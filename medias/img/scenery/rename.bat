@@ -14,7 +14,7 @@ rem 如果没有相同的文件名，则继续
 
 if not "%%~ni"=="%~n0" (
 
-if !a! LSS 100 (ren "%%i" s"!a!.jpg") else ren "%%i" s"!a!.jpg"
+if !a! LSS 1 (ren "%%i" "s!a!.jpg") else ren "%%i" "s!a!.jpg"
 
 rem 设置数值型变量a=a+1
 

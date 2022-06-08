@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZV5YXT231"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-5ZV5YXT231');
+</script>
+
+
+  <title>TEAC | 子先居</title>
+
+  <link rel="icon" type="image/png" href="/medias/img/favicon.png">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  
+    
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  
+
+  
+    
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+
+  
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">加载中...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+  function loadScript(src, cb) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+
+  //https://github.com/filamentgroup/loadCSS
+  var loadCSS = function (href, before, media, attributes) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  };
+
+</script> 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+<script type="text/javascript">
+  Vue.use(window.VueAwesomeSwiper)
+</script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://unpkg.com/typed.js@2.0.11"></script>
+
+
+    <div id="safearea">
+      <main class="main" id="pjax-container">
+        <!-- 头部导航 -->
+        
+<header class="header   " 
+  id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fas fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/img/logo.png" class="lazyload placeholder" data-srcset="/medias/img/logo.png" srcset="/medias/img/fruits/103.gif" alt="logo">
+      <h3 class="drawer-box-head_title">子先居</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fas fa-angle-double-down"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-images" style="margin-top: -20px;"></i>
+                      
+                      <span>gallery</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/docs">
+                      
+                      <i class="fas fa-folder-open" style="margin-top: -20px;"></i>
+                      
+                      <span>docs</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/artitalk/">
+                      
+                      <i class="fas fa-comment-dots" style="margin-top: -20px;"></i>
+                      
+                      <span>artitalk</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/davischeng">
+              <i class="fas fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/img/logo.png" class="lazyload placeholder" data-srcset="/medias/img/logo.png" srcset="/medias/img/fruits/103.gif" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">子先居</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友情链接">
+                  
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-angle-double-down"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-images" style="margin-top: -20px;"></i>
+                      
+                      <span>gallery</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/docs">
+                      
+                      <i class="fas fa-folder-open" style="margin-top: -20px;"></i>
+                      
+                      <span>docs</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/artitalk/">
+                      
+                      <i class="fas fa-comment-dots" style="margin-top: -20px;"></i>
+                      
+                      <span>artitalk</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <span>
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
+          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+      window.addEventListener('pjax:complete', () => {
+        this.cancelDialogVisible();
+      })
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/davischeng" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+</header>
+        <!-- 内容区域 -->
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/img/cover/c86.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        TEAC
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2022-03-01 |
+        </span>
+      
+
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 17 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉,这个密码太对,请再试试.(Sorry, this password is too correct. Please try again.)" data-whm="抱歉,这个文章不能被校验,不过您还是能看看解密后的内容.(Sorry, this article can't be verified, but you can still see the decrypted content.)">
+  <script id="hbeData" type="hbeData" data-hmacdigest="9882ec48e3c1432202aecf0eb8dae8fb913853901d53ee43d74cf672e2d63f70">bdfb7b8433e190d3cef65becf5513768f2a34d7548ef0ed8433c8104a843b87aeb2ac5f8b7a4e0d6e804750e203173ea08602a09340768d5ff4c25583aa1436ea2570c53ab26b6531e853462aeb849cb97dbd4d965ae5e0f198bd8b974b3522c9ccc72306b0201f8975f88f2c18c4e3cf96aac0065644f9f06f33e1f567cc7fff2d9ebcf25628e0771b53dd13b8cb0c9faf3eb9bf51c3a69bf4aaf4fafa403da5dd4b0ea52eb1366e53e0217f7537cd84773f8b0f4b4c3d59c54483f6f2d436b879e7b3cad8304bf9051ce82c87b9237dd8a758811171be1528f3e761db2cdf52178023162a17d1f53efaa0d0fd5a824e05d53d8e2505c1054acc5cd26b9092c328e3a3d7a70513fdeb7438d51d7eefddd0f3d2692a910805ffe7074eac63327426595ad1222df4b754095fdfc4aceb0ba74d12487a027bbfee6d8c84bb2d682ac51ceafe5e49f8ec59c46c1dcc3a82cd70194a6c52885c80bd8a1374ef3bab6e8e7d18690444d3353a24a40f18fea0208264554bd3de817aaa0a8dcd0cb281c01849c89493912bd02788a89754074758016b539c53f248dd86b9b4e38c66960b0dd41e30e49aef44bb0856ab7b05d86e366aa9ff08bd24fcc85d80fab722747205ddc504e43038a2618f57ce89c8f6cf9e799846d9b086b6aac24d7fac204b9866869607a2c26945049805c2947629c3d86548c84e76ee0b225ff2855338720bc798a36fb1c9b6c2c64044b1f1575627be1dcf206294456a6cae48fea0587d98e2788c8cb8bd4db51510899df859a30939ae7951cb5c3cf1251eaf93dd2958351338937cfc7509163a90e15dfc9b47a168a1c47ec4fb20cd20c14428cd8c18884a0b32baff5ac36ef41430e1c55035eee791b8bbec6ccc6ed8a2663c9af3e36484b9a1faa8485d751a5af2a2aeac374e09a32e0bf39ecf7c54dee31480f39022087beb445d02693801a4a28dc7007ee8c0cfa9a433b2beb05bb37899928c3f06f0b6aabd89ac652092514eccc475b2e78311104e8eef153b8616ea986cf46b0b49c5f58d23ff60a98d0c6d8b3aadd54f1fd52bfef7ff88f06db4ca5453cb8b87a8f4fb0d4f5f4c83265c3ecba844d0132cbb14f9cea1e3e7b1c0ec80bd73945a8bddaf44c8eae69e159235fc08d381924ff3cca30bfe22a9acf66aa906e1dfc801d13f8cd1b14b4b83458a4bfeff97ad3f0ed5245a6a794af3559aee5c9e1007d8e8f1be5924bb376e1ef37fa9c8514f4145507da2f4209bd1d4d3cfaddb4bedd902bca4f62f0d60357c4abe9e4848a168275031dc3295a74f7fc7220e2d0c1974bea23b2c90fa3e29aa998c042939c9f9ea36a5897df7491c011043cd3ec6bc7e9cb31be6112deaec24254c5f35fb369b3cd7fc4274b948986d266958451883d6f9698b1f1d8a23efcc75f8303d900fcb7bff8bfcbe0c36c018fbe67b5671cb8b7fe1360520a04744b0784e5823d416b885e756d572a23fba85c07f60942783d7708e38e8154af818198ee38f6aa05d67e09de54000d20fb742c2e2fc78918ae8e2c888bc24201646d674fa6064762659b473f1f0418d1014eb03a7fcc516914c04c9e4b2a3f0e58fa9692a6e6d89c1b09c877c2e26b6156e3c2f52675ef7b510e6b5c9cf3f1689885a61c765eb37f1c5216a4edddbda30b67a6cacbf826149bcaa24c98f62e5accf8780d53bca7ade687d301852fde4aa17be0a033dfb39960a115d717cf81ba4930ef432ec86a7542751b89dc7fcd8e817fa628ec2dc01ab42f2fc4e39ced78e212cc00d41ed95a6171e35b07bea52d1c81ecfa3a0203a51b26042c73b121fe3107ec81b61c78abcbef22d87f8f4b7fde7710caad651111956b2d8b7f7a001609cca78cf8ad85e2bbf4c9c382ccea665ef3f5bb1cf3b2605377b522afbe344b914f89a8b1fbdc3db1438d4553efb42aa764b5fae8a31f3148e5609028b3d42eca8323db87d7e29fe3efaa450ae0112eac9633c8726fe16be316c0eef6198b8e028cbe0af04e43101808bc00fc8a00d7477ed3b06f879938987370600e16f408d931872f3157d6d60bcd12816d924049670b32124c215a380b9ec7080675d233aa2e4c11e4cf34633ec36d28b68fbbe202b8b7a858b5e582affeb82ab4e1d4c47266c7318ae72c5bfb2468b878dfd5364c5063fbbd22a0802953027c542a6fbb5d646573fd6bf8d929bbc59f52da654fd258999e53dfe03fc2feda29ea10dfa26f01e63fa84cb925ab4cec931b7b8c46803da60ba126f81278f75dd239992ba43eda51f9b48d73b905de7c2db1236bfcfb110084aca598effed4454e1a96b30a40f8f1edc058bf87ce46d88a6fd7f09fe5fcd7e2fff175ee6d657be710894c13b96d89210959c7c32fc3a0f5828962e6461b6c99ed4173e0878d772b5cb62e033fd9dadc58f0d642a5209f2dd7c64d8ede9a544bd687d7d17b532a3ced319cc9e6af58bba699a4f72812c5334473b5b586d38409cf59b153c08b9415e85413aff41ac5aab16694e2af9ed310a35a35fd4c6f5bcc0511686b5b4f2317952dca538b210c1810b231f6b8903a7eb9efa74f648b178fc0b39581155a42900576c825442aadebd44f53e0b208c7e7329008516de826894bd8fc01554d9571d8458f58ddb330fb9ff9074db40130804784e20e8f6a0b44d30c8065a8dcb534f4cddaa7892ef1c03d27bcc10fcb9a503c2b18757916c4e5bf7904d76f350e463ddd0651d55cb87d974330d22dbb01a4367adb61c797b6086c975e67a7efd53b0711a0f250533096639309a28235dc08f70632edd0b92ca62e0cd5302f751979894ab556b5dd55a9fc09db26d5809a5a6578334b36b4f61992cbbc6da27354dc14a3b34f8aa944ba2ab739a8aebc385e405cf252db25c4eb8c94cd71f21791ccfa20bfaa21c0addd0007fa66dc10426db696fca913075268ac8394a8d857c3ae16b21ae8dc285725eccc4062d3397a380b8e7e230f73a58335aa5c82a4160e6e09f52406180cdaf621626a5d037cdc35caf5ee761b06dd44f25b00bdf84e63d50f355d897345b912ce8abb61438b6357603ebcc11539ee95285eb2abd8a2efd8203202b073aeca27c9d2445b680c12dac038947dd3601404fc158fd52b715995343fddf902c5800e98ecdc87f82049e59a8903246098d667d962ea3b292eb91b23a31ecf3bf67351c5bd5566f0b3f9207d4ab6ad2dcf9f84b500ff4f8be068722ccd456136125a8306ff412a953f87c3cfe9a5d4f2b7fa2390d5a4d489f1e3ecb7375afe829a7030d84acd78ed0373472d62429005ba4609cf09a0b87748a7ce0ce76492e9c4d579ee3c2b355391adbd6dc08aa337c6f5d68364ac15773a7536e1b0aa7f5ae36d5b0aa171cdce98ef001a31fa8cad7f381ebb172107190d723474f526cb584b37afedf9728aae1d5181cbb79c2cbdfc21be75e1531ce46b2f9547f6c016538f7554f1a36530431c484b5491f116c839cb023e0547b6ecfd607037af59f9e56376d104e2b37b7a0a1e46b9ba07cc8fc701eca880ebf8691bd1fbae91a0641cc7321b4981e396bdd3396d683f358f369d1ea39894019d693a2a47cf7764fc25810023b5c1d2af8971b755222c674c54c773e9f36421d2179ebe71eb8ed4eeee61c000d1aa98cc64ba68dd048be8c31640580ab35b6b3cd43b6d2d910a634730c71e5168316870cb6babc7d7f0d0fae3f76e1646791b98bdcb179e4ff31b9e0c8c5a2d0d4251c98b6269d3c2423b3904db05f08a6e77118237be3860e77cbb2a2d2e4f8bf305e632eb23402090e87d06950e89412ffb8f54146975cb8eceb694db8697d08e2d161c80f3bc19e6cac9ede8f5707a3364e4a1e11609db4ffa4887902f1413b4833dd2ae67be3eff521f3dd928bf3da337c5e7a5fb641edb71b410ceb33aa935cd7c2844e27392b871e98d96fdf98aa5a8b686261c3f346abc632561c960e485575514149cf672fc646f65990a48fdc830812a46949cf975a7fba9c6ec5c0d22df25cbf0afbb2279f2b7437d5f81939c0c5e559fab29f447d8cd2503b3c8dee822de86da4d251247f0fce7af039b4ab971b78dfa091d3411f5d3bfe5e32f70add90dca9ee1dc71ce8e15629228001f019d716ba01a2b9c193f6aba818e3a97088c33c871523be75e242e8be02991405a3b32bcb3af79ee3062d72dbede73df29b72771139e43729ec04ca8eb95c1bd6a2bc8ee92f55d47284a48c0f5e9d2fcf88d030db30d03b612e36081f2b728898d2c549a36c03acc99d57abe5fb08750656bc8718e294c65a832b2e22dc1d0dce107a8e63172c00e1ae16a2ad83c3d3c1453cf77c76db35607f013d2abebebba0c6a8e3dce5f1a6b0f922b4a21244148531dfaf04e5096f9d47dab7ccc862c4bb6c4d7c2afc8b68c3f474708f71df30a5490414cc827d656b8d1532a4fdc19324c4e1901bb7506e7d90b0fa5e7595d2efc9b0a339e361ace4022d9894db5215952c78ded25c3c5d8d42c724ea6bf7b644924b9a462ddea581dff9b8307436c6957ac53a9954c2f041e0b6a927d9724938bda017306d6bec02f659c1d9e5b9816bf880c839745e0e1570270743b63aa39c4627069ffb16e825afcafe6f88e758b7d7b15bf553836399f2b3474b297e01d4cbc4c84ec4752039aa6ba3f4f103d206dac061c92483a51e3a2ee8c157fd70b48a0567cfb356296a2fefbf583f756da9b1e9230f46465db503eb20f2e048dd39d3e5389b8f1916f757960767f02a3b4cb02b8bf9ba83c6a4f0c5498da5862dd1b105edc806a219aefa927a04c99120c4b24b6720d5ebab9c0d56726a887049cd877963679c86cfe3bdf28fc13f7aadfa9e566c21e6592a2b9c66ced7f656a1993125fce7e0459fb9e56d77b8a61b67968ede2f19e9048cd3ea24b89e00fa8aaa9e6449d11d9630e791e32af46a30a69a951b11ee660440be5cfec5dbb629274565e3c9e32cc5a86d90d6fc7a13e5f85ff440c2ad49582567e3ef24a693a68c9aaecd484422a2827cbee441fe778cf7de1dc31ff37b7e6dcfaf16ce82ec883196de0d0c8aedf6c11108306aa37711e455a69ad356a6ed174284ae6da9a3207d608596dda9f6f4459c06257db905a019b489d68eb9ec8e57980930095c210664476919ed30df843b7497a4566717dd5ae3fc549b3f22b69fe241f2b7068132dce9a24ba3737b2d42f0e366cab11f9e7bd08823cc75627533c2ac49d8420e1f3a176fff670ade2f2c11cd4d771442bb0c8faf7a6d167eaa811373f2a59004f710040c116c8167fbfc6f31e9faae38a9a2adb3b27b2dcd3cc7a1f69eda568ba752ca58cf33a99d420e47a1d5845aa717fccdf7a3e421b3f758a103be9a050a4ba5308ac18d11a31e243f0a0a9e61f6f763e2360d0c9efa7120225137b72082f1d777e879a779d2521f9519a701bf433610b130a64b4671ab946e9e8ebe95304e02bf227f8e93294f0c6a467e9334288dcce20ba5db7579fa3e7a6895cd09612e7ae190d2744c9fcc2ef7bde08528f5f261490e3b78029c45039bdf480dabd4f30c9c3cd2f2d9eb4ad0f319e8be430b7982dc80a40d72b48e3e8a9daf7f2b159ade18503116bce814f33dcd6154b1cc5525a38e2c8cd45fdd172373c9d5007ea9ed9fcd812993e714a0de8d4f42a0fe66ceb6456ac46bbb87a675718185d0e3215f8c6cef99ff0e21d2bb9b09835f358e8773a1ca91d02d7afdeafcea3e1bcdbb6cc02746c92d581c17f36416288d5e880def37c90982e7acfb5627ffaaa25739ec4d8a27e857b2c1c8f39020b92fc649c91ae28cf469ea8d28b9dc76805bf4c7be6910b671acc178136ac7c657e6308a027facce2c6308752f4473a35dae211f543f69ff13ea6351fb47ca721241fc603aceef03a0e290891c0775df95e6c63918d395a6112137530f619757d73a60bfc4bf5f9227166fb55b3f1715542d073988d578c1f6fca1c9d467c92bd349aa44b0b7d05fddf62860061c33d9b8cb443bfb6b92d1400239d4af0b0270fbc757e435dcad23aa580ec87fcf3bff746815455051b1a80d3d69126357262bf299071e1fba617e39604454ae1e32c34e98a289721964958d4e6e4d10a6a018427f315d1aec286b75fa5c479348e43c36da2b0b35531b8b446bdc7a664f57783029c85166cd6f8157b4d803cff2a3c104c385d66ff63f52a19609348987855192141eab4231133e30269f263a2724d281ad76b7d2765d7b98825cc6a310df49ffbb21218ff3929c77b69cd266ce0e5876951508b1723a3c9fe7be4f9bd77470b08b2afcef59760fd9e64891e96e102e5549d6f57e1a0e712cee1990ed0244fdbb514d2300c7efce30b2b9b8b5860878614dc55bf6a4f289f8114fed2a59b2e93e3ae8e63599a51cbe1d02332032646fdebc399d0edc5aaf863b1e1f3e07b472fd25ded5ffddadca7d561e79344f99d8ef77ddc0d208c629ba0375897fb46c0bec05e065f3c9b904d91e7e9fbfd2682aa968388c68ea45a32b550a242ab10c73c48f3ea6a7a9e89a602013bd6cc1bec379cd28e9851d91c1921b07ff813f5b811fa4bf4663e231aa0d888495cc1812f5c711dcd885b50bdb68217222fec9265d61fffc0fe35d0353e9dc0e663484aad0542b9a997b4faa1460f641b6a6842045365f4fd5d42fdb0d2c127872fa1621030f1f2ef4f8634025762fd4d02b2e899c8e389dab15b75ef3e96ed213caa1f39a346e25acbef84d815d5eaa598aaa1d3f6add32f79649e1283bc1fc12feabdfd19052f392f22199af6c534d40fd3e739d9fa583cf1b7ac0d73eaae2dcf64b3858d3b4201498a227308783dc46c865a8581133ff0e57698ba24063e8ec9b7675eb407c4f493d0c2e5c6e4d60fcff5f8dfc4cbe4153bf06d4886038414b76ccdf298fc3b7747c3960e95610ae3b9dbb34d3c3d36d282626cb194e3d6aefdc812ec2969adc419e68c557b8b139caaed94546ee4d39f7969066a1a273d86a20e4e54d7a93a4bb0ebb170b47a8f0c3ea64e5f3aab4bc659be971507e07698231285d8d1f0c5615539fbc75648f1d5c2fe1a6ee6221a5086940087a7fc959f347aafc852e51d39086f103bce3deca97751d473ab61668c7738cfdea0f77eacf316584cc6b02634ae5c46628af662e0eaf31a7ba0cfa20a458ff8166db66aad32833dcaab326102f695757aafda692ca2637801dac610b1b3e3573016020e65318ffd6a4dba781aed7324b4cbb09eb5fa00421ffdf07395cee3371682833bf40d26f3af88cb8a8be0141ee9b6451bfbb471217e719d46c9da9e10c6dbcd57465e4fe01785e7b09f3deebd2d5199f12173345928b6691d9b47b7e8296a4aea055337aed360a237ea12371248b0b2450eb9b33fbed1f919e5c19bd95c025d15fd033059fed4102fe336b6b09b13e30dae543a595488e42d21fa4c1123b8e36a715747bfa9c5025894e7a35e7412b2016afd6cecb34413eab0c7042c83a8a48c55030e6a017a04cae4d3458bf17c14411b89410cfdaa78cf3ef3d1eaed7eaba49c03e18e6caea0206895c7efaa921edd62961f7d34ae59c3a9af440d7546042272dd6be71ae26f1984d4a435029f6bb63c5220aa4724cd99fdad2cfc649ce093860deafb1a8b4a28f705f7b1bb303e17c5f342ac3bc3f6b47fbbde9adb3db8a5c7133839c3e728c61a103ee0c85dae6f4682b1b1cdecd76a3df753adfd49d2c6b793d89b58db6ddfd86c5275b9abc262b209923830e5a4c0aca8ae5d8aad07b4af6587558e01627dfd3756cc51aa971894f8c3a33fdff78f6fa39cd4856cc04a90192f64af57df8f78347f1a14de3da24d4e6bbc0137242228a1fd95c4118570fa3ea6fb9a7fbed506a46f753ddc76e087a207359d05a64020f211c1df003a067345f835f310d225614126531dbc579002125d5b60b9cf49394e4dc4c737b3861962da21c0312d7e4a986ad005964956f4f83f7c7beaf4516cb70a0c474d3eba71490ec8fe9dd620d79396c69e4447493403307ea624dd3ffc851ee51e054a2ceca56a63eba27b3862969e936c8ffe585699a8ebaaf18ae0510e7d5c42e022a4efab825494f5f96ce87e5ed6157c55d19c20243c96e0943cc24fbcfb4e5a31646cc81fb950cd6f4abf69072e193bbee873e25af38e2088e116335ff9e6b2a6665fb105fe6640e3a8b1698d803476b45061f03763f19dc3c29643baa1f551b2417e9d4c38a97cdf70a54146604072022061f03ec5a31e24e0c15d4ca406579b55b0d6b923a4877cb0fe48ed49f29ab6977fccce672226834db327cfaeb97d19fe74db48c83798e60b2e11e9f05127ad65ea254b6edad8d3b0e85f0397dc25b075c334ef8208ef94440960604f4ef8d34bc7992584a05094934970e94999264a2ab064bbfdb1618220cc6b4c5c40ff7fd89fb3934bbc88e2c1ff5af0b48252c600b0c7b379954fdbc8026524e0a04f8bffb7e4bba8d8e58176b7ea4d2f533ae0bd67c794c5bec7706f3f7ccb75765d57e7686ab18e1bbb4cde5530291816b9a187818f071f14ee23e784c5ea244b88b9e790e6cc8f9401f3d4fb2b7c1259fa053ed0ef0d878703b379c08b09b5a135292d7f4fad06cf393ee05b9e532a531cd52a1244dbd09991d2d32273c308b8aaf2e07cd024ba21917b3b2f3a65e90676c3c4a209d84823607e0266eca2bb9c02c330e1b6c7c64573dec229e111fe3239d012b326ff6a23dabba79bea9d7b7212b6cb30fe89ece45cbed85dc283b3ce0fdbd3e1816e307df4af9289599b2b881b26c139b7c757568e48e0e2d451209abc5f23a562a4074bf44d4951d197acd6ba81700458f7d03264339a4781aa089a58dc7adab53ef1a7bbef8822f0bb6b403b9b08ceafb70d450cadf1d101cd2a4c56c5dc256e7fe70932035fa423598b3027a5a5609ccc4fd96321fdc47a73f1c7b0e3144146140cc6a99b81b4d4142667a9a2df33bcf48d4991b030868b5097b328b3c21767cb6f185d98e31be1b5bc83d94d1200aa1f4da46d5ddd66af06e072a81136b4e17b1ec08fe8d33637b90024ea0d37ec69ba1a5b4b4efa1c2c71d936de39a6fdf4fb288ddd450fe3f08a706ac302d2c8d2725994d05f3bf0dc8c1188936523903ea00903f64eb23b3777af6dc862c6539f6d89f2e2773676080e6d47efc20f19a0cd41bf54530f44c631727988fb3bbd9435233082eac5aa7d7ba1402dab71ec636cf40b3f0a831eed56ef9c78690f0f35d43ce719e5a86e48051d0ea46c8d15157cd6b07cdcf27ad61e7d740c280f94a20e7c65a5411293f62b601e04daf0a151c751153d1cd438bbeb91d77d9e3d08869fa3833fbee405766f2f13d406242f78c688d90d6538c8824c514217a143d2dc05ae70c6385aff0da7eac3cfaca1b120a8fee955dd612f29fcf003d82f413bc2f7a4dd92cbc1ad33292ccab5dcd2f5dda50037858c4230eb1e7939fd37102f44a4c82d48786578158b1c5985d230065381ca64b1c3f35f0f5a6b5f6da5bbbeef5ef02897c21840aee544faaeffb49d63ee81657926799f6aeceabb803ba64ff51eaaf38500acbbcace5b85bde3099ce4211dd0896d1baf23b98c80f7573d22561bff305bc980a93227843f8eed93d486e822032289df787be9a03acd6f293ff010ce99d2e994162462d601e8f64b494b967825f59e5c5f804ac7a29b9f8a7f92cc5238696bcf0a0d3e5436561383b0de5896d792baf4c68cecda7631270f8523627e5d1b0497f8cc3176110e8982d5d9381b4ed22ebc487a6c07ab61d74bdbe6ce2834fbb7d7c5a15e8891bd9c4f20b3dfc0000b34934aef305d856c929179f82b8094668b9e15924ab53d47976339d8e300b6762761aea5760e2556170d27ead36b8ffc20932b47e0789c75bafe903230f84371d551099f1925ece3ba92fbe42e7c83d51dfef03881c2b8b5a5336533bef29321a790f3cc846eb0692d2833cd5c4b626b344f5ef7e3289b6140c43476aff889c9e38ab92302643f091f2cfd6144a5342a393df572edb8109fe8276d71d0ebd8f1d34b01ce6491314e72fb42feadfd71299f081aebfb90d4d340fd2ba4a701a3b8bd498c875a3e24d39df2ffe58c6d8daefbede5c47495e89a3d3775a9ea4a86e1a197a8effeb68692d685af56c11dc081642ea9d0d7a314c2c4f7c8f16599b09f1ab0d315597ffc986acda15cf131bd2973b915ce2af3c87b34a31544a08dcba60d90449c1f4b945bbc4659731c10342f99ce0ea8f6e3ef4231c67c3210058e746d1a185e42beafbb5ed8b6a9304b605cac1d27d932c59a4ff2275ed2e3144eff4c9e77ac29df481873951ba72d66170c89e18f298a90f1fa755d842c89dbcd45fc38f1add550a4db1469beae73cfe960e7e771bd01ea6359fe6be1b202503ef56ba7e4b9cf81052d78955cbfbc5b52c3b75abf6953da01023c27414f3348e65aea834a995d2398a21c26b8d92b1c5a75f685ffedf8592d018dcef6a66d757b13b1e190721d67d24e37510a9d5a14e8804bf443a3fa7a8e490a82818648d5a7e082f9a8de2a752ac3ac14e1e48a293d7fa037e9079bb0672676d2130b4d20fbce5f1a13f36250498aecc7621265b29ea368043208c4dc362fef1b61e8ff2802084532393afead2d7d2c3e5d0e913301ebd441d0d8e9b80e1165b0adf0f005f2f46c89b3a00dec9503ef431ce35af8580c6ddc0a8c3140c887e8676ac157f9b1db63a994d465f4b43669fbc552092a0f37ffa00a94edc4ff859f0d32ec004d43c0f973f67503714f68e338b5b255313329313e55b1fe7f134f1e5d7274aa3413de3439576b3f2b959a6d967c18a3bf91577dd6e6be6d255490961dd9e22e884394d113f6fe1bbaa2f5ef4832e592c1fe70b894b34ae60be3a1a21a26fd36076aa5794777056b4d4f120c9e86e528449a7dbc67963114b9795817cf1af393dd6411522b8507ee83f8be2e91865517c93b88e93b3e71c4e25778449916e3ceba2a00c4c3014c4710bbefdab176280d542aacbee27238449a8f8028637cecc4430056966b80daf6a87f4845234fa30002c0e31dbc0e7658f30133e14a95dc2f44a8d1c6c04e897e6f45cc795fd27ab9fc57ef619f292dddb650a8d17ef28f86dade60d009a8c8717ef13f39059164e6317507d6fbd98ade687d2ba746944fbf35fe27d730ef5dbc5cf281df118cfa41bbd0da79d95287533d41d48013a29bf61e302173a211906f37791df90ece367b216de2eae5b4747a4b90ff3e50a7ce350a2f018a196a86e1964f4dfb6b77175cd07dc3b93d7295293f837d0e238094d5544b6d4051c9ae5429b5b35fb5d6f19c8d1873ffc29b0692105a1816a731f185e45dd87031c01f00c985d2c47c330261210fd05f3f8a95be1d87e73ab3e5e1ac008654638a22d8c55adda3c41d2aac7841b02e69b739792f11528c4f7b668334e649a02ee4baaaefb3430a83aba32d2457f311dd7e0db0119c344fc7bbe505fab75261f596c7d409665429b8d5e3b5faf6cddf5ca657f0c87154154b202633b803a0877441a2db945e0927a547aabb1aebe1a63e7e5ad46a2b031eab1774f081321052171b3da90f86e7062b76784f5f9885eaeb70788d989e4a0caf20e009cbf7530a341980144ff2b488793109f8802eb50445c7b0661a8740d76b1e2937435010983919b054765c8b9f3394d8a289f73ed276b24e543de5b4b8559a4745c0fe270fbaad700e248fc8520bc6da68695bbfeff0bdcc879b88eafe7bb3f49228146f26ae9b64c314b58242537ab9a3e955facef997097369655cc00a14902bbe0167cd888b71408e229bd85c62ddee632786605761b5247c0211ac31488ca5feaebaa1fc9d25fc66ada3e744f8502e263e4bc5f988571739bf2c9b2394fbda9a36db76e1f123556d10ab42cd1756a73187fcca4345aa0618de6886276d30259e6c3f299f68931e31eaf1780f25b0f808930e03927f2cd563e1316078092c4c90c99a3b5cdc2d5ed52bf78f702532ee547a407929984b5b40a1530d9761cda4c8cf5aae92e57afd151d9849c79223774bd2491a2e20af9cf1b2f43a9859c67b208634143b68799248a75850d141d7b6f49aa18ebce226cd6446158f03bf19bf3f2c89f54067454c41fff967908341aa0acf8a629da2dc48d5320039ed3869b9fca0e5d60e9ef171f94fd14058e011670fbb4f59d8a468d6a84a58b0972dc0a4170855220eb600c4378de53914e515b7d3388ff1379f404446ea5ed0790bd5d698245df47689d39530412e951e2e17e96fb8f3d6b59e12650779157ad9127bfd24ed9a8360c4ad4aaf5ee1bcc016d257e832b7f976c91a6a26ded51da32991f645da0e81b4af73c2206df745931e920effb5a3284a4a1b75bb48df015c250b867909be941491fcb38097792b9508830526e877841c31c4a4f29e13091c93f2caae1045baeb3f4de370a44429ea2caede9c40081376d308e5c16afa2fff7257a73fcaf4c2577951aa268e7386378831d1a9d51685375cd77a6375e88e4f32a36b07018d4037e037bef02ee58e2bf1cd49636ee1832798f6438b31d99292d7636299c539d4e16641d7f69d7fe4b8eff96cff6308feb4cd0d3942a623c8c55cab72835ddd463601a0ab425171b77203038d2c251412bebc2150dfeb4d1eb653fc3ee646d54ced79d6b92b14e4ca6e557fe9cda6e0e5810cb8e37715cb03d0b1b25844a86e4fc7ecc1e0d08822e972a4dbf528f6e4ad85dec6df276bfa3f0a8c05fc19422469affddd3421816bb078e8da65402bac3c422656dde43f9ff6719c943adcf29c3e0dff30e5c19c259d63075156a97eacc1dfd5cd619d7ea24521423b6adfcea0eb488e8fc4b92cf26f7168e187847b08a6848aab5663213c061fe1cd6614c411a68195bb7830f145e29c18a181f28a06eab8d48ac799ed2aca904715f23c5f5a69176362a261c519b2e2ed7585ed2ad37cd47549f84a07f22658230332d91724133eafc2c69890269983f0a51baa06ad48bff1aa8b4be78b64d2bdde799ae4dce08bc9d88c5f9379f60932c539fe5e058937e044885c1f9694ac1f915195323ebdcd16d58e6953fceb345ec141a1d995069b25b45253cbeab849dff2a1ab36dbaa3b688d2c9a4c871b57844d14f6e0b7d052a13cb964f8a383eda174b6f84c5a6b7f4062c2698790e3e7d5a064f309210ddbb996983910df1ddc49a8a45f4e83bfdc62db92768b590aa807f6916b4d7083cc33a01f31402e97afcefa0d5f6fcc3b8527df06aa610a44d684de7d97abba161581eeb8af17fb2766ca07692cd75f651ebac43042da60bf3767542d01aef0cb162caa098cf8a793cd24b024150a596d0a0e0c053f277066ac116d9c06474827d0cf24351224da86e4237a9f681a8ccfbd257984907b8d819e17ae53162e369736233bece0c1c808f8bdb22e345ce2290d1c01d579c8d334bc564434a877a7ed37ff194c475ae0e6913df17f5bb8b4890bbbaa40e8653fb695b38648b9eed27929985ccf249b8d348f646be738850caa2dff8fecc78b36ab6a395500925dc876df535e3ad237de1f67aa2213c9bdc1fffebf815b0ce06d436a41140fcf0b325d92497116057b4102a8d61f317d9976bb92f3649284eb317d354354be7dc0277cfbd2d306686c4fed7ba974b105a1080fe1a0aef6b39122dec5e59fa41f9e70d9059cf64597baf248fd4fcea25e3e625d172fc8e6f2a7b8dfd3ca4e9ef87c5072f67d34e3f89d0823844293cfb180b166b07902434b10069157762bbef9ad32bbdeafd4a0e40774fd117cfd3bd0b6d3154705c78f1b690b11740e868f227e060074b2a55b5f35f4ffca83672061e9fc03d169455b50601e4c9545fbeaabfe72717ebc62f369b290f80e95314480aead3e7347bfa394ca07ccfde7ea611a70efddadc21647f5958b44afa2f74e166329d6ecec2bd31b82b75238d3f404bbf139b4ff7ac8a649b309ad3cb28946aa63cf16082d10c07adc1cac8c931cb3d41500eec1b80cd935f2cf141b5f49f5222c5957afb77d491e9c34c90bc3bf5ea7199152a6e87223c82dbd3778af09a8fefdf504788c0abd15de30487e3fe7ad74cfe9fea91ac01df3fffc22821035ca4d37ce9d8a87162827421ad841dc925652db6e66f4ab75d68d8e7e39e9320934e2039a0426c4c376ad7668edac54277e96213858640501f7daffc82b4e2ec48fe9f4e0f6bd3af9db0f6e69f86800277138a1ccf27e88ae0823cc06899dd7e0cbeff940a66ffa180a5cb5b145e6aaea700df183c641b4764c1dd9e253adfc58a3437b8a59a581acd6d3f18b92b7c03a98ab80956776574e7551f480ec4705b81715698cc47c23389b5fed2c28a16c0db8482016300700e25d72fa42c5905d9cd7197e4f4e787a70a9998ef4b9b4078b883ee587b18672729fe0e984bd03c23dfbfb2d16a4eb968922bf8bc6accb8b89e1780efe161a199e5935120c0b3a656d8d5a6ca7521f5991cb2d76b1d28f5319c40ddf320cc33701b82a66df2ea64c1beb870b5d2c39a3559867d74fef7636d0a418a2a89f3c17c97ec76b98629939b722a16167e001b404247bd34c6adfee139d242e896d178727b3c372768693797457aeb749e457b7ea383a3ed5572b38cb1de533c10108e10a579cd7ba0a1482dc1c3d513bb3ae3854fd3a76b8dce07a39098bc40bcc9a31d56d1f721cbd32895ee6fa6d1f356c7fe77ebd7b3278220c96238662523f6331ffb75e6412a8482820fcbae176495f31e69a1db2ced6ec988c50406ab083239ef17fdbba95240ca0128ad14d5c01ffb1e4d91e4edf65fce3654159fff4d41c9f88cef0c0d75888658effd670381bf1125367f13ff715786c5a2bef6008c5bedaf4c086b8fa7376d4b0aedb13e9d660dfa5b46d6adbc6ddb17a7cacd4d351832d8ac12c16befd3840f72acd28dace175bca176bba041e50776fad460c1712d9285a2bf44ec0167929ec00d062c0143e5c336778729e27e9e1f271d56f9a3cc66b19fdd917c950fab9b3b0d0efebe403250175857582624f4b54eed2d945f893046fa655b0c5849cc3002a4b1f4b61ac492356efca510b8ae624cc8c3b4ebb08fd70a802708e408e38e779a3f8796875af8769c2ea069a5f8eebfcd5151d869986918f7fb58e7fb33c43f2caf9007af553eca5914c034ff928e96baedbf6109ecf7a9903095841d8933b61d5c34878c4aeae3924c94f19d49cb8d427e162f77040df3cc46c362031b1dedb528d11a68fb3d270dcdec3f50d34c99517f6fe34ddf25a7944f65cc2c72e428a1c690e0063127c1bcde82d413ede54d2ee06f3126541cc55e6b1eea9e59dbed5b40043b1bf28dada799ca1daf6c9b5da1d643e8445241979db0698a7a839cdf9fbc8c59b9f2cc051866098e28d89d0db66918eb15447bc380478ece3f637887bfd5d564d9bfc476f0e48b7b3217b4bd9fca3d51d9f8d9eece3d5e40e39b0b2029df805427d2da4708b0cc8f8950f1ef9039fa8840eaa987db8ba2f5b37d3feac05b3845a120246089867e2d3eed7b53d4c6beb1afd2c4ee10a354df492fc0422de9f4a0b9157ed6db1689430</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好,请在这里输入密码.(Hello, you need a password here)</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+      </div>
+      <div class="post-tags-categories">
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Davis Cheng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/gallery/7/index.html" target="_blank" title="TEAC">https://davischeng.github.io/gallery/7/index.html</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/img/pay/alipay.jpg" class="lazyload placeholder" data-srcset="/medias/img/pay/alipay.jpg" srcset="/medias/img/fruits/103.gif" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/img/pay/wechat.jpg" class="lazyload placeholder" data-srcset="/medias/img/pay/wechat.jpg" srcset="/medias/img/fruits/103.gif" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '10000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '/medias/img/scenery/s100.jpg,/medias/img/scenery/s101.jpg,/medias/img/scenery/s102.jpg,/medias/img/scenery/s103.jpg,/medias/img/scenery/s104.jpg,/medias/img/scenery/s105.jpg,/medias/img/scenery/s106.jpg,/medias/img/scenery/s107.jpg,/medias/img/scenery/s108.jpg,/medias/img/scenery/s109.jpg,/medias/img/scenery/s110.jpg,/medias/img/scenery/s111.jpg,/medias/img/scenery/s112.jpg,/medias/img/scenery/s113.jpg,/medias/img/scenery/s114.jpg,/medias/img/scenery/s115.jpg,/medias/img/scenery/s116.jpg,/medias/img/scenery/s117.jpg,/medias/img/scenery/s118.jpg,/medias/img/scenery/s119.jpg,/medias/img/scenery/s120.jpg';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
+
+      </main>
+    </div>
+
+    <!-- 页脚 -->
+    
+  
+  <!-- 底部鱼儿跳动效果，依赖于jquery-->
+<div id="j-fish-skip" style=" position: relative;height: 153px;width: auto;"></div>
+<script>
+  var RENDERER = {
+    POINT_INTERVAL: 5,
+    FISH_COUNT: 3,
+    MAX_INTERVAL_COUNT: 50,
+    INIT_HEIGHT_RATE: .5,
+    THRESHOLD: 50,
+    FISH_COLOR: '',
+    init: function () {
+      this.setFishColor(); this.setParameters(), this.reconstructMethods(), this.setup(), this.bindEvent(), this.render()
+    },
+    setFishColor: function () {
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+      if (isDark) {
+        this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
+      } else {
+        this.FISH_COLOR = '' || '#42b983';
+      }
+    },
+    setParameters: function () {
+      this.$window = $(window), this.$container = $("#j-fish-skip"), this.$canvas = $("<canvas />"), this.context = this.$canvas.appendTo(this.$container).get(0).getContext("2d"), this.points = [], this.fishes = [], this.watchIds = []
+    },
+    createSurfacePoints: function () {
+      var t = Math.round(this.width / this.POINT_INTERVAL);
+      this.pointInterval = this.width / (t - 1), this.points.push(new SURFACE_POINT(this, 0));
+      for (var i = 1; i < t; i++) {
+        var e = new SURFACE_POINT(this, i * this.pointInterval),
+          h = this.points[i - 1];
+        e.setPreviousPoint(h), h.setNextPoint(e), this.points.push(e)
+      }
+    },
+    reconstructMethods: function () {
+      this.watchWindowSize = this.watchWindowSize.bind(this), this.jdugeToStopResize = this.jdugeToStopResize.bind(this), this.startEpicenter = this.startEpicenter.bind(this), this.moveEpicenter = this.moveEpicenter.bind(this), this.reverseVertical = this.reverseVertical.bind(this), this.render = this.render.bind(this)
+    },
+    setup: function () {
+      this.points.length = 0, this.fishes.length = 0, this.watchIds.length = 0, this.intervalCount = this.MAX_INTERVAL_COUNT, this.width = this.$container.width(), this.height = this.$container.height(), this.fishCount = this.FISH_COUNT * this.width / 500 * this.height / 500, this.$canvas.attr({
+        width: this.width,
+        height: this.height
+      }), this.reverse = !1, this.fishes.push(new FISH(this)), this.createSurfacePoints()
+    },
+    watchWindowSize: function () {
+      this.clearTimer(), this.tmpWidth = this.$window.width(), this.tmpHeight = this.$window.height(), this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL))
+    },
+    clearTimer: function () {
+      for (; this.watchIds.length > 0;) clearTimeout(this.watchIds.pop())
+    },
+    jdugeToStopResize: function () {
+      var t = this.$window.width(),
+        i = this.$window.height(),
+        e = t == this.tmpWidth && i == this.tmpHeight;
+      this.tmpWidth = t, this.tmpHeight = i, e && this.setup()
+    },
+    bindEvent: function () {
+      this.$window.on("resize", this.watchWindowSize), this.$container.on("mouseenter", this.startEpicenter), this.$container.on("mousemove", this.moveEpicenter)
+    },
+    getAxis: function (t) {
+      var i = this.$container.offset();
+      return {
+        x: t.clientX - i.left + this.$window.scrollLeft(),
+        y: t.clientY - i.top + this.$window.scrollTop()
+      }
+    },
+    startEpicenter: function (t) {
+      this.axis = this.getAxis(t)
+    },
+    moveEpicenter: function (t) {
+      var i = this.getAxis(t);
+      this.axis || (this.axis = i), this.generateEpicenter(i.x, i.y, i.y - this.axis.y), this.axis = i
+    },
+    generateEpicenter: function (t, i, e) {
+      if (!(i < this.height / 2 - this.THRESHOLD || i > this.height / 2 + this.THRESHOLD)) {
+        var h = Math.round(t / this.pointInterval);
+        h < 0 || h >= this.points.length || this.points[h].interfere(i, e)
+      }
+    },
+    reverseVertical: function () {
+      this.reverse = !this.reverse;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].reverseVertical()
+    },
+    controlStatus: function () {
+      for (var t = 0, i = this.points.length; t < i; t++) this.points[t].updateSelf();
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].updateNeighbors();
+      this.fishes.length < this.fishCount && 0 == --this.intervalCount && (this.intervalCount = this.MAX_INTERVAL_COUNT, this.fishes.push(new FISH(this)))
+    },
+    render: function () {
+      requestAnimationFrame(this.render), this.controlStatus(), this.context.clearRect(0, 0, this.width, this.height), this.context.fillStyle = this.FISH_COLOR;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].render(this.context);
+      this.context.save(), this.context.globalCompositeOperation = "xor", this.context.beginPath(), this.context.moveTo(0, this.reverse ? 0 : this.height);
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].render(this.context);
+      this.context.lineTo(this.width, this.reverse ? 0 : this.height), this.context.closePath(), this.context.fill(), this.context.restore()
+    }
+  },
+  SURFACE_POINT = function (t, i) {
+    this.renderer = t, this.x = i, this.init()
+  };
+  SURFACE_POINT.prototype = {
+    SPRING_CONSTANT: .03,
+    SPRING_FRICTION: .9,
+    WAVE_SPREAD: .3,
+    ACCELARATION_RATE: .01,
+    init: function () {
+      this.initHeight = this.renderer.height * this.renderer.INIT_HEIGHT_RATE, this.height = this.initHeight, this.fy = 0, this.force = {
+        previous: 0,
+        next: 0
+      }
+    },
+    setPreviousPoint: function (t) {
+      this.previous = t
+    },
+    setNextPoint: function (t) {
+      this.next = t
+    },
+    interfere: function (t, i) {
+      this.fy = this.renderer.height * this.ACCELARATION_RATE * (this.renderer.height - this.height - t >= 0 ? -1 : 1) * Math.abs(i)
+    },
+    updateSelf: function () {
+      this.fy += this.SPRING_CONSTANT * (this.initHeight - this.height), this.fy *= this.SPRING_FRICTION, this.height += this.fy
+    },
+    updateNeighbors: function () {
+      this.previous && (this.force.previous = this.WAVE_SPREAD * (this.height - this.previous.height)), this.next && (this.force.next = this.WAVE_SPREAD * (this.height - this.next.height))
+    },
+    render: function (t) {
+      this.previous && (this.previous.height += this.force.previous, this.previous.fy += this.force.previous), this.next && (this.next.height += this.force.next, this.next.fy += this.force.next), t.lineTo(this.x, this.renderer.height - this.height)
+    }
+  };
+  var FISH = function (t) {
+    this.renderer = t, this.init()
+  };
+  FISH.prototype = {
+    GRAVITY: .4,
+    init: function () {
+      this.direction = Math.random() < .5, this.x = this.direction ? this.renderer.width + this.renderer.THRESHOLD : -this.renderer.THRESHOLD, this.previousY = this.y, this.vx = this.getRandomValue(4, 10) * (this.direction ? -1 : 1), this.renderer.reverse ? (this.y = this.getRandomValue(1 * this.renderer.height / 10, 4 * this.renderer.height / 10), this.vy = this.getRandomValue(2, 5), this.ay = this.getRandomValue(.05, .2)) : (this.y = this.getRandomValue(6 * this.renderer.height / 10, 9 * this.renderer.height / 10), this.vy = this.getRandomValue(-5, -2), this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1, this.theta = 0, this.phi = 0
+    },
+    getRandomValue: function (t, i) {
+      return t + (i - t) * Math.random()
+    },
+    reverseVertical: function () {
+      this.isOut = !this.isOut, this.ay *= -1
+    },
+    controlStatus: function (t) {
+      this.previousY = this.y, this.x += this.vx, this.y += this.vy, this.vy += this.ay, this.renderer.reverse ? this.y > this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy -= this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(.05, .2)), this.isOut = !1) : this.y < this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy += this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1), this.isOut || (this.theta += Math.PI / 20, this.theta %= 2 * Math.PI, this.phi += Math.PI / 30, this.phi %= 2 * Math.PI), this.renderer.generateEpicenter(this.x + (this.direction ? -1 : 1) * this.renderer.THRESHOLD, this.y, this.y - this.previousY), (this.vx > 0 && this.x > this.renderer.width + this.renderer.THRESHOLD || this.vx < 0 && this.x < -this.renderer.THRESHOLD) && this.init()
+    },
+    render: function (t) {
+      t.save(), t.translate(this.x, this.y), t.rotate(Math.PI + Math.atan2(this.vy, this.vx)), t.scale(1, this.direction ? 1 : -1), t.beginPath(), t.moveTo(-30, 0), t.bezierCurveTo(-20, 15, 15, 10, 40, 0), t.bezierCurveTo(15, -10, -20, -15, -30, 0), t.fill(), t.save(), t.translate(40, 0), t.scale(.9 + .2 * Math.sin(this.theta), 1), t.beginPath(), t.moveTo(0, 0), t.quadraticCurveTo(5, 10, 20, 8), t.quadraticCurveTo(12, 5, 10, 0), t.quadraticCurveTo(12, -5, 20, -8), t.quadraticCurveTo(5, -10, 0, 0), t.fill(), t.restore(), t.save(), t.translate(-3, 0), t.rotate((Math.PI / 3 + Math.PI / 10 * Math.sin(this.phi)) * (this.renderer.reverse ? -1 : 1)), t.beginPath(), this.renderer.reverse ? (t.moveTo(5, 0), t.bezierCurveTo(10, 10, 10, 30, 0, 40), t.bezierCurveTo(-12, 25, -8, 10, 0, 0)) : (t.moveTo(-5, 0), t.bezierCurveTo(-10, -10, -10, -30, 0, -40), t.bezierCurveTo(12, -25, 8, -10, 0, 0)), t.closePath(), t.fill(), t.restore(), t.restore(), this.controlStatus(t)
+    }
+  }, $(function () {
+    RENDERER.init()
+    $('.dark').click(function () {
+      setTimeout(() => {
+        RENDERER.setFishColor();
+        RENDERER.context.fill();
+      });
+    })
+  });
+</script>
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+              
+                <a href="mailto:davischeng@outlook.com" class="social">
+                  
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="https://davischeng.github.io" class="social">
+                  
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=32322788" class="social">
+                  
+                    <i class="fab fa-qq" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2022 <a href="https://davischeng.github.io/">子先居</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://davischeng.github.io/">TheLane</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6e4ef944392f7626176047877621a9f1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+
+    <script src="/js/utils/index.js"></script>
+    <script src="/js/app.js"></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+    content = '.post-detail',//文章容器
+    idArr = {};  //标题数组以确定是否增加索引id
+  //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    activeLinkClass: 'is-active-link',
+    // onClick: function (e) {},
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      tocbot.init(option);
+      mobileTocClick();
+    });
+
+  }
+
+  window.tocScrollFn = function () {
+    return bamboo.throttle(function () {
+      findHeadPosition();
+    }, 100)()
+  }
+  window.addEventListener('scroll', tocScrollFn);
+
+  const findHeadPosition = function (top) {
+    if ($('.toc-list').length <= 0) {
+      return false;
+    }
+    setTimeout(() => {  // or DOMContentLoaded 
+      autoScrollToc();
+    }, 0);
+  }
+
+  const autoScrollToc = function () {
+    const $activeItem = document.querySelector('.is-active-link');
+    const $cardToc = document.querySelector('.toc-content');
+    const activePosition = $activeItem.getBoundingClientRect().top
+    const sidebarScrollTop = $cardToc.scrollTop
+    if (activePosition > (document.documentElement.clientHeight - 100)) {
+      $cardToc.scrollTop = sidebarScrollTop + 150
+    }
+    if (activePosition < 100) {
+      $cardToc.scrollTop = sidebarScrollTop - 150
+    }
+  }
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+      mobileTocClick();
+    }
+  });
+  
+  // 手机端toc按钮点击出现目录
+  const mobileTocClick = function () {
+    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
+    let right = '45px';
+    if (window.innerWidth >= 551 && window.innerWidth <= 992) {
+      right = '100px'
+    }
+    const mobileToc = {
+      open: () => {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+      },
+
+      close: () => {
+        $cardTocLayout.style.animation = 'toc-close .2s'
+        setTimeout(() => {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+        }, 100)
+      }
+    }
+    document.getElementById('toc-mobile-btn').addEventListener('click', () => {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open()
+      else mobileToc.close()
+    })
+
+    $cardToc.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) { // 小于992px的时候
+        mobileToc.close()
+      }
+    })
+  }
+</script>
+
+<style>
+  .is-position-fixed {
+    position: sticky !important;
+    top: 74px;
+  }
+
+  .toc-main ul {
+    counter-reset: show-list;
+  }
+
+  .toc-main ul li::before {
+    content: counter(item)".";
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
+</style> 
+
+<!-- 设置导航背景 -->
+<script>
+  let setHeaderClass = () => {
+    const headerMenuTransparent = true;
+    if (!headerMenuTransparent) { return; }
+    const nav = $('#navHeader');
+    const navTop = nav.outerHeight();
+    const winTop = $(window).scrollTop();
+    if(winTop > navTop) {
+      nav.addClass('header-bg-color');
+    }
+    else {
+      nav.removeClass('header-bg-color');
+    }
+  };
+
+  let scrollCollect = () => {
+    return bamboo.throttle(function (e) {
+      setHeaderClass();
+    }, 200)()
+  }
+
+  let initHeaderBg = () => {
+    setHeaderClass();
+  }
+
+  setHeaderClass();
+  window.addEventListener('scroll', scrollCollect);
+
+  document.addEventListener('pjax:send', function () {
+    window.removeEventListener('scroll', scrollCollect)
+  })
+  document.addEventListener('pjax:complete', function () {
+    window.addEventListener('scroll', scrollCollect);
+    setHeaderClass();
+  })
+</script> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://unpkg.com/v-plugs-ayu/lib/ayu.css">
+  <script src="https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+          }
+        })
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+  
+
+<!-- 图片懒加载 -->
+<script defer src="https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+<!-- 卡片滚动动画 -->
+   
+
+<!-- 评论所需js -->
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+  
+    <script src="/js/cursor/text.js"></script>
+  
+
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+</html>
