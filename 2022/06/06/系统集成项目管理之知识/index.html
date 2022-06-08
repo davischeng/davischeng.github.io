@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZV5YXT231"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-5ZV5YXT231');
+</script>
+
+
+  <title>系统集成项目管理之知识 | 子先居</title>
+
+  <link rel="icon" type="image/png" href="/medias/img/favicon.png">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  
+    
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  
+
+  
+    
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+
+  
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">加载中...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+  function loadScript(src, cb) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+
+  //https://github.com/filamentgroup/loadCSS
+  var loadCSS = function (href, before, media, attributes) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  };
+
+</script> 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+<script type="text/javascript">
+  Vue.use(window.VueAwesomeSwiper)
+</script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://unpkg.com/typed.js@2.0.11"></script>
+
+
+    <div id="safearea">
+      <main class="main" id="pjax-container">
+        <!-- 头部导航 -->
+        
+<header class="header   " 
+  id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fas fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/img/logo.png" class="lazyload placeholder" data-srcset="/medias/img/logo.png" srcset="/medias/img/fruits/103.gif" alt="logo">
+      <h3 class="drawer-box-head_title">子先居</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fas fa-angle-double-down"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-images" style="margin-top: -20px;"></i>
+                      
+                      <span>gallery</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/docs">
+                      
+                      <i class="fas fa-folder-open" style="margin-top: -20px;"></i>
+                      
+                      <span>docs</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/artitalk/">
+                      
+                      <i class="fas fa-comment-dots" style="margin-top: -20px;"></i>
+                      
+                      <span>artitalk</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/davischeng">
+              <i class="fas fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/img/logo.png" class="lazyload placeholder" data-srcset="/medias/img/logo.png" srcset="/medias/img/fruits/103.gif" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">子先居</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友情链接">
+                  
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-angle-double-down"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-images" style="margin-top: -20px;"></i>
+                      
+                      <span>gallery</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/docs">
+                      
+                      <i class="fas fa-folder-open" style="margin-top: -20px;"></i>
+                      
+                      <span>docs</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/artitalk/">
+                      
+                      <i class="fas fa-comment-dots" style="margin-top: -20px;"></i>
+                      
+                      <span>artitalk</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <span>
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
+          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+      window.addEventListener('pjax:complete', () => {
+        this.cancelDialogVisible();
+      })
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/davischeng" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+</header>
+        <!-- 内容区域 -->
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/img/cover/c29.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        系统集成项目管理之知识
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2022-06-06 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-detail-header_category">
+              知识
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 13.8k |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 47分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h2 id="一-信息化知识"><a href="#一-信息化知识" class="headerlink" title="一 信息化知识"></a>一 信息化知识</h2><h3 id="新兴技术"><a href="#新兴技术" class="headerlink" title="新兴技术"></a>新兴技术</h3><p>新一代信息技术产业包括：<br>1.<font size=5em color=blue>新技术类</font>： “互联网+”、云计算、大数据、物联网、IT 十二五规划、IPV6、5G 、两化融合。<br>2.<font size=5em color=blue>大数据</font>的 4V+1O 指的是什么？<br><font size=5em color=red>4V</font>指：Volume、Velocity、Variety、Veracity（大量、高速、多样、真实）大数据技术的战略意义不在于掌握庞大的数据信息，而在于对这些含有意义的数据进行专业化处理。在于提高对数据的“加工能力”，通过“加工”实现数据的“增值”。<br><font size=5em color=red>1O</font>指数据是在线的（Online）数据是永远在线的，是随时能调用和计算的，这是大数据区别于传统数据最大的特征。<br>3.B2B、B2C、C2C、B2M、M2C、B2A（即 B2G）、C2A（即 C2G）<font size=5em color=blue>七类电子商务模式</font>等。<br>·<font size=5em color=red>ABC</font> &#x3D; Agent、Business、Consumer。<br>ABC 模式是新型电子商务模式的一种，被誉为继阿里巴巴 B2B 模式、京东商城 B2C 模式以及淘宝 C2C 模式之后电子商务界的第四大模式。它由代理商、商家和消费者共同搭建的集生产、经营、消费为一体的电子商务平台。<br>·<font size=5em color=red>B2B</font> &#x3D; Business to Business。<br>商家（泛指企业）对商家的电子商务，即企业与企业之间通过互联网进行产品、服务及信息的交换。通俗的说法是指进行电子商务交易的供需双方都是商家（或企业、公司），他们使用 Internet 的技术或各种商务网络平台（如拓商网），完成商务交易的过程。过程包括：发布供求信息，订货及确认订货，支付过程，票据的签发、传送和接收，确定配送方案并监控配送过程等。<br>·<font size=5em color=red>B2C</font> &#x3D; Business to Customer。<br>B2C 模式是中国最早产生的电子商务模式，如今的 B2C 电子商务网站非常的多，比较大型的有天猫商城、京东商城、一号店、亚马逊、苏宁易购、国美在线等。<br>·<font size=5em color=red>C2C</font> &#x3D; Consumer to Consumer。<br>C2C 同 B2B、B2C 一样，都是电子商务的几种模式之一。不同的是 C2C 是用户对用户的模式，C2C 商务平台就是通过为买卖双方提供一个在线交易平台，使卖方可以主动提供商品上网拍卖，而买方可以自行选择商品进行竞价。<br>·<font size=5em color=red>B2M</font> &#x3D; Business to Manager。<br>B2M 是相对于 B2B、B2C、C2C 的电子商务模式而言，是一种全新的电子商务模式。而这种电子商务相对于以上三种有着本质的不同，其根本的区别在于目标客户群的性质不同，前三者的目标客户群都是作为一种消费者的身份出现，而 B2M 所针对的客户群是该企业或者该产品的销售者或者为其工作者，而不是最终消费者。<br>·<font size=5em color=red>M2C</font> 是针对于 B2M 的电子商务模式而出现的延伸概念。B2M 环节中，企业通过网络平台发布该企业的产品或者服务，职业经理人通过网络获取该企业的产品或者服务信息，并且为该企业提供产品销售或者提供企业服务，企业通过经理人的服务达到销售产品或者获得服务的目的。<br>·<font size=5em color=red>B2A（B2G）</font> &#x3D; Business to Government。<br>B2G 模式是企业与政府管理部门之间的电子商务，如政府采购，海关报税的平台，国税局和地税局报税的平台等。<br>·<font size=5em color=red>C2A（C2G）</font> &#x3D; Consumer to Administration。<br>消费者对行政机构的电子商务，指的是政府对个人的电子商务活动。这类的电子商务活动目前还没有真正形成。然而，在个别发达国家，如在澳大利亚，政府的税务机构已经通过指定私营税务，或财务会计事务所用电子方式来为个人报税。这类活动虽然还没有达到真正的报税电子化，但是，它已经具备了消费者对行政机构电子商务的雏形。<br>·<font size=5em color=red>O2O </font>&#x3D; Online to Offline。<br>O2O 是新兴起的一种电子商务新商业模式，即将线下商务的机会与互联网结合在了一起，让互联网成为线下交易的前台。这样线下服务就可以用线上来揽客，消费者可以用线上来筛选服务，还有成交可以在线结算，很快达到规模。特点是：推广效果可查，每笔交易可跟踪。如美乐乐的 O2O 模式为例，其通过搜索引擎和社交平台建立海量网站入口，将在网络的一批家居网购消费者吸引到美乐乐家居网，进而引流到当地的美乐乐体验馆。线下体验馆则承担产品展示与体验以及部分的售后服务功能。<br>4.<font size=5em color=blue>EAI</font>：企业应用集成，它涵盖了 ERP、CRM、SCM、OA、……<br>EAI（Enterprise Application Integration，企业应用集成）是将基于各种不同平台、用不同方案建立的异构应用集成的一种方法和技术。EAI 通过建立底层结构，来联系横贯整个企业的异构系统、应用、数据源等，实现企业内部的 ERP、CRM、SCM、数据库、数据仓库，以及其他重要的内部系统之间无缝地共享和交换数据。有了 EAI，企业就可以将企业核心应用和新的 Internet解决方案结合在一起。<br>5.<font size=5em color=blue>请指出“两网、一站、四库、十二金”的构成</font>？<br>1）“两网”指政务内网和政务外网；<br>2）“一站”指政府门户网站；<br>3）“四库”即建立人口、法人单位、空间地理和自然资源、宏观经济等四个基础数据库；<br>4）“十二金”可分为三类，第一类，办公业务资源系统、宏观经济管理系统；第二类，金税、<br>金关、金财、金融监管（含金卡）、金审；第三类，金盾、社会保障、金农、金水、金质。</p>
+<table>
+<thead>
+<tr>
+<th align="center">应用</th>
+<th align="center">主体</th>
+<th align="center">名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">公众访问层</td>
+<td align="center">政府门户网站</td>
+<td align="center">“一站”</td>
+</tr>
+<tr>
+<td align="center">数据资源层</td>
+<td align="center">人口基础信息库、法人单位基础信息库、资源地理基础信息库、宏观经济信息库</td>
+<td align="center">“四库”</td>
+</tr>
+<tr>
+<td align="center">应用系统层</td>
+<td align="center">宏观经济管理、办公业务资源、金税、金关、金盾、金审、金融监管(含金卡)、金财、金保、金农、金水、金质</td>
+<td align="center">“十二金”</td>
+</tr>
+<tr>
+<td align="center">网络平台层</td>
+<td align="center">政务内网、政务外网</td>
+<td align="center">“两网”</td>
+</tr>
+</tbody></table>
+<p><img src="/img/info/onesite.jpg" class="lazyload placeholder" data-srcset="/img/info/onesite.jpg" srcset="/medias/img/fruits/103.gif" alt="一站、两网、四库、十二金"><br>十三五五回顾：下一代信息网络产业、电子核心产业、新兴软件和新型信息技术服务、互联网与云计算大数据服务、人工智能等行业，其应用横跨国民经济中的农业、工业和服务业等三大产业。</p>
+<p>根据《“十四五”规划纲要》，“十四五”期间，我国新一代信息技术产业持续向“数字产业化、产业数字化”的方向发展。一方面，培育壮大人工智能、大数据、区块链、云计算、网络安全等新兴数字产业：</p>
+<p>十四五时期中国新一代信息技术产业发展重点（数字产业化）</p>
+<h3 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>云计算</h3><p>·中加快云操作系统迭代升级，推动超大规模分布式存储、弹性计算、数据虚拟隔离等技术创新；<br>·以混合云为重点培育云服务产业</p>
+<h3 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>大数据</h3><p>·推动大数据采集、清洗、存储、挖掘、分析、可视化算法等技术创新<br>·培育数据采集、标注、存储、传输、管理、应用等全生命周期产业体系</p>
+<h3 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>物联网</h3><p>·推动传感器、网络切片、高精度定位等技术创新<br>·协同发展云服务与边缘计算服务<br>·培育车联网、医疗物联网、家居物联网产业</p>
+<h3 id="工业互联网"><a href="#工业互联网" class="headerlink" title="工业互联网"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>工业互联网</h3><p>·打造自主可控的标识解析体系、标准体系、安全管理体系<br>·推进“工业互联网＋智能制造”产业生态建设</p>
+<h3 id="区块链"><a href="#区块链" class="headerlink" title="区块链"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>区块链</h3><p>·推动智能合约、共识算法、加密算法、分布式系统等技术创新<br>·重点发展区块链服务平台和金融科技、供应链管理、政务服务等领域应用方案</p>
+<h3 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>人工智能</h3><p>·建设重点行业人工智能数据集，发展算法推理训练场景<br>·推进智能医疗装备、智能运载工具、智能识别系统等智能产品设计与制造<br>·推动通用化和行业性人工智能开放平台建设</p>
+<h3 id="VR、AR"><a href="#VR、AR" class="headerlink" title="VR、AR"></a><i class="fa-solid fa-angles-right fa-spin" style="--fa-animation-duration: 30s; --fa-animation-iteration-count: 1;"></i>VR、AR</h3><p>·推动三维图形生成、动态环境建模、实时动作捕捉、快速渲染处理等技术创新<br>·发展虚拟现实整机、感知交互、内容采集制作等设备、软件、行业解决方案</p>
+<table>
+<thead>
+<tr>
+<th align="center">大类</th>
+<th align="center">小类</th>
+<th align="left">2025年发展目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">集成电路及专用装备</td>
+<td align="center">制造装备</td>
+<td align="left">20-14nm工艺发备，国产设备占30%</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">光刻机</td>
+<td align="left">浸没式光刻机</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">封装设备</td>
+<td align="left">封装设备及材料国产化</td>
+</tr>
+<tr>
+<td align="center">信息通信设备</td>
+<td align="center">无线移动通信</td>
+<td align="left">国产移动通信系统设备、移动终端、移动终端芯片的国内市场占有率预计分无线移动通信别达到80%、80%和40%；国际市场占有率预计分别达到40%、45%和20%。</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">新一代网络化</td>
+<td align="left">国产光通信设备国际市场份额预计达60%，光通信设备关键元器件实现国产突破；国产路由器与交换机产业进人国际第一阵营，国际市场占有率预计达25%，</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">高性能计算机与服务器</td>
+<td align="left">国产高性能计算机与服务器国际市场占有率预计达40%、国内市场占有率预高性能计算机与计超80%。其中，国产高端服务器国内市场占有率预计超50%；采用国产服务器CPU的品牌服务器国内市场占有率预计达30%以上。</td>
+</tr>
+<tr>
+<td align="center">操作系统 与工业软件</td>
+<td align="center"></td>
+<td align="left">自主工业软件市场占有率超过50%；“豆联网+”智慧工业云在重点行业的应操作系统与工业软件&#x2F;用普及率超过60%。</td>
+</tr>
+<tr>
+<td align="center">智能制造核心信息设备</td>
+<td align="center"></td>
+<td align="left">国产智能制造核心信息设备在国内市场占据主导地位，国内市场的占有率达智能制造核心信息设备到60%。</td>
+</tr>
+</tbody></table>
+<h3 id="J2EE"><a href="#J2EE" class="headerlink" title="J2EE"></a>J2EE</h3><p>6.<font size=5em color=blue>J2EE</font> 中 JNDI、Servlet、JSP、EJB、JDBC 的功能<br><font size=5em color=blue>JNDI</font>：Java 命名和目录服务，提供了统一、无缝的标准化名字服务。<br><font size=5em color=blue>Servlet</font>：Java Servlet 是运行在服务器上的一个小程序，用以提供以构件为基础、独立于平台的 Web 应用。<br><font size=5em color=blue>JSP</font>：Java Servlet 的一种扩展，使创建静态模板和动态内容相结合的 HTML 和 XML 页面更加容易。<br><font size=5em color=blue>EJB</font>：实现应用中关键的业务逻辑，创建基于构件的企业级应用程序。EJB 在应用服务器的EJB 容器内运行，由容器提供所有基本的中间层服务，如事务管理、安全、远程客户连接、生命周期管理和数据库连接缓冲等。<br><font size=5em color=blue>JDBC</font>：Java 数据库连接技术，提供访问数据库的标准接口。<br>7.<font size=5em color=blue>J2EE</font> 的 4 层体系架构：客户层&#x2F;表示层&#x2F;业务逻辑层&#x2F;数据层。<br>其中，EJB 实现应用中关键的业务逻辑，创建基于构件的企业级应用程序。<br>·<font size=5em color=red>客户端层</font>：负责与用户直接交互，J2EE支持多种客户端，所以客户端既可以是WEB浏览器，也可以是专用的Java客户端。<br>·<font size=5em color=red>服务器端组件层</font>：本层是为了基于WEB的应用服务的，利用J2EE中的JSP与Java Servlet技术，可以响应客户端的请求，并向后访问封装有商业逻辑的组件。<br>·<font size=5em color=red>EJB层</font>：本层主要封装了商务逻辑，完全企业计算机，提供了事务处理，负载均衡、安全、资源连接等各种基本服务，程序在编写EJB时可以不关心这些基本的服务，集中注意力于商务逻辑的实现。<br>·<font size=5em color=red>企业信息系统层</font>：企业信息系统层包括了企业的现有系统（包括数据库系统、文件系统），J2EE提供了多种技术以访问这些系统，如JDBC访问DBMS。<br>在J2EE规范中，J2EE平台包括有一整套的服务、应用编程接口和协议，可用于开发一般的多层应用和基于WEB的多层应用，是J2EE的核心和基础。它还提供了EJB、Java Servlets API、JSP和XML技术的全面支持等。</p>
+<h3 id="网络术语"><a href="#网络术语" class="headerlink" title="网络术语"></a>网络术语</h3><p>8.<font size=5em color=blue>网络设计方案</font>中如果没有相应的数据存储备份解决方案，就不算是完整的网络系统方案。<br>（双机热备份，磁盘阵列，磁盘镜像，数据库软件的自动复制）功能。<br>9.<font size=5em color=blue>IEEE802.3 是什么标准</font>? 802、3U? 802、3z&#x2F;802、3ab? FDDI?ATM?<br>IEEE802.3,以太网标准<br>IEEE802、3u，快速以太网标准；<br>IEEE802、3z&#x2F;IEEE802、3ab，千兆以太网标准；<br>FDDI，光纤分布数据接口告诉网络标准；<br>ATM，异步传输模式。<br>10.<font size=5em color=blue>风险分析和评估包含的管理要素有</font>：<br>资产识别和分析、<br>威胁识别和分析、<br>脆弱性识别和分析、<br>风险分析和评估要求。<br>11.<font size=5em color=blue>请简述 DAS、NAS、SAN 的定义</font>。<br><font size=5em color=red>DAS</font>，直接附属存储，表示一个或数个服务器物理连接到外部 RAID 的非共享端口上。这些端口可以使用任何标准，每个端口只能由一个服务器来访问；<br><font size=5em color=red>NAS</font>，Network Attached Storage，网络附加存储，是一种将分布、独立的数据整合为大型、集中化管理的数据中心，以便于对不同主机和应用服务器进行访问的技术；<br><font size=5em color=red>SAN</font>，Storage Area Network，存储局域网，指在网络服务器群的后端，采用光纤通道等存储专用协议连接成的告诉专用网络，使网络服务器与多种存储设备直接连接。最大特点是可以实现网络服务器与存储设备之间的多对多连接，而且是本地的告诉连接。<br>12.<font size=5em color=blue>IPv6 地址类型</font>：单播地址、组播地址、任意播地址、特殊地址（不包括广播地址）。<br><font size=5em color=red>单播地址</font><br>IPv6单播地址与IPv4单播地址一样，都只标识了一个接口。为了适应负载平衡系统，RFC3513允许多个接口使用同一个地址，只要这些接口作为主机上实现的IPv6的单个接口出现。单播地址包括四个类型：全局单播地址、本地单播地址、兼容性地址、特殊地址。<br>一、全局单播地址：等同于IPv4中的公网地址，可以在IPv6 Internet上进行全局路由和访问。这种地址类型允许路由前缀的聚合，从而限制了全球路由表项的数量。<br>二、本地单播地址：<br>链路本地地址和唯一本地地址都属于本地单播地址，在IPv6中，本地单播地址就是指本地网络使用的单播地址，也就是IPV4地址中局域网专用地址。每个接口上至少要有一个链路本地单播地址，另外还可分配任何类型（单播、任播和组播）或范围的IPv6地址。<br>(1)链路本地地址（FE80::&#x2F;10）：仅用于单个链路（链路层不能跨VLAN），不能在不同子网中路由。结点使用链路本地地址与同一个链路上的相邻结点进行通信。例如，在没有路由器的单链路IPv6网络上，主机使用链路本地地址与该链路上的其他主机进行通信。<br>(2)唯一本地地址（FC00::&#x2F;7）：唯一本地地址是本地全局的，它应用于本地通信，但不通过Internet路由，将其范围限制为组织的边界。<br>(3)站点本地地址（FEC0::&#x2F;10，新标准中已被唯一本地地址代替）<br>三、兼容性地址：在IPv6的转换机制中还包括了一种通过IPv4路由接口以隧道方式动态传递IPv6包的技术。这样的IPv6结点会被分配一个在低32位中带有全球IPv4单播地址的IPv6全局单播地址。另有一种嵌入IPv4的IPv6地址，用于局域网内部，这类地址用于把IPv4结点当作IPv6结点。此外，还有一种称为“6to4”的IPv6地址，用于在两个通过Internet同时运行IPv4和IPv6的结点之间进行通信。<br>四、特殊地址：包括未指定地址和环回地址。未指定地址（0:0:0:0:0:0:0:0或::）仅用于表示某个地址不存在。它等价于IPv4未指定地址0.0.0.0。未指定地址通常被用做尝试验证暂定地址唯一性数据包的源地址，并且永远不会指派给某个接口或被用做目标地址。环回地址（0:0:0:0:0:0:0:1或::1）用于标识环回接口，允许节点将数据包发送给自己。它等价于IPv4环回地址127.0.0.1。发送到环回地址的数据包永远不会发送给某个链接，也永远不会通过IPv6路由器转发   。<br><font size=5em color=red>组播地址</font><br>IPv6组播地址可识别多个接口，对应于一组接口的地址（通常分属不同节点）。发送到组播地址的数据包被送到由该地址标识的每个接口。使用适当的组播路由拓扑，将向组播地址发送的数据包发送给该地址识别的所有接口。任意位置的IPv6节点可以侦听任意IPv6组播地址上的组播通信。IPv6节点可以同时侦听多个组播地址，也可以随时加入或离开组播组。<br>IPv6组播地址的最明显特征就是最高的8位固定为1111 1111。IPv6地址很容易区分组播地址，因为它总是以FF开始的  。</p>
+<p><font size=5em color=red>任播地址</font><br>一个IPv6任播地址与组播地址一样也可以识别多个接口，对应一组接口的地址。大多数情况下，这些接口属于不同的节点。但是，与组播地址不同的是，发送到任播地址的数据包被送到由该地址标识的其中一个接口。<br>通过合适的路由拓扑，目的地址为任播地址的数据包将被发送到单个接口（该地址识别的最近接口，最近接口定义的根据是因为路由距离最近），而组播地址用于一对多通信，发送到多个接口。一个任播地址必须不能用作IPv6数据包的源地址；也不能分配给IPv6主机，仅可以分配给IPv6路由器 。</p>
+<p>IPv6是英文“Internet Protocol Version 6”（互联网协议第6版）的缩写，是互联网工程任务组（IETF）设计的用于替代IPv4的下一代IP协议，其地址数量号称可以为全世界的每一粒沙子编上一个地址 。<br>由于IPv4最大的问题在于网络地址资源不足，严重制约了互联网的应用和发展。IPv6的使用，不仅能解决网络地址资源数量的问题，而且也解决了多种接入设备连入互联网的障碍 。<br>互联网数字分配机构（IANA）在2016年已向国际互联网工程任务组（IETF）提出建议，要求新制定的国际互联网标准只支持IPv6，不再兼容IPv4。<br>2021年7月12日，中央网络安全和信息化委员会办公室、国家发展和改革委员会、工业和信息化部发布关于加快推进互联网协议第六版（IPv6）规模部署和应用工作的通知。<br>13.<font size=5em color=blue>在 TCP&#x2F;IP 网络中</font>，路由器连接到局域网的 IP 地址称为默认网关。<br>14.<font size=5em color=blue>云数据中心特点</font>：<br>资源池化，<br>高效智能，<br>面向服务，<br>按需供给，<br>绿色低碳。</p>
+<h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p>15.<font size=5em color=blue>招标人根据招标项目的</font>具体情况，组织部分投标人单独踏勘项目现场属于招标人与投标人串通投标。<br>16.<font size=5em color=blue>在进度控制中</font>可利用比较横道图显示进度执行绩效．它既包含进度基准也包含进度实际执行状态。<br>17.<font size=5em color=blue>根据立项批复</font>，某大型信息系统项目需求清晰，各阶段的任务和文档明确，关键性能指标的设计方案需要试验加以确定，该系统的开发方法适合采用结构化方法与原型法的组合应用。<br>18.<font size=5em color=blue>根据《软件可靠性和可维护性管理 CB&#x2F;T l40942OO8》</font>在项目需求分析阶段应选定确保软件可靠性和可维护性所依据的规范和准则。<br>19.<font size=5em color=blue>在软件开发项目中</font>、负责对配置管理工作进行捡查和审计的角色是 QA 人员。<br>20.<font size=5em color=blue>加密是电子商务安全技术中</font>的关键手段，其中单钥加密体制的加密密钥和解密密钥相同。<br>21.<font size=5em color=blue>软件产品的成熟性</font>是指软件产品为避免由软件中故障而导致失效的能力。<br>22.<font size=5em color=blue>冲突是不可避免</font>的，为了处理团队中的冲突，项目经理应该认识到冲突和冲突管理过程具有的特征：<br>冲突是正常的；<br>冲突是个团队问题，而不是某人的个人问题，开诚布公有利于解决冲突；<br>解决冲突应对事不对人；<br>解决冲突应着眼于现在而非过去。<br><font size=5em color=blue>冲突管理的 6 种方法</font>:<br>（1）问题解决。<br>（2）合作。<br>（3）强制。<br>（4）妥协。<br>（5）撤退。<br>（6）求同存异。<br>23.<font size=5em color=blue>领导权变理论</font>的基本观点：只有结合具体情景，因时、因地、因事、因人制宜的领导方式，才是有效的领导方式。<br>24.<font size=5em color=blue>项目进度控制的工具</font>：进度报告；进度变更控制系统；偏差分析；进度比较横道图；资源平衡；假设条件情景分析：进度压缩；进度计划编制工具等。<br>25.<font size=5em color=blue>监理的工作内容</font>：<br>四控：质量控制、进度控制、投资控制、变更控制。<br>三管：合同管理、信息管理、安全管理 。一协调：协调有关单位及人员的工作关系<br>26.<font size=5em color=blue>电子政务网络由</font>：<br>政务内网和政务外网组成， 两网之间物理隔离，外网与互联网之间逻辑隔离。<br>政务内网：主要是副省级以上政务部门的办公网，与副省级以下政务部门的办公网物理隔离<br>政务外网：是政府的业务专网，主要运行政务部门面向社会的专业性服务业务和不需要再内网上运行的业务。<br>27.<font size=5em color=blue>企业信息化的结构</font>：<br>1、产品（服务）层<br>2、作业层<br>3、管理层<br>4、决策层<br>28.<font size=5em color=blue>商业智能的定义</font>：<br>商业智能采用三个技术：数据仓库、 联机分析处理（OLAP）、数据挖掘<br>商业智能通常被理解为将组织中现有的数据转化为知识，帮助组织作出明智的业务经营决策<br>商业智能的实现有三个层次：数据报表、多维数据分析、数据挖掘<br>商业智能实现的三个层次之间的关系：数据分析和数据挖掘并不是取代数据报表，报表系统依然有其不可取代的优势。<br>29.<font size=5em color=blue>信息系统的生命周期</font><br>分为 4 个阶段：立项、开发、运维、消亡 。<br>消亡阶段的含义：系统更新改造、功能扩展、报废重建<br>30.<font size=5em color=blue>结构化方法</font>的特点：把整个系统的开发过程分为若干阶段，然后一步一步第依次进行，前一阶段是后一阶段的工作依据</p>
+<h3 id="法律法规"><a href="#法律法规" class="headerlink" title="法律法规"></a>法律法规</h3><p><font size=5em color=blue>招投标法</font>：招投标法第19条、21条、50条<br><font size=5em color=red>第十九条</font> 招标人应当根据招标项目的特点和需要编制招标文件。招标文件应当包括招标项目的技术 要求、对投标人资格审查的标准、投 标报价要求和评标标准等所有实质性要求和条件以及拟签订合同的主要条款。<br>国家对招标项目的技术、标准有规定的，招标人应当按照其规定在招标文件中提出相应要求。<br>招标项目需要划分标段、确定工期的，招标人应当合理划分标段、确定工期，并在招标文件中载明。<br><font size=5em color=red>第二十一条</font>招标人根据招标项目的具体情况，可以组织潜在投标人踏勘项目现场。<br><font size=5em color=red>第五十条</font> 招标代理机构违反本法规定，泄露应当保密的与招标投标活动有关的情况和资料的，或者与 招标人、投标人串通损害国家利益、社会公共利益或者他人合法权益的，处五万元以上二十五万元以下的罚款，对单位直接负责的主管人员和其他直接责任人员处单位罚款数额百分之五以上百分之十以下的罚款； 有违法所得的，并处没收违法所得；情节严重的，暂停直至取消招标代理资格；构成犯罪的，依法追究刑 事责任。给他人造成损失的，依法承担赔偿责任。<br>前款所列行为影响中标结果的，中标无效。</p>
+<p><font size=5em color=blue>著作权法</font>：著作权法第 22 条<br><font size=5em color=red>第二十二条</font> 在下列情况下使用作品，可以不经著作权人许可，不向其支付报酬，但应当指明作者姓名、 作品名称，并且不得侵犯著作权人依照本法享有的其他权利：<br>（一）为个人学习、研究或者欣赏，使用他人已经发表的作品；<br>（二）为介绍、评论某一作品或者说明某一问题，在作品中适当引用他人已经发表的作品；<br>（三）为报道时事新闻，在报纸、期刊、广播电台、电视台等媒体中不可避免地再现或者引用已经发 表的作品；（四）报纸、期刊、广播电台、电视台等媒体刊登或者播放其他报纸、期刊、广播电台、电视台等媒 体已经发表的关于政治、经济、宗教问题的时事性文章，但作者声明不许刊登、播放的除外；<br>（五）报纸、期刊、广播电台、电视台等媒体刊登或者播放在公众集会上发表的讲话，但作者声明不许刊登、播放的除外；<br>（六）为学校课堂教学或者科学研究，翻译或者少量复制已经发表的作品，供教学或者科研人员使用， 但不得出版发行；（七）国家机关为执行公务在合理范围内使用已经发表的作品；<br>（八）图书馆、档案馆、纪念馆、博物馆、美术馆等为陈列或者保存版本的需要，复制本馆收藏的作品；<br>（九）免费表演已经发表的作品，该表演未向公众收取费用，也未向表演者支付报酬；<br>（十）对设置或者陈列在室外公共场所的艺术作品进行临摹、绘画、摄影、录像；<br>（十一）将中国公民、法人或者其他组织已经发表的以汉语言文字创作的作品翻译成少数民族语言文 字作品在国内出版发行；<br>（十二）将已经发表的作品改成盲文出版。<br>前款规定适用于对出版者、表演者、录音录像制作者、广播电台、电视台的权利的限制。<br><font size=5em color=blue>政府采购法</font>：第26条、29条、30条、31条、32条、38条、39条、40条<br><font size=5em color=red>第二十六条</font> 政府采购采用以下方式：<br>（一）公开招标；<br>（二）邀请招标；<br>（三）竞争性谈判；<br>（四）单一来源采购；<br>（五）询价；<br>（六）国务院政府采购监督管理部门认定的其他采购方式。公开招标应作为政府采购的主要采购方式。<br><font size=5em color=red>第二十九条</font> 符合下列情形之一的货物或者服务，可以依照本法采用邀请招标方式采购：<br>（一）具有特殊性，只能从有限范围的供应商处采购的；<br>（二）采用公开招标方式的费用占政府采购项目总价值的比例过大的。<br><font size=5em color=red>第三十条</font> 符合下列情形之一的货物或者服务，可以依照本法采用竞争性谈判方式采购：<br>（一）招标后没有供应商投标或者没有合格标的或者重新招标未能成立的；<br>（二）技术复杂或者性质特殊，不能确定详细规格或者具体要求的；<br>（三）采用招标所需时间不能满足用户紧急需要的；<br>（四）不能事先计算出价格总额的。<br><font size=5em color=red>第三十一条</font> 符合下列情形之一的货物或者服务，可以依照本法采用单一来源方式采购：<br>（一）只能从唯一供应商处采购的；<br>（二）发生了不可预见的紧急情况不能从其他供应商处采购的；<br>（三）必须保证原有采购项目一致性或者服务配套的要求，需要继续从原供应商处添购，且添购资金 总额不超过原合同采购金额百分之十的。<br><font size=5em color=red>第三十二条</font> 采购的货物规格、标准统一、现货货源充足且价格变化幅度小的政府采购项目，可以依 照本法采用询价方式采购<br><font size=5em color=red>第三十八条</font> 采用竞争性谈判方式采购的，应当遵循下列程序：<br>（一）成立谈判小组。谈判小组由采购人的代表和有关专家共三人以上的单数组成，其中专家的人数 不得少于成员总数的三分之二。<br>（二）制定谈判文件。谈判文件应当明确谈判程序、谈判内容、合同草案的条款以及评定成交的标准 等事项。<br>（三）确定邀请参加谈判的供应商名单。谈判小组从符合相应资格条件的供应商名单中确定不少于三家的供应商参加谈判，并向其提供谈判文件。<br>（四）谈判。谈判小组所有成员集中与单一供应商分别进行谈判。在谈判中，谈判的任何一方不得透 露与谈判有关的其他供应商的技术资料、价格和其他信息。谈判文件有实质性变动的，谈判小组应当以书 面形式通知所有参加谈判的供应商。<br>（五）确定成交供应商。谈判结束后，谈判小组应当要求所有参加谈判的供应商在规定时间内进行最 后报价，采购人从谈判小组提出的成交候选人中根据符合采购需求、质量和服务相等且报价最低的原则确 定成交供应商，并将结果通知所有参加谈判的未成交的供应商。<br><font size=5em color=red>第三十九条</font> 采取单一来源方式采购的，采购人与供应商应当遵循本法规定的原则，在保证采购项目 质量和双方商定合理价格的基础上进行采购。<br><font size=5em color=red>第四十条</font> 采取询价方式采购的，应当遵循下列程序：<br>（一）成立询价小组。询价小组由采购人的代表和有关专家共三人以上的单数组成，其中专家的人数 不得少于成员总数的三分之二。询价小组应当对采购项目的价格构成和评定成交的标准等事项作出规定。<br>（二）确定被询价的供应商名单。询价小组根据采购需求，从符合相应资格条件的供应商名单中确定不少于三家的供应商，并向其发出询价通知书让其报价。<br>（三）询价。询价小组要求被询价的供应商一次报出不得更改的价格。<br>（四）确定成交供应商。采购人根据符合采购需求、质量和服务相等且报价最低的原则确定成交供应商，并将结果通知所有被询价的未成交的供应商。<br><font size=5em color=blue>软件维护</font>包括哪四种？请简述。<br>1）纠错性维护；<br>2）适应性维护；<br>3）完善性维护；<br>4）预防性维护。</p>
+<h3 id="GB（或-GB-x2F-T）"><a href="#GB（或-GB-x2F-T）" class="headerlink" title="GB（或 GB&#x2F;T）"></a>GB（或 GB&#x2F;T）</h3><p><font size=5em color=blue>GB（或 GB&#x2F;T）</font>——中华人民共和国国家标准。<br>强制性国家标准以 GB 开头，推荐性国家标准以 GB&#x2F;T 开头。<br>2001 年起，指南类国家标准以 GB&#x2F;Z 开头。指南类标准当然也属推荐性标准。现行有效的 33 项软件工程国家标准全部为推荐性标准。其中有 2 项标准以 GB&#x2F;Z 开头，其他 31 项标准均以 GB&#x2F;T 开头。<br><font size=5em color=blue>软件工程基础标准包括</font><br>《GB&#x2F;T 11457—1995 软件工程术语》、<br>《GB 1526—1989 信息处理数据流程图、程序流程图、系统流程图、程序网络图和系统资源图的文件编辑符号及约定》、<br>《GB&#x2F;T 14085-1993 信息处理系统 计算机系统配置图符号及约定》。<br>软件工程开发标准包括<br>    《信息技术 软件生存周期过程 GB&#x2F;T 8566—2001》、<br>  《软件支持环境 GB&#x2F;T 15853—1995》、<br>  《软件维护指南 GB&#x2F;T 14079—1993》。<br>软件工程文档标准包括<br>    《软件文档管理指南 GB&#x2F;T 16680—1996》、<br>      《计算机软件产品开发文件编制指南 GB&#x2F;T 8567—1988》、<br>      《计算机软件需求说明编制指南 GB&#x2F;T 9385—1988》。<br>软件工程管理标准包括<br>    《计算机软件配置管理计划规范 GB&#x2F;T 12505—1990》、<br>      《信息技术 软件产品评价 质量特性及其使用指南 GB&#x2F;T16260—2002》、<br>      《计算机软件质量保证计划规范 GB&#x2F;T 12504—1990》、<br>    《计算机软件可靠性和可维护性管理 GB&#x2F;T 14394—1993》。<br><font size=5em color=blue>《软件文档管理指南 GB&#x2F;T 16680—1996》</font>：<br>软件文档分为开发文档、产品文档和管理文档三 类（参见标准 7.2 节，重要），<br>哪些典型文档属于开发文档，哪些典型文档属于产品文档，哪些典型文档属于管理文档 ；<br>文档的质量等级分为四级，每一级的名称和适用范围基本的开发文档：（国标 7.2.1） 可行性研究和项目任务书；需求规格说明； 功能规格说明；设计规格说明，包括程序和数据规格说明； 开发计划； 软件集成和测试计划； 质量保证计划、标准、进度； 安全和测试信息。<br>基本的产品文档：（国标 7.2.2）<br><font size=5em color=red>培训手册</font>；<br><font size=5em color=red>参考手册和用户指南</font>；<br><font size=5em color=red>软件支持手册</font>；<br><font size=5em color=red>产品手册和信息广告</font>。<br>基本的管理文档（国标 7.2.3）<br>—— 开发过程的每个阶段的进度和进度变更的记录；<br>—— 软件变更情况的记录；<br>—— 相对于开发的判定记录；<br>—— 职责定义。<br>根据《软件文档管理指南 GB&#x2F;T 16680—1996》，文档的质量可以按文档的形式和列出的要求划分为四级。由同一单位内若干人联合开发的程序或可被其他单位使用的程序适合采用三级文档。</p>
+<p><font size=5em color=blue>沟通途径条数计算</font>首先是要记住计算公式：<br>  沟通途径条数&#x3D;（n<em>（n-1））&#x2F;2<br>n 是指的人数。比如，当项目团队有 3 个人时，沟通渠道数为 3</em>（3 -1）&#x2F;2&#x3D;3；而当项目团队有 6 个人时，沟通渠道数为 6*（6-1）&#x2F;2&#x3D;15。由于沟通是需要花费项目成本的，所以应尽量控制团队规模，避免大规模团队中常常出现的沟通不畅问题。</p>
+<p><font size=5em color=blue>赶工和快速跟进</font>是常见的进度压缩技术。<br><font size=5em color=blue>某政府部门需要改造</font>现有信息系统，目前正在开展项目立项工作。假如你负责编写《项目建议书》，其中对承建方的技术能力要求可不必写入该建议书。<br><font size=5em color=blue>范围确认</font>主要关注对可交付成果的验收，质量控制主要关注可交付成果是否正确以及是否满足质量要求。<br><font size=5em color=blue>沟通管理计划</font>：干系人的沟通需求；需要沟通的信息；发布相关信息的原因；发布所需信息的时限和沟通频率；负责沟通相关信息的人员；将要接收信息的个人或小组；传递信息的技<br>术或方法；在下层员工无法解决问题时的问题升级流程；对沟通管理计划进行更新与优化的方法；通用术语表；沟通制约因素。<br><font size=5em color=blue>掌握前导图法</font>（即单代号网络图）和箭线图法（双代号网络图），会作图、看图，会找关键路径，掌握虚路径的概念，理解术语并会计算 ES、LS、EF、LF、FF、TF，并能对网络图结合项目的工序情况进行分析。<br><font size=5em color=blue>成本超支、进度落后</font>的措施：<br>  （1）用高效人员替代低效人员；<br>  （2）防范风险的情况下并行施工成本超支、进度超前的措施<br>  （3）采取措施，控制成本<br>  （4）对于不同的任务，采取不同的成本和进度措施，必要时候调整成本基准。</p>
+<h2 id="二-项目管理"><a href="#二-项目管理" class="headerlink" title="二 项目管理"></a>二 项目管理</h2><h3 id="立项管理要点："><a href="#立项管理要点：" class="headerlink" title="立项管理要点："></a>立项管理要点：</h3><p>过程：<br>a.项目建议书，<br>b. 可行性研究（初步，详细，内容基本相同），<br>c.初步设计和投资概算，<br>d.必要的论证和评估<br>要点：<br>a.上述环节只有（详细）可行性研究不能省，<br>b. 项目建议书的内容：（技术类立项申请书）<br>（1）项目名称<br>（2）项目建设的必要性和依据<br>（3）项目目的、作用及意义<br>（4）项目的国内外技术发展概况、水平和发展趋势<br>（5）研究开发领域，主要关键技术，研究开发内容，技术方案、实验地点、规模、进度安排<br>（6）项目研究开发情况，现有工作基础和设备条件<br>（7）项目负责人、项目主要技术负责人<br>（8）项目起止日期，最终达到目标，前经济预期考核的技术经济指标<br>（9）项目经费预算、用途和用款计划<br>（10）其他</p>
+<h3 id="整体管理要点"><a href="#整体管理要点" class="headerlink" title="整体管理要点"></a>整体管理要点</h3><p>要点：<br>a.项目章程是出资人（代表，注意不是实施方）对项目实施的总体要求，为使用项目资源提供授权，标志项目的正式启动，项目章程中一般要指定项目经理或项目负责人,项目经理不能制定和发布项目章程<br>b. 项目控制的内容：<br>(1) 比较项目实际情况和项目基准（基线）的差异<br>(2) 寻找差异的原因，如果确立了超出基准的趋势，一般要采取调整措施（非正式），如果确定已经超出基准（基线），则一般要进行项目变更（正式程序），所谓范围控制，就是和范围基准比较并采取措施，进度控制就是和进度基准比较并采取措施，以此类推。（重要，中级，高级）<br>c. 基线（基准）指经过批准并且客户正式确认的计划且这里的计划指计划过程组的产物)，成本基准就是经过批准且得到客户正式确认的成本计划（即预算），范围基准就是经过批准且得到客户正式确认的范围方面的计划（包括范围管理计划、范围说明书，工作分解结构和 WBS字典，即范围管理中计划过程组的产物）, 以此类推。</p>
+<h3 id="范围管理要点"><a href="#范围管理要点" class="headerlink" title="范围管理要点"></a>范围管理要点</h3><p>要点：<br>a. 范围说明书的内容：<br>（1）项目目的<br>（2）产品范围描述<br>（3）项目的可交付物<br>（4） 项目边界<br>（5） 产 品 验 收 标 准<br>（6）项目的约束条件<br>（7）项目的假定<br>（8）更新的项目文档<br>b. 工作分解结构最底层叫工作包，分解 WBS 的方法至少有三种：<br>按生命周期阶段分解、按照子项目分解、按照交付物分解，建工作分解结构应把握的原则（8 条）即在创建工 WBS 时：应包括分包出去的工作，还要包括项目管理工作本身，WBS 的最底层的工作单元是工作包<br>c.范围确认相当于客户正式对交付物签字认可或进行评审，范围确认与质量控制不同：范围确认是有关工作结果的接收问题，质量控制是有关工作结果正确与否<br>d.范围控制的目的是避免范围蔓延，范围蔓延指不受控的变更</p>
+<h3 id="质量管理要点："><a href="#质量管理要点：" class="headerlink" title="质量管理要点："></a>质量管理要点：</h3><p>（1）项目质量管理的过程有哪一些。<br>（2）质量、质量管理及有关的术语。<br>（3）质量管理的 8 条原则和质量管理流程的 4 个环节。<br>（4）质量管理理论的基本知识，主要是 ISO9000 系列、全面质量管理、六西格玛。<br>（5）质量计划、质量策略、质量保证、质量控制的定义。<br>（6）质量控制的工具，会使用会分析，如测试、检查、统计抽样、因果图、控制图、直方图、帕累托图等。<br>过程：<br>a.质量规划<br>b. 质量保证<br>c. 质量控制<br>要点：<br>a. 质量规划指定义项目质量管理的资源，遵循的过程规范和成果的标准<br>b. 质量保证的目的是让做法符合规范,质量控制的目的是让成果达到预定的标准（如果不达到，则分析原因，找到措施）<br>c.质量保证的主要方法：是审计和过程分析，审计是质量保证的方法，是一种独立检查，管过程，不管结果 ,QA 具有独立性<br>d.质量控制主要采用：评审和测试，以及各种图形工具（因果图等）, 评审和测试是质量控制手段，不是质量保证手段<br>e.在质量控制的各种图形工具中，应掌握因果图（鱼骨图，鱼刺图），帕累托图、趋势图、直方图的应用场合和特点<br>质量管理有 8 条原则：<br>（1）以顾客为中心：<br>（2）领导作用：<br>（3）全员参与：<br>（4）过程方法：<br>（5）系统管理：<br>（6）持续改进：<br>（7）以事实为决策依据：<br>（8）互利的供方关系：<br>质量管理的流程有 4 个环节：<br>（1）确立质量标准体系；<br>（2）对项目实施进行质量监控；<br>（3）将实际与标准对照；<br>（4）纠偏纠错。<br>（1）确立质量标准体系：是进行质量管理的前提性的关键性工作。<br>（2）对项目实施进行质量：监控：收集项目实施过程中的相关信息，观察、分析实际情况以便监控。<br>（3）将实际与标准对照：进展如何，如果发生了偏差，是什么原因造成的？ 从而为客观评介项目质量状况提供依据。<br>（4）纠编纠错：根据具体情况采取合理的纠正措施，让项目实施回到正轨。<br>项目质量管理主要包括质量计划、质量保证和质量控制 3 个过程。<br>（1）质量计划<br>明确质量标准，即确定每个独特项目的相关质量标准，把质量计划到项目的产品和管理项目所涉及的过程之中。<br>确定关键因素，即理解哪个变量影响结果是质量计划的重要部分。<br>建立控制流程，即以一种能理解的、完整的形式传达为确保质量而采取的纠正措施。<br>（2）质量保证<br>质量保证是用于有计划、系统的质量活动，确保项目中的所有过程满足项目干系人的期望。质量保证是贯穿整个项目全生命周期的、有计划的、系统的活动。它经常性的针对整个项目质量计划的执行情况进行评估、检查与改进工作。质量保证包括与满足一个项目相关的质量标准有关的所有活动，它的另一个目标是不断地质量改进。<br>（3）质量控制</p>
+<p>质量管理计划编制<br>质量管理计划的主要内容有：<br>（1）编制依据；<br>（2）质量宗旨与质量目标；<br>（3）质量责任与人员分工；<br>（4）项目的各个过程及其依据的标准；<br>（5）质量控制的方法与重点；<br>（6）验收标准。<br>质量管理计划编制的工具和技术有：<br>（1）效益成本分析：收益要超过成本，如减少返工可以提高生产率、降低 成本、提高客户满意度，所以值 。<br>（2）基准比较：将实际做法或计划做法与其他项目的实践比较，产生改进思路并提出度量绩效的标准。其他项目可能是内外部或本&#x2F;其他领域。<br>（3）流程图：显示某系统相关要素之间关系的示意图，表示工艺流程或管理流程，用来揭示封闭系统的运动状况，辅助决策。<br>（4）实验设计：是一种统计方法，确定影响特定变量的因素。<br>（5）质量成本分析：质量成本是为了让产品&#x2F;服务达到质量要求所付出的全部努力的总成本，分为预防成本、评估成本、缺陷成本（内部&#x2F;外部）。<br>（6）质量功能展开：QFD （Quality Function Deployment，质量功能展开）是把顾客或市场的要求转化为设计要求、零部件特性、工艺要求、生产要求的多层次演绎分析方法。<br>（7）过程决策程序图法：PDPC（Process Decision Program Chart，过程决策程序图法）是在制定计划阶段或进行系统设计时，事先预测可能发生的障碍（不理想事态或结果），从而设计出一系列对策措施以最大的可能引向最终目标（达到理想结果）。该法可用于防止重大事故的发生，因此也称之为重大事故预测图法。<br>质量控制的工具和技术<br>质量控制的工具和技术主要有：测试、检查、统计抽样 六西格玛、因果图、流程图、直方图、检查表、散点图、排列图、控制图等。</p>
+<h3 id="进度管理："><a href="#进度管理：" class="headerlink" title="进度管理："></a>进度管理：</h3><p>要点：<br>a．掌握进度压缩的两种方法：赶工和快速跟进<br>b. 掌握前导图和箭线图两种网络图的绘制方法，关键路径的概念，最早开始、结束时间，最晚开始、结束时间，总时差和自由时差的计算方法<br>总时差&#x3D;本活动的最晚开始时间-本活动的最早开始时间，自由时差&#x3D;紧后活动的最早开始时间- 本活动的最早结束<br>有关项目进度管理需要掌握的知识有如下一些：<br>（1）项目进度管理的过程有哪一些。<br>（2）活动定义与 WBS（Work Breakdown Structure，工作分解结构）的定义，有关 WBS 的一些专业术语理解，如检查点、里程碑、基线、工作包、活动等。<br>（3）活动定义采用的一些工具和技术，如分解、模板、滚动式规划、专家判断等。<br>（4）掌握前导图法（即单代号网络图）和箭线图法（双代号网络图），会作图、看图，会找关键路径，掌握虚路径的概念，理解术语并会计算 ES、LS、EF、LF、FF、TF，并能对网络图结合项目的工序情况进行分析。<br>（5）活动资源估算的几种方法，如专家判断法、类比估算法、参数估算法、三点估算法，会用三点估算法进行计算。<br>（6）滚动波浪式计划、甘特图等术语。<br>（7）掌握进度控制的几种工具和技术，如进度报告、S 曲线、香蕉曲线等。<br>网络图 网络图往往是考生的难点，但又是考试的必考题，所以一定要掌握，要做图，会计算，还要会分析。<br>会计算<br>对于关键路径上的活动来说，ES、EF、LS、LF 很好求。ES&#x3D;EF，LS&#x3D;LF，因为关键路径上的活动是不允许延迟的，否则就会影响总工期。据此，TF、FF 必为 0。<br>四、活动资源估算 活动历时估算所采用的主要技术和工具有专家判断、类比估算、参数估算、三点估算。<br>类比估算法是以过去类似项目活动的实际时间为基础，通过类比来推测估算当前项目活动所需的时间。当项目相关性的资料和信息有限，而先前活动与当前活动又有本质上的类似性时，用这种方法来估算项目活动历时是一种较为常用的方法。<br>历时的三点估算法是一种模拟估算，以一定的假设条件为前提，估算多种活动时间的方法。最常用的方法是三点估算法。其步骤是：首先估计出项目各个活动的三种可能时间，即最乐观时间 Ta、最悲观时间 Tb 和正常时间 Tm，然后运用下列公式求得各项活动历时的平均值。<br>比如活动 A 的乐观历时为 6 天，最可能历时为 12 天，最悲观历时为 20 天，则利用三点估算法得出的活动 A 的历时为：（6+4*12+20）&#x2F;6&#x3D;74&#x2F;6&#x3D;12.33 天。</p>
+<p>进度计划 项目进度计划应包括以下几个基本内容：<br>（1）项目综合进度计划；<br>（2）项目实施进度计划；<br>（3）项目采购的进度计划；<br>（4）项目验收进度计划；<br>（5）项目的维护计划。 进度计划编制所采用的主要技术和工具有：CPM、PERT、历时压缩技术。<br>进度控制 项目进度控制是指依据项目进度基准计划对项目的实际进度进行监控，使项目能够按时完成。 有效项目进度控制的关键是监控项目的实际进度，及时、定期地将它与计划进度进行比较，并立即采取必要的纠正措施。项目进度控制必须与其他变化控制过程紧密结合，并且贯穿于项目的始终。当项目的实际进度滞后于计划进度时，首先发现问题、分析问题根源并找出妥善的解决办法。<br>项目进度控制的主要有：确定项目进度的当前状态；对引起进度变更的因素施加影响，以保证这种变化朝着有利的方向发展；确定项目进度已经变更；当变更发生时管理实际的变更。</p>
+<h3 id="成本管理要点："><a href="#成本管理要点：" class="headerlink" title="成本管理要点："></a>成本管理要点：</h3><p>过程：<br>a.成本估算；<br>b.成本预算；<br>c. 成本控制<br>要点：<br>a. 成本估算和预算都是成本计划，区别在于前者是要钱的计划，后者是花钱的计划，成本控制的目的不是节约成本，是要让实际花费符合预算要求<br>b.造价的概念，造价&#x3D;成本估算+盈利，它既不是估算也不是预算，和预算没有必然的联系<br>c.管理储备金的概念：管理储备金是成本基准和预算的一部分，但项目经理不能自由支配，它不是挣值计算的一部分<br>d. 成本的分类：<br>可变成本：随着生产量、工作量或时间而变的成本<br>固定成本：不随着生产量、工作量或时间变化而变的非重复成本<br>直接成本：直接可以归属于项目工作的成本为直接成本<br>间接成本：来自一般管理费用科目或几个项目共同担负的项目成本所分摊给本项目的费用能区分教材上所举的例子属于哪种成本.<br>e. 掌握挣值计算技术，包括绩效衡量、预测、绘制挣值分析曲线</p>
+<h3 id="人力资源管理要点："><a href="#人力资源管理要点：" class="headerlink" title="人力资源管理要点："></a>人力资源管理要点：</h3><p>过程：<br>a.编制人力资源管理计划；<br>b. 组建团队<br>c. 建设团队<br>d. 管理团队<br>要点：<br>管理冲突的六种方法：<br>解决问题 合作 强制 妥协 求同存异 撤退（其中问题解决是最理想的一种方法）<br>团队建设的 5 个阶段：<br>形成 震荡 规范 发挥 结束</p>
+<h3 id="风险管理要点："><a href="#风险管理要点：" class="headerlink" title="风险管理要点："></a>风险管理要点：</h3><p>过程：<br>a. 编制风险管理计划；<br>b. 风险识别；<br>c. 定性风险分析;<br>d. 定量风险分析;<br>e. 制定风险应对计划;<br>f.风险监控<br>要点：<br>a. 定量风险分析方法有三种，期望货币值(即 EMV 的概念)、决策树、蒙特卡洛分析<br>b.应对风险的策略有：规避，转移，减轻，接受，其中规避指消除风险源（常用方法是替换策略）；转移指将风险转嫁给另一方承担（常用的方法是买保险和分包），减轻指降低风险发生的概率和风险造成的影响（常用方法是备份、冗余设计，管理方面产用的方法是加强指导和监控）<br>c.常用的定性风险分析方法是概率影响矩阵法。</p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="">
+              系统集成项目管理
+            </a>
+          
+            <a href="/tags/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90/" class="">
+              系统集成
+            </a>
+          
+            <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="">
+              项目管理
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Davis Cheng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2022/06/06/系统集成项目管理之知识/" target="_blank" title="系统集成项目管理之知识">https://davischeng.github.io/2022/06/06/系统集成项目管理之知识/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/img/cover/c24.jpg" class="lazyload placeholder" data-srcset="/medias/img/cover/c24.jpg" srcset="/medias/img/fruits/103.gif" alt="">
+    </div>
+    <a href="/2022/06/06/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E4%B9%8B%E8%BF%87%E7%A8%8B/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">系统集成项目管理之过程</div>
+      </div>
+      
+      <!-- <div class="content">
+        ITO （信息技术外包）ITO可以包括产品支持与专业服务的组合，用于向客户提供IT基础设施，或企业应用服务，或同时提供这
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/img/cover/c30.jpg" class="lazyload placeholder" data-srcset="/medias/img/cover/c30.jpg" srcset="/medias/img/fruits/103.gif" src="" alt="">
+    </div>
+    <a href="/2022/06/06/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E4%B9%8B%E5%BA%94%E7%94%A8/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">系统集成项目管理之应用</div>
+      </div>
+      <!-- <div class="content">
+        【应用1】某银行计划开发一套信息系统，为了保证交付质量，银行指派小张作为项目的质量保证工程师。项目开始后，小张开始对该项
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/img/pay/alipay.jpg" class="lazyload placeholder" data-srcset="/medias/img/pay/alipay.jpg" srcset="/medias/img/fruits/103.gif" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/img/pay/wechat.jpg" class="lazyload placeholder" data-srcset="/medias/img/pay/wechat.jpg" srcset="/medias/img/fruits/103.gif" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="gitment-container"></div>
+
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '10000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '/medias/img/scenery/s100.jpg,/medias/img/scenery/s101.jpg,/medias/img/scenery/s102.jpg,/medias/img/scenery/s103.jpg,/medias/img/scenery/s104.jpg,/medias/img/scenery/s105.jpg,/medias/img/scenery/s106.jpg,/medias/img/scenery/s107.jpg,/medias/img/scenery/s108.jpg,/medias/img/scenery/s109.jpg,/medias/img/scenery/s110.jpg,/medias/img/scenery/s111.jpg,/medias/img/scenery/s112.jpg,/medias/img/scenery/s113.jpg,/medias/img/scenery/s114.jpg,/medias/img/scenery/s115.jpg,/medias/img/scenery/s116.jpg,/medias/img/scenery/s117.jpg,/medias/img/scenery/s118.jpg,/medias/img/scenery/s119.jpg,/medias/img/scenery/s120.jpg';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
+
+      </main>
+    </div>
+
+    <!-- 页脚 -->
+    
+  
+  <!-- 底部鱼儿跳动效果，依赖于jquery-->
+<div id="j-fish-skip" style=" position: relative;height: 153px;width: auto;"></div>
+<script>
+  var RENDERER = {
+    POINT_INTERVAL: 5,
+    FISH_COUNT: 3,
+    MAX_INTERVAL_COUNT: 50,
+    INIT_HEIGHT_RATE: .5,
+    THRESHOLD: 50,
+    FISH_COLOR: '',
+    init: function () {
+      this.setFishColor(); this.setParameters(), this.reconstructMethods(), this.setup(), this.bindEvent(), this.render()
+    },
+    setFishColor: function () {
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+      if (isDark) {
+        this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
+      } else {
+        this.FISH_COLOR = '' || '#42b983';
+      }
+    },
+    setParameters: function () {
+      this.$window = $(window), this.$container = $("#j-fish-skip"), this.$canvas = $("<canvas />"), this.context = this.$canvas.appendTo(this.$container).get(0).getContext("2d"), this.points = [], this.fishes = [], this.watchIds = []
+    },
+    createSurfacePoints: function () {
+      var t = Math.round(this.width / this.POINT_INTERVAL);
+      this.pointInterval = this.width / (t - 1), this.points.push(new SURFACE_POINT(this, 0));
+      for (var i = 1; i < t; i++) {
+        var e = new SURFACE_POINT(this, i * this.pointInterval),
+          h = this.points[i - 1];
+        e.setPreviousPoint(h), h.setNextPoint(e), this.points.push(e)
+      }
+    },
+    reconstructMethods: function () {
+      this.watchWindowSize = this.watchWindowSize.bind(this), this.jdugeToStopResize = this.jdugeToStopResize.bind(this), this.startEpicenter = this.startEpicenter.bind(this), this.moveEpicenter = this.moveEpicenter.bind(this), this.reverseVertical = this.reverseVertical.bind(this), this.render = this.render.bind(this)
+    },
+    setup: function () {
+      this.points.length = 0, this.fishes.length = 0, this.watchIds.length = 0, this.intervalCount = this.MAX_INTERVAL_COUNT, this.width = this.$container.width(), this.height = this.$container.height(), this.fishCount = this.FISH_COUNT * this.width / 500 * this.height / 500, this.$canvas.attr({
+        width: this.width,
+        height: this.height
+      }), this.reverse = !1, this.fishes.push(new FISH(this)), this.createSurfacePoints()
+    },
+    watchWindowSize: function () {
+      this.clearTimer(), this.tmpWidth = this.$window.width(), this.tmpHeight = this.$window.height(), this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL))
+    },
+    clearTimer: function () {
+      for (; this.watchIds.length > 0;) clearTimeout(this.watchIds.pop())
+    },
+    jdugeToStopResize: function () {
+      var t = this.$window.width(),
+        i = this.$window.height(),
+        e = t == this.tmpWidth && i == this.tmpHeight;
+      this.tmpWidth = t, this.tmpHeight = i, e && this.setup()
+    },
+    bindEvent: function () {
+      this.$window.on("resize", this.watchWindowSize), this.$container.on("mouseenter", this.startEpicenter), this.$container.on("mousemove", this.moveEpicenter)
+    },
+    getAxis: function (t) {
+      var i = this.$container.offset();
+      return {
+        x: t.clientX - i.left + this.$window.scrollLeft(),
+        y: t.clientY - i.top + this.$window.scrollTop()
+      }
+    },
+    startEpicenter: function (t) {
+      this.axis = this.getAxis(t)
+    },
+    moveEpicenter: function (t) {
+      var i = this.getAxis(t);
+      this.axis || (this.axis = i), this.generateEpicenter(i.x, i.y, i.y - this.axis.y), this.axis = i
+    },
+    generateEpicenter: function (t, i, e) {
+      if (!(i < this.height / 2 - this.THRESHOLD || i > this.height / 2 + this.THRESHOLD)) {
+        var h = Math.round(t / this.pointInterval);
+        h < 0 || h >= this.points.length || this.points[h].interfere(i, e)
+      }
+    },
+    reverseVertical: function () {
+      this.reverse = !this.reverse;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].reverseVertical()
+    },
+    controlStatus: function () {
+      for (var t = 0, i = this.points.length; t < i; t++) this.points[t].updateSelf();
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].updateNeighbors();
+      this.fishes.length < this.fishCount && 0 == --this.intervalCount && (this.intervalCount = this.MAX_INTERVAL_COUNT, this.fishes.push(new FISH(this)))
+    },
+    render: function () {
+      requestAnimationFrame(this.render), this.controlStatus(), this.context.clearRect(0, 0, this.width, this.height), this.context.fillStyle = this.FISH_COLOR;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].render(this.context);
+      this.context.save(), this.context.globalCompositeOperation = "xor", this.context.beginPath(), this.context.moveTo(0, this.reverse ? 0 : this.height);
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].render(this.context);
+      this.context.lineTo(this.width, this.reverse ? 0 : this.height), this.context.closePath(), this.context.fill(), this.context.restore()
+    }
+  },
+  SURFACE_POINT = function (t, i) {
+    this.renderer = t, this.x = i, this.init()
+  };
+  SURFACE_POINT.prototype = {
+    SPRING_CONSTANT: .03,
+    SPRING_FRICTION: .9,
+    WAVE_SPREAD: .3,
+    ACCELARATION_RATE: .01,
+    init: function () {
+      this.initHeight = this.renderer.height * this.renderer.INIT_HEIGHT_RATE, this.height = this.initHeight, this.fy = 0, this.force = {
+        previous: 0,
+        next: 0
+      }
+    },
+    setPreviousPoint: function (t) {
+      this.previous = t
+    },
+    setNextPoint: function (t) {
+      this.next = t
+    },
+    interfere: function (t, i) {
+      this.fy = this.renderer.height * this.ACCELARATION_RATE * (this.renderer.height - this.height - t >= 0 ? -1 : 1) * Math.abs(i)
+    },
+    updateSelf: function () {
+      this.fy += this.SPRING_CONSTANT * (this.initHeight - this.height), this.fy *= this.SPRING_FRICTION, this.height += this.fy
+    },
+    updateNeighbors: function () {
+      this.previous && (this.force.previous = this.WAVE_SPREAD * (this.height - this.previous.height)), this.next && (this.force.next = this.WAVE_SPREAD * (this.height - this.next.height))
+    },
+    render: function (t) {
+      this.previous && (this.previous.height += this.force.previous, this.previous.fy += this.force.previous), this.next && (this.next.height += this.force.next, this.next.fy += this.force.next), t.lineTo(this.x, this.renderer.height - this.height)
+    }
+  };
+  var FISH = function (t) {
+    this.renderer = t, this.init()
+  };
+  FISH.prototype = {
+    GRAVITY: .4,
+    init: function () {
+      this.direction = Math.random() < .5, this.x = this.direction ? this.renderer.width + this.renderer.THRESHOLD : -this.renderer.THRESHOLD, this.previousY = this.y, this.vx = this.getRandomValue(4, 10) * (this.direction ? -1 : 1), this.renderer.reverse ? (this.y = this.getRandomValue(1 * this.renderer.height / 10, 4 * this.renderer.height / 10), this.vy = this.getRandomValue(2, 5), this.ay = this.getRandomValue(.05, .2)) : (this.y = this.getRandomValue(6 * this.renderer.height / 10, 9 * this.renderer.height / 10), this.vy = this.getRandomValue(-5, -2), this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1, this.theta = 0, this.phi = 0
+    },
+    getRandomValue: function (t, i) {
+      return t + (i - t) * Math.random()
+    },
+    reverseVertical: function () {
+      this.isOut = !this.isOut, this.ay *= -1
+    },
+    controlStatus: function (t) {
+      this.previousY = this.y, this.x += this.vx, this.y += this.vy, this.vy += this.ay, this.renderer.reverse ? this.y > this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy -= this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(.05, .2)), this.isOut = !1) : this.y < this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy += this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1), this.isOut || (this.theta += Math.PI / 20, this.theta %= 2 * Math.PI, this.phi += Math.PI / 30, this.phi %= 2 * Math.PI), this.renderer.generateEpicenter(this.x + (this.direction ? -1 : 1) * this.renderer.THRESHOLD, this.y, this.y - this.previousY), (this.vx > 0 && this.x > this.renderer.width + this.renderer.THRESHOLD || this.vx < 0 && this.x < -this.renderer.THRESHOLD) && this.init()
+    },
+    render: function (t) {
+      t.save(), t.translate(this.x, this.y), t.rotate(Math.PI + Math.atan2(this.vy, this.vx)), t.scale(1, this.direction ? 1 : -1), t.beginPath(), t.moveTo(-30, 0), t.bezierCurveTo(-20, 15, 15, 10, 40, 0), t.bezierCurveTo(15, -10, -20, -15, -30, 0), t.fill(), t.save(), t.translate(40, 0), t.scale(.9 + .2 * Math.sin(this.theta), 1), t.beginPath(), t.moveTo(0, 0), t.quadraticCurveTo(5, 10, 20, 8), t.quadraticCurveTo(12, 5, 10, 0), t.quadraticCurveTo(12, -5, 20, -8), t.quadraticCurveTo(5, -10, 0, 0), t.fill(), t.restore(), t.save(), t.translate(-3, 0), t.rotate((Math.PI / 3 + Math.PI / 10 * Math.sin(this.phi)) * (this.renderer.reverse ? -1 : 1)), t.beginPath(), this.renderer.reverse ? (t.moveTo(5, 0), t.bezierCurveTo(10, 10, 10, 30, 0, 40), t.bezierCurveTo(-12, 25, -8, 10, 0, 0)) : (t.moveTo(-5, 0), t.bezierCurveTo(-10, -10, -10, -30, 0, -40), t.bezierCurveTo(12, -25, 8, -10, 0, 0)), t.closePath(), t.fill(), t.restore(), t.restore(), this.controlStatus(t)
+    }
+  }, $(function () {
+    RENDERER.init()
+    $('.dark').click(function () {
+      setTimeout(() => {
+        RENDERER.setFishColor();
+        RENDERER.context.fill();
+      });
+    })
+  });
+</script>
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+              
+                <a href="mailto:davischeng@outlook.com" class="social">
+                  
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="https://davischeng.github.io" class="social">
+                  
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=32322788" class="social">
+                  
+                    <i class="fab fa-qq" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2022 <a href="https://davischeng.github.io/">子先居</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://davischeng.github.io/">TheLane</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6e4ef944392f7626176047877621a9f1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+
+    <script src="/js/utils/index.js"></script>
+    <script src="/js/app.js"></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+    content = '.post-detail',//文章容器
+    idArr = {};  //标题数组以确定是否增加索引id
+  //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    activeLinkClass: 'is-active-link',
+    // onClick: function (e) {},
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      tocbot.init(option);
+      mobileTocClick();
+    });
+
+  }
+
+  window.tocScrollFn = function () {
+    return bamboo.throttle(function () {
+      findHeadPosition();
+    }, 100)()
+  }
+  window.addEventListener('scroll', tocScrollFn);
+
+  const findHeadPosition = function (top) {
+    if ($('.toc-list').length <= 0) {
+      return false;
+    }
+    setTimeout(() => {  // or DOMContentLoaded 
+      autoScrollToc();
+    }, 0);
+  }
+
+  const autoScrollToc = function () {
+    const $activeItem = document.querySelector('.is-active-link');
+    const $cardToc = document.querySelector('.toc-content');
+    const activePosition = $activeItem.getBoundingClientRect().top
+    const sidebarScrollTop = $cardToc.scrollTop
+    if (activePosition > (document.documentElement.clientHeight - 100)) {
+      $cardToc.scrollTop = sidebarScrollTop + 150
+    }
+    if (activePosition < 100) {
+      $cardToc.scrollTop = sidebarScrollTop - 150
+    }
+  }
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+      mobileTocClick();
+    }
+  });
+  
+  // 手机端toc按钮点击出现目录
+  const mobileTocClick = function () {
+    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
+    let right = '45px';
+    if (window.innerWidth >= 551 && window.innerWidth <= 992) {
+      right = '100px'
+    }
+    const mobileToc = {
+      open: () => {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+      },
+
+      close: () => {
+        $cardTocLayout.style.animation = 'toc-close .2s'
+        setTimeout(() => {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+        }, 100)
+      }
+    }
+    document.getElementById('toc-mobile-btn').addEventListener('click', () => {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open()
+      else mobileToc.close()
+    })
+
+    $cardToc.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) { // 小于992px的时候
+        mobileToc.close()
+      }
+    })
+  }
+</script>
+
+<style>
+  .is-position-fixed {
+    position: sticky !important;
+    top: 74px;
+  }
+
+  .toc-main ul {
+    counter-reset: show-list;
+  }
+
+  .toc-main ul li::before {
+    content: counter(item)".";
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
+</style> 
+
+<!-- 设置导航背景 -->
+<script>
+  let setHeaderClass = () => {
+    const headerMenuTransparent = true;
+    if (!headerMenuTransparent) { return; }
+    const nav = $('#navHeader');
+    const navTop = nav.outerHeight();
+    const winTop = $(window).scrollTop();
+    if(winTop > navTop) {
+      nav.addClass('header-bg-color');
+    }
+    else {
+      nav.removeClass('header-bg-color');
+    }
+  };
+
+  let scrollCollect = () => {
+    return bamboo.throttle(function (e) {
+      setHeaderClass();
+    }, 200)()
+  }
+
+  let initHeaderBg = () => {
+    setHeaderClass();
+  }
+
+  setHeaderClass();
+  window.addEventListener('scroll', scrollCollect);
+
+  document.addEventListener('pjax:send', function () {
+    window.removeEventListener('scroll', scrollCollect)
+  })
+  document.addEventListener('pjax:complete', function () {
+    window.addEventListener('scroll', scrollCollect);
+    setHeaderClass();
+  })
+</script> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://unpkg.com/v-plugs-ayu/lib/ayu.css">
+  <script src="https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+          }
+        })
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+  
+
+<!-- 图片懒加载 -->
+<script defer src="https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+<!-- 卡片滚动动画 -->
+   
+
+<!-- 评论所需js -->
+
+  
+    <script type="text/javascript">
+  var utteranceCommon = {};
+
+  function check_utterance() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      utteranceCommon.Theme = 'github-dark';
+    } else {
+      utteranceCommon.Theme = 'github-light';
+    }
+
+    return document.getElementById("gitment-container");
+  }
+  comment_el = '#gitment-container';
+  load_utterance = function () {
+    if ($(comment_el).length) {
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_utterance();
+
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'davischeng/davischeng.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      // content 是要插入评论的地方
+      document.getElementById('gitment-container').appendChild(utterances);
+
+    }
+  }
+
+  function dark_utterance() {
+    const HEAD = check_utterance();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: utteranceCommon.Theme
+    };
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+
+  $(document).ready(load_utterance);
+  document.addEventListener('pjax:complete', function () {
+    load_utterance();
+  });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_utterance();
+    });
+  })
+
+</script>
+
+<style>
+  .utterances {
+    max-width: inherit !important;
+  }
+</style>
+  
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+  
+    <script src="/js/cursor/text.js"></script>
+  
+
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+</html>

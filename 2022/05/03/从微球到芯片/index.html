@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZV5YXT231"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-5ZV5YXT231');
+</script>
+
+
+  <title>从微球到芯片 | 子先居</title>
+
+  <link rel="icon" type="image/png" href="/medias/img/favicon.png">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  
+    
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  
+
+  
+    
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+
+  
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">加载中...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+  function loadScript(src, cb) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+
+  //https://github.com/filamentgroup/loadCSS
+  var loadCSS = function (href, before, media, attributes) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  };
+
+</script> 
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+<script type="text/javascript">
+  Vue.use(window.VueAwesomeSwiper)
+</script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://unpkg.com/typed.js@2.0.11"></script>
+
+
+    <div id="safearea">
+      <main class="main" id="pjax-container">
+        <!-- 头部导航 -->
+        
+<header class="header   " 
+  id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fas fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/img/logo.png" class="lazyload placeholder" data-srcset="/medias/img/logo.png" srcset="/medias/img/fruits/103.gif" alt="logo">
+      <h3 class="drawer-box-head_title">子先居</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fas fa-angle-double-down"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-images" style="margin-top: -20px;"></i>
+                      
+                      <span>gallery</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/docs">
+                      
+                      <i class="fas fa-folder-open" style="margin-top: -20px;"></i>
+                      
+                      <span>docs</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/artitalk/">
+                      
+                      <i class="fas fa-comment-dots" style="margin-top: -20px;"></i>
+                      
+                      <span>artitalk</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/davischeng">
+              <i class="fas fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/img/logo.png" class="lazyload placeholder" data-srcset="/medias/img/logo.png" srcset="/medias/img/fruits/103.gif" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">子先居</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友情链接">
+                  
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-angle-double-down"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-images" style="margin-top: -20px;"></i>
+                      
+                      <span>gallery</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/docs">
+                      
+                      <i class="fas fa-folder-open" style="margin-top: -20px;"></i>
+                      
+                      <span>docs</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/artitalk/">
+                      
+                      <i class="fas fa-comment-dots" style="margin-top: -20px;"></i>
+                      
+                      <span>artitalk</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <span>
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
+          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+      window.addEventListener('pjax:complete', () => {
+        this.cancelDialogVisible();
+      })
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/davischeng" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+</header>
+        <!-- 内容区域 -->
+        
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/img/cover/c14.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        从微球到芯片
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2022-05-03 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/%E6%9D%82%E8%B0%88/" class="post-detail-header_category">
+              杂谈
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 15.2k |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 52分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <blockquote>
+<p>在1949年10月1日中华人民共和国成立之时，科技水平落后，没有完整的工业体系。20世纪60至70年代，中国先后掌握了“两弹一星”和“杂交水稻”技术。20世纪80年代，“863计划”直接推动了中国生物技术、航太技术、资讯技术、激光技术、自动化技术、能源技术、新材料和海洋高技术的发展。20世纪90年代，提出科教兴国战略。从2000年到2020年，中华人民共和国的科研经费从895.7亿元人民币增长到24426亿元人民币，年均增长率为131.3515%，科研经费占GDP的比重从2000年的1.00%增长至2020年的2.4%，已超过世界平均水平（1.60%）。时至今日，中国的科学技术水平自从改革开放以来科技发展开始提速，现在中国在航空航天、载人深潜、无人机、人工智能、绿色能源、量子通讯、高速铁路、资源勘探、自动化、超导、电子技术、核技术、激光等领域取得许多世界领先的成果，但同时在发动机、精密制造、医药研发等领域上与世界先进水平仍有差距，要赶超仍需一段时间，且在科研制度上，弊端较多，依然有需改进之处。2010年代以来，科技型企业、尤其是以像阿里巴巴、腾讯、字节跳动、百度等为首的互联网企业，又或者是像华为、小米、中兴、大疆等为首的高科技企业蓬勃发展，科技型企业占所有公司的资产总额已从2010年的6.8%上升至2020年的23.7%，且与绝大部分的民众息息相关。</p>
+</blockquote>
+<h3 id="1990年代之前"><a href="#1990年代之前" class="headerlink" title="1990年代之前"></a>1990年代之前</h3><p>中华人民共和国在刚成立之时，对科学技术的管理采用苏联模式。在该模式中，中央政府采用高度集中的形式对各个机构提出任务，各个机构的自主性很小。文化大革命发生后，中国的科研领域受到较大冲击，众多科研研究者受到迫害，一些科研项目被迫停止。。尽管如此，在20世纪60、70年代，中华人民共和国的科学技术仍然取得如两弹一星、杂交水稻等重大科研成就。</p>
+<p>1976年文化大革命结束后，中华人民共和国政府开始在各个方面进行整顿，科技和教育成为改革开放的重要突破口。在多年前，“科学技术是生产力”、“科技工作者是劳动者”、“脱帽加冕”等观点早已被提出，但受到严厉批判。而这时，“自然科学是上层建筑”和“自然科学有阶级性”转眼之间成为反动谬论。1977年8月4日在人民大会堂，由中共中央副主席、国务院副总理邓小平亲自提议召开并主持了全国科教工作座谈会，知识分子成为急待拉拢和讨好的座上宾。这是他复出后，第一次公开参加的重要活动。8月8日上午，邓小平在座谈会结束时发表了著名的“八八讲话”，决定恢复高考制度，提议召开全国科学大会，通过改善物质待遇来调动知识分子的积极性。</p>
+<p>1978年3月18日至3月31日，全国科学大会在北京召开。邓小平在开幕式上强调说，知识分子的绝大多数已经是工人阶级的一部分。郭沫若在闭幕式上发表讲话（由中央人民广播电台播音员虹云当场朗读），号召科学工作者热烈地拥抱“科学的春天”。</p>
+<p>1982年，中共中央在全国科学技术奖励大会上提出“经济建设依靠科学技术，科学技术工作要面向经济建设”的方针。1984年2月24日，中共中央顾问委员会主任邓小平在《办好经济特区，增加对外开放城市》中说：特区是技术的窗口、知识的窗口。1985年3月，邓小平在全国科技工作会议上发表《改革科技体制是为了解放生产力》，提出“经济体制，科技体制，这两方面的改革都是为了解放生产力。新的经济体制，应该是有利于技术进步的体制。新的科技体制，应该是有利于科技发展的体制。”同年，中共中央发布《关于科学技术体制改革的决定》,指出“集体或个人建立科学研究或技术服务机构。地方政府要对它们进行管理，给予指导和帮助”。这一决定为许多改制行为如研究所所长负责制、利润实体、产学研合作、物质奖励、知识形态商品、专利保护、技术市场、人才流动、科研人员创办企业等开了绿灯。</p>
+<p>1986年3月，在四位老科学家的建议下，邓小平作出批示，要求“找些专家和有关负责同志讨论，提出意见，以凭决策”。半年后，《863计划纲要》形成，选择生物技术、航天技术、信息技术、激光技术、自动化技术、能源技术、新材料和海洋高技术八个领域列为中国发展高技术的重点。1987年，《技术合同法》实施。1988年9月，邓小平根据当代科学技术发展的趋势和现状，提出了“科学技术是第一生产力”的论断。</p>
+<h3 id="1990年代至今"><a href="#1990年代至今" class="headerlink" title="1990年代至今"></a>1990年代至今</h3><p>大亚湾核反应堆微中子实验<br>1995年5月，中国共产党中央委员会、中华人民共和国国务院作出《关于加速科学技术进步的决定》，正式提出了科教兴国战略。中华人民共和国众多的公立科研机构，包括中国科学院、中国工程院和许多大学每年可以从政府得到大量的拨款。1995年《“211工程”总体建设规划》获得国务院批准。“211工程”，即面向21世纪、重点建设100所左右的高等学校和一批重点学科的建设工程，是建国以来由国家立项在高等教育领域进行的规模最大、层次最高的重点建设工程。1998年中国教育部决定在实施《面向21世纪教育振兴行动计划》中，重点支持国内部分高校创建世界一流大学和高水准大学，并以江泽民在北京大学100周年校庆的讲话时间（1998年5月）命名为“985工程”。</p>
+<p>从2000年到到2010年，中华人民共和国的科研经费从895.7亿元人民币增长到6980亿元人民币，年均增长率为22.79%，科研经费占GDP的比重从2000年的1.00%增长至2010年的1.75%，已超过世界平均水平（1.60%）。2013年12月联合国知识产权组织在其年度报告中指出中国公民2011年申请了560681件专利，成为世界第一。日本和美国分别居第二、第三。2012年中国的专利申请数量比2011年增加了24%，占到全球专利申请数量的28%。</p>
+<p>2017年中华人民共和国国务院印发《关于深化中央财政科技计划专项、基金等）管理改革方案的通知》计划将国家重点基础研究发展计划(‘973’)､国家高技术研究发展计划(‘863’)､国家科技支撑计划､国际科技合作与交流专项等各种国家科研计划和基金整合统一管理，既国家重点研发计划。</p>
+<h3 id="主要领域发展情况"><a href="#主要领域发展情况" class="headerlink" title="主要领域发展情况"></a>主要领域发展情况</h3><h4 id="核技术"><a href="#核技术" class="headerlink" title="核技术"></a>核技术</h4><p>1964年10月16日中华人民共和国爆炸了第一颗原子弹，1967年6月17日中华人民共和国爆炸了第一颗氢弹，1971年9月，中国第一艘核潜艇下水试航。在民用核技术方面，1958年6月，中国第一座实验性原子能反应堆在北京郊外的中国科学院原子能研究所内建成。1985年3月20日中国的第一座自主设计和建造的核电厂——秦山核电站在浙江海盐开工，1991年12月15日首次并网发电，并成为世界上第七个具备自主设计、自主建造、自主调试和自主运营管理核电厂的国家。1995年12月中国实验快堆工程立项，并在2010年7月首次临界进而成为世界上第8个拥有快堆技术的国家。2012年11月项目通过验收。2006年9月中国新一代先进超导托卡马克实验装置实验装置（EAST）首次成功放电，成为世界上第一个投入运行的全超导非圆截面核聚变实验装置，该装置也是世界上第一个实现稳态高约束模式运行持续时间达到百秒量级的同类装置，并首次实现加热功率超过10兆瓦，等离子体储能增加到300千焦，等离子体中心电子温度首次达到1亿度，获得的多项实验参数接近未来聚变堆稳态运行模式所需要的物理条件，朝着未来聚变堆实验运行迈出了关键一步，也为人类开发利用核聚变清洁能源奠定了重要的技术基础。。2013年，中国的“铀浓缩技术”实现自主化和工业化应用，意味着中国核燃料的生产能力具备国际竞争力。中国聚变工程实验堆（CFETR）在2017年进入工程设计阶段，其设计核聚变功率为1000兆瓦，预计2035年建成。</p>
+<h4 id="航天技术"><a href="#航天技术" class="headerlink" title="航天技术"></a>航天技术</h4><p>航天项目<br>人造卫星<br>从1970年4月24日，中国发射第一颗人造卫星东方红一号，至2013年初，中国已成功自主研制并发射140颗不同类型的人造卫星。 2012年12月27日，中国自主建设、独立运行的北斗卫星导航系统正式提供亚太区域服务，北斗三号系统于2020年7月31日正式全球开通。2020年12月6日，高分专项工程完成收官任务。</p>
+<p>运载火箭</p>
+<p>长征五号重型火箭<br>自1996年10月至2009年8月，“长征”系列运载火箭录得连续76次发射成功。新一代运载火箭多项关键技术取得重要突破，120吨级推力的液氧&#x2F;煤油发动机和50吨级推力的氢氧发动机研制进展顺利，长征五号、六号、七号、八号，在2015年至2020年间相继服役并成功发射。长征九号运载火箭，正在研发中将投入中国探月工程使用。</p>
+<p>载人航天<br>1992年9月21日正式立项。<br>1999年11月20日，中国成功发射并回收第一艘神舟号无人试验飞船。<br>2003年10月15日，中国第一位太空人杨利伟乘坐神舟五号进入太空。<br>2005年10月12日至17日，中国的神舟六号飞船实现“两人五天”的载人航太飞行。<br>2008年9月25日，神舟七号飞船将三名太空人翟志刚、刘伯明和景海鹏带入太空，其间翟志刚实现了中国的第一次太空漫步。<br>2011年11月1日，中国发射了首个试验型空间站天宫一号，并成功完成与后续发射的神舟八号飞船的对接。<br>2012年6月16日，神舟九号飞船将两名航天员景海鹏、刘旺以及一名女航天员刘洋送入太空，与天宫一号进行两次对接，其中一次为手动对接。<br>2013年6月11日，神舟十号飞船将两名男航天员聂海胜、张晓光和一名女航天员王亚平送入太空。<br>2016年10月17日，神舟十一号飞船将两名航天员景海鹏、陈冬送入太空，并与同年发射的天宫二号空间实验室进行交会对接，在轨驻留时间长达30天。<br>2021年4月29日，中国成功发射了天宫空间站的首个舱段天和核心舱。<br>2021年6月17日，神舟十二号飞船将三名太空人聂海胜、刘伯明和汤洪波送入太空，并于起飞六个半小时后与天和核心舱对接，在轨停留时间为三个月。<br>2021年10月16日，神舟十三号飞船将三名太空人翟志刚、王亚平和叶光富送入太空，并于起飞六个半小时后与天和核心舱对接，在轨停留六个月。<br>探月工程<br>2004年1月23日正式立项<br>2007年10月24日发射嫦娥一号，完成首次月球环绕任务，获取了世界上首个月球多频道被动微波遥感探测[3]。<br>2010年10月1日发射嫦娥二号， 完成了10米级分辨率的全月面遥感成像。<br>2013年12月14日嫦娥三号在月球登陆成功，是1976年以来首个软着陆于月球的无人探测器。<br>2014年11月1日，探月工程三期再入返回飞行试验器从月球轨道返回。<br>2018年6月14日，鹊桥号中继卫星进入环绕地月拉格朗日L2点的晕轮轨道。<br>2019年1月3日，嫦娥四号着陆与月球背面的冯卡门环形山，这是人类探测器首次软着陆于月球背面。<br>2020年11月24日，中国发射嫦娥五号于月球正面进行取样返回任务，将约2公斤样品带回地球。<br>深空探测<br>2012年12月13日16时30分09秒，嫦娥二号在距地球约700万公里远的深空掠过小行星4179，最近距离仅为3.2公里，飞掠时速高达10.73公里&#x2F;秒。这是中国第一次对小行星进行探测，中国也成为继美国、欧空局和日本后，第四个对小行星实施探测的国家或组织。有关测控数据表明，截至2014年年中，嫦娥二号已经突破了1亿公里深空。[4]<br>2016年1月11日正式立项。2020年7月23日，中国发射天问一号火星环绕器与着陆巡视器，于2021年2月10日成功环绕火星，成为中国第一个火星人造卫星，并于2021年5月15日成功着陆于火星表面的乌托邦平原。<br>计划<br>建造66吨级的中国空间站，远期可拓展至180吨。<br>继续中国的月球探测计划“嫦娥工程”， 包括嫦娥六号、嫦娥七号与嫦娥八号等任务，建设无人月面基地。<br>2012年6月14日，中国探月工程首席科学家欧阳自远院士在中科院第十六次院士大会上表示，中国深空探测当前的任务是进行太阳系探测，要研究的主要科学问题包括：太阳系生命信息的探寻，行星的起源与演化和太阳系的形成与演化，太阳和小天体活动对地球的灾害性影响，地外资源、能源与环境的开发利用以支持人类社会的可持续发展等。<br>中国后续深空探测工程，初步明确了四次任务。第一次任务是在2020年发射火星探测器，2021年到达火星。计划2028年左右进行第三次火星探测，采集火星土壤返回地球。中国还将在2024年进行小行星探测，并在2030年前后开展木星系探测和天王星飞越探测。<br>搜寻太阳系近邻宜居行星的太空探索计划觅音计划已于2018年启动，该计划涉及空间分布式合成孔径阵列望远镜、低噪声中红外探测器、高灵敏高稳定深低温空间探测等关键技术，已被中国航天科技集团列入面向2030年和2045年即将开展的重大工程项目。<br>目标</p>
+<p>长征一至三型中型卫星火箭<br>中国国家航天局《2006年中国的航天》白皮书中列出了短期（5年）目标：</p>
+<p>建立一个长期的地球观测系统<br>建立一个独立的卫星通信网络<br>建立自主的卫星导航定位系统<br>提供商业发射服务<br>建立遥感系统<br>进行微重力，空间材料，生命科学和天文学研究<br>月球探测计划<br>中国航天的长远目标是：<br>提高中国在世界空间科学的地位<br>建立一个长期的载人空间站<br>完成月球载人登月<br>建立月球载人基地<br>完成火星无人使命</p>
+<h4 id="航空技术"><a href="#航空技术" class="headerlink" title="航空技术"></a>航空技术</h4><p>中国第一架飞机是工程师冯如在1910年制造的一架双翼飞机，此后中国只有零星制造飞机，并没有大规模生产。直到1954年7月11日第一架国产飞机初教5完成试飞，并于8月末开始大批生产。</p>
+<p>1956年首架歼5升空试飞，同年9月9日向世界宣布中国第一架生产的喷气式飞机问世，之后中国尝试进行自行设计喷气式飞机强5并成功大规模生产。但很长一段时间中国航空产品中仿造的比例一直很高。</p>
+<p>进入21世纪，中国航空开始较快发展，在民用飞机领域，ARJ21于2008年11月28日12时23分在上海大场机场成功首飞并在2009年成为中国第一种部分自主设计并可以大规模制造（尽管目前为止还没有开始）的支线飞机。其他民用支线飞机包括新舟60和新舟600型涡桨支线客机（两种型号同样改进自运-7），并销售到多个发展中国家。同时在大型飞机领域，中国在经历运-10在1980年代的失败之后终于开始了第一个市场化整机全新设计的窄体客机计划C919，并于2017年顺利完成首飞， 进入生产前的试飞取证状态 。</p>
+<p>中国军用飞机也取得了较大进步，被众人看待有可能成为中国第四代军用战斗机的歼20和歼-31分别在2011年1月11日和2012年10月31日完成首次飞行测试， 使中国成为世界上第二个同时开发两种四代战斗机的国家。2012年11月22日首架歼-15原型机在辽宁号航空母舰上进行着舰测试和起飞测试成功。运-20运输机（Y-20）在2013年1月26日完成试飞。</p>
+<h4 id="高速铁路"><a href="#高速铁路" class="headerlink" title="高速铁路"></a>高速铁路</h4><p>2000年时，中国还没有一条真正意义上的高速铁路，但在2010年中国的高速铁路运营里程已经超过欧洲的总和。同时中国高速铁路技术也开始了对外输出，2012年12月6日泰国表示准备引进中国高铁技术。同年12月中国北方机车车辆工业集团公司表示正兰州市建设一个装备制造基地，其一大功用就是便于向中亚、西亚出口包括高铁设备在内的轨道交通产品。从2012年8月起，中国开始向欧盟定期出口高铁关键技术大部件。2012年10月，中国同意70亿美元援建老挝高铁并由中国公司建设。中国北车集团还与美国加利福尼亚州以及通用电气签署了合作协议，向其提供高速铁路技术、设备和工程师。中国南车集团与美国GE公司在2011年签署高铁技术出口协议。 2017年6月复兴号电力动车组投入商用，是世界上首个实用化民营高铁达420公里极速，正常运行速度高达350公里。</p>
+<h4 id="电子与资讯"><a href="#电子与资讯" class="headerlink" title="电子与资讯"></a>电子与资讯</h4><p>中国在电子与信息技术方面达到世界一流水平。2009年中国制造世界上48.3%的电视机，49.9%的移动电话，60.9%的个人电脑和75%的液晶显示器。2010年中国软件行业在软件和信息服务市场的份额以高于15%的速度增加，在过去的十年里平均增幅达到36%。</p>
+<p>在超级计算机方面，中华人民共和国位于世界领先水平。2019年中国拥有世界最快的500个超级计算机中的219个。中国在1983年就研制出第一台超级计算机“银河—Ⅰ”，使中国成为继美国、日本之后第三个能独立设计和研制超级计算机的国家。部署于国家超级计算长沙中心的天河一号（2011年）和部署于国家超级计算深圳中心的曙光星云（2009）分别为当时世界超级计算机运算速度排名的第二和第四名。中国以国产微处理器为基础制造出的本国第一台超级计算机“神威蓝光”部署于济南中心（2011年），并由中国科学技术大学和清华大学组成的联合小组，成功实现了16公里的量子态隐形传输，这一距离是目前世界记录最远距离的20多倍。部署在国家超级计算广州中心的超级计算机天河二号实现了从2013年6月到2016年6月共3年在TOP500保持第一位，而2016年6月神威·太湖之光则实现了首度不采用国外技术产品，使用基于中国设计、制造处理器而打造出来国产超级计算机，并取代了天河二号的第一地位。</p>
+<h4 id="网络通讯"><a href="#网络通讯" class="headerlink" title="网络通讯"></a>网络通讯</h4><p>中华人民共和国互联网发展非常迅速，根据中国互联网络信息中心（CNNIC）发表的《中国互联网络发展状况统计报告》，截至2021年12月，中国网民规模达10.32亿，互联网普及率为73.0%，其中手机网民规模达9.04亿，较2020年底增加4296万人；农村网民占比为27.80%，规模为2.84亿。</p>
+<h4 id="半导体"><a href="#半导体" class="headerlink" title="半导体"></a>半导体</h4><p>龙芯3A3000处理器正面照<br>半导体领域的前沿研发目前基本都被欧美和日韩的企业以及院校所包揽。（参见全球导体厂商排名）作为现代IT业的根本基础，最核心的芯片生产技术基本仍为美日韩等有限的几家大型公司所掌握。在2019年全球智能手机市场份额排名中国采用多品牌战术占世界前十大手机厂中的七家，总市占40%并持续增长，超过三星的22.6%与苹果15.6%。</p>
+<h4 id="生物及医疗"><a href="#生物及医疗" class="headerlink" title="生物及医疗"></a>生物及医疗</h4><p>中国拥有生物技术重点实验室近200个，研发人员2万多人，涉及现代生物技术的企业约500多家，从业人员超过5万人，已建立了20多个生物技术园区。在生物资源的调查统计方面，中国完成登记的动植物、微生物资源约为26万种，已收集与重大疾病相关的中国人家系3000多个，收集农作物种质资源32万份，建立了全球保有量最大的农作物种质资源库。就生物技术来看，中国在基因测序、转基因植物、疫苗研制、高技术筛选农作物、基因治疗技术方面都处于世界前沿。但是中国生物技术产业的发展缺乏一个有组织的、系统的、分工明确的体系和发展战略。其次，生物技术的产业化水平偏低。第三，不同高新技术产业的相互交叉渗透不足。其四，国际市场的开拓与国际合作有待加强。</p>
+<h4 id="生物及医疗-1"><a href="#生物及医疗-1" class="headerlink" title="生物及医疗"></a>生物及医疗</h4><p>中国拥有生物技术重点实验室近200个，研发人员2万多人，涉及现代生物技术的企业约500多家，从业人员超过5万人，已建立了20多个生物技术园区。在生物资源的调查统计方面，中国完成登记的动植物、微生物资源约为26万种，已收集与重大疾病相关的中国人家系3000多个，收集农作物种质资源32万份，建立了全球保有量最大的农作物种质资源库。就生物技术来看，中国在基因测序、转基因植物、疫苗研制、高技术筛选农作物、基因治疗技术方面都处于世界前沿。但是中国生物技术产业的发展缺乏一个有组织的、系统的、分工明确的体系和发展战略。其次，生物技术的产业化水平偏低。第三，不同高新技术产业的相互交叉渗透不足。其四，国际市场的开拓与国际合作有待加强。</p>
+<h4 id="生物技术"><a href="#生物技术" class="headerlink" title="生物技术"></a>生物技术</h4><p>1973年，水稻专家袁隆平培育出了“籼型杂交水稻”，该水稻亩产比普通水稻增产20％以上。2014年10月10日，农业部通报，由袁隆平院士领衔的第四期超级稻百亩方亩产超过1000公斤，创造了每亩1026.7公斤（每公顷15.4吨）的新纪录。另外中华人民共和国科学家独立完成了杂交水稻父本9311（籼稻）的基因组序列草图。中华人民共和国是世界上第二个有转基因抗虫棉花自主知识产权的国家。</p>
+<p>2021年，中国科学院天津工业生物技术研究所研究员马延和团队，从头设计、构建了11步反应的非自然固碳与淀粉合成途径，在实验室中首次实现从二氧化碳到淀粉分子的全合成。该技术不依赖植物光合作用，不需大面积种地、施肥和农作物加工，经优化，原料只需二氧化碳、氢气和电，便能生成淀粉。而且在充足能量供给条件下，按照目前技术参数，理论上1立方米大小的生物反应器年产淀粉量相当于我国5亩玉米地的年产淀粉量。</p>
+<h4 id="医疗技术"><a href="#医疗技术" class="headerlink" title="医疗技术"></a>医疗技术</h4><p>1965年，中华人民共和国科学家首次人工合成了结晶牛胰岛素，使中国成为第一个在体外全合成具有生物活性的结晶蛋白质的国家。1986年香港首例试管婴儿诞生。大陆首例试管婴儿于1988年3月10日诞生。中华人民共和国还作为惟一的发展中国家成员参与了国际人类基因组计划，完成了1％测序工作。在国际上首次定位和克隆了神经性高频耳聋基因、乳光牙本质Ⅱ型、汗孔角化症等遗传病的致病基因。</p>
+<h4 id="激光技术"><a href="#激光技术" class="headerlink" title="激光技术"></a>激光技术</h4><p>包括激光测距技术、激光制导技术、激光通信技术、强激光技术等。1961年，中国成功研制了第一台激光器。上世纪80年代华中科技大学建成了中国第一个激光技术国家重点实验室，90年代初建立了第一个激光加工国家工程研究中心，开始研究深紫外非线性光学晶体和激光技术，经过20多年努力，使中国成为当今世界上唯一掌握深紫外全固态激光技术的国家。2012年7月19日，中国进行的大口径高通量激光驱动器实验平台出光试验中，单束出光能量第三次超过16千焦，达到16.523千焦，成为继美国、法国之后第三个迈入“单束万焦耳出光”俱乐部的国家。</p>
+<h4 id="资源勘探技术"><a href="#资源勘探技术" class="headerlink" title="资源勘探技术"></a>资源勘探技术</h4><p>2017年5月18日，中国正式宣布南海北部神狐海域进行的可燃冰试采获得成功，这也标志着中国成为全球第一个实现了在海域可燃冰试开采中获得连续稳定产气的国家。</p>
+<h4 id="交通技术"><a href="#交通技术" class="headerlink" title="交通技术"></a>交通技术</h4><p>中国建造了世界高原铁路技术难度最大的青藏铁路，高原铁路建设技术到达领军水平。中国机车建造在国际上具有一定优势。2014年10月中国北车公司首次向美国出口284辆地铁车辆。。2015年6月1日南北车合并为中车集团，各种铁路和高铁、地铁、轻轨车辆将由国家支持的中车集团主导。2017年建厂芝加哥举行动工，首案为中标芝加哥846辆地铁车辆。2012年6月下旬广州中船龙穴造船厂的排水量35万吨巨型油轮新埔洋号出海试航。2019年10月18日，首艘国产大型邮轮在中国船舶工业集团有限公司旗下的上海外高桥造船有限公司点火开工，全面进入实质性建造阶段。</p>
+<h3 id="技术短板"><a href="#技术短板" class="headerlink" title="技术短板"></a>技术短板</h3><h3 id="短板"><a href="#短板" class="headerlink" title="短板"></a>短板</h3><ol>
+<li>光刻机<br>（ASML、尼康、佳能、SUSS、ABM Inc.）<br>制造芯片的光刻机，其精度决定了芯片性能的上限。在“十二五”科技成就展览上，中国生产的最好的光刻机，加工精度是90纳米。这相当于2004年上市的奔腾四CPU的水准。而国外已经做到了十几纳米。</li>
+</ol>
+<p>光刻机里有两个同步运动的工件台，一个载底片，一个载胶片。两者需始终同步，误差在2纳米以下。两个工作台由静到动，加速度跟导弹发射差不多。在工作时，相当于两架大飞机从起飞到降落，始终齐头并进一架飞机上伸出一把刀，在另一架飞机的米粒上刻字，不能刻坏了。</p>
+<ol start="2">
+<li><p>芯片<br>（英特尔、高通、英伟达、联发科、海思、博通、AMD、德州仪器、意法半导体、恩智浦半导体）<br>低速的光芯片和电芯片已实现国产，但高速的仍全部依赖进口。国外最先进芯片量产精度为10纳米，我国只有28纳米，差距两代。据报道，在计算机系统、通用电子系统、通信设备、内存设备和显示及视频系统中的多个领域中，我国国产芯片占有率为0。</p>
+</li>
+<li><p>操作系统<br>（WINDOWS、UNIX、XENIX、Mac OS、Netware、OS&#x2F;2 warp、HarmonyOS）<br>普通人看到中国IT业繁荣，认为技术差距不大，实则不然。3家美国公司垄断手机和个人电脑的操作系统。数据显示，2017年安卓系统市场占有率达85.9%，苹果IOS为14%。其他系统仅有0.1%。这0.1%，基本也是美国的微软的Windows和黑莓。没有谷歌铺路，智能手机不会如此普及，而中国手机厂商免费利用安卓的代价，就是随时可能被“断粮”。</p>
+</li>
+<li><p>航空发动机短舱<br>（Safran、UTC、Alenia Aermacchi、MRAS、Bombardier、Boeing、GKN、Triumph）<br>飞机上安放发动机的舱室，俗称“房子”，是航空推进系统最重要的核心部件之一，其成本约占全部发动机的1&#x2F;4左右。短舱需要将发动机包覆，减少飞行阻力；其进气道还要具有防、除冰的能力；飞行中，要保护发动机不受干扰正常工作；在地面，需要做到方便发动机的维护和维修，一旦短舱有损，飞行中可能会引起发动机严重事故。短舱越大技术难度越高。我国在这一重要领域尚属空白。查阅所有公开资料，我国尚无自主研制短舱的专门机构，相关院校似乎也没有设置相关的学科。</p>
+</li>
+<li><p>触觉传感器</p>
+</li>
+</ol>
+<p>触觉传感器是工业机器人核心部件。精确、稳定的严苛要求，拦住了我国大部分企业向触觉传感器迈进的步伐，目前国内传感器企业大多从事气体、温度等类型传感器的生产。在一个有着100多家企业的行业中，几乎没有传感器制造商进行触觉传感器的生产。日本阵列式传感器能在10厘米×10厘米大小的基质中分布100个敏感元件，售价10万元，而国内产品多为一点式，一般100元一个。</p>
+<ol start="6">
+<li>真空蒸镀机</li>
+</ol>
+<p>OLED面板制程的“心脏”。日本Canon Tokki独占高端市场，掌握着该产业的咽喉。业界对它的年产量预测通常在几台到十几台之间。有钱也买不到，说的就是它。Canon Tokki能把有机发光材料蒸镀到基板上的误差控制在5微米内（1微米相当于头发直径的1％），没有其他公司的蒸镀机能达到这个精准度。目前我国还没有生产蒸镀机的企业，在这个领域我们没什么发言权。</p>
+<ol start="7">
+<li>手机射频器件</li>
+</ol>
+<p>一块手机的主板上，1&#x2F;3的空间是射频电路。手机发展趋势是更轻薄，功耗更小，频段更多，带宽更大，这就向射频芯片提出了挑战。射频芯片将数字信号转化成电磁波，4G手机要支持十几个频段，信息带宽几十兆。2018年，射频芯片市场150亿美元；高端市场基本被Skyworks、Qorvo和 博通3家垄断，高通也占一席之地。射频器件的另一个关键元件——滤波器，国内外差距更大。手机使用的高端滤波器，几十亿美元的市场，完全归属Qorvo等国外射频器件巨头。中国是世界最大的手机生产国，但造不了高端的手机射频器件。这需要材料、工艺和设计经验的踏实积累。</p>
+<ol start="8">
+<li>iCLIP技术</li>
+</ol>
+<p>iCLIP是一种新兴的实验技术，是研发创新药的最关键的技术之一。它的发明，让人们抛弃精密的观测仪器，也能确定RNA（核糖核酸）和蛋白质在哪个位置“交汇”，甚至可以读出位点“密码”。iCLIP技术难，犹如万千人海中找一个人，要从几十亿个碱基对找到一个或几个确定的结合点，精确度可想而知。国外研究团队已在此领域展开“技术竞赛”，研究论文以几个月为周期轮番上演。国内实验室却极少有成熟经验。</p>
+<ol start="9">
+<li>重型燃气轮机</li>
+</ol>
+<p>燃气轮机广泛应用于舰船、火车和大型电站。我国具备轻型燃机自主化能力；但重燃仍基本依赖引进。国际上大的重燃厂家，主要是美国GE、日本三菱、德国西门子、意大利安萨尔多4家。与中国合作都附带苛刻条件：设计技术不转让，核心的热端部件制造技术也不转让，仅以许可证方式许可本土制造非核心部件。没有自主化能力，意味着我国能源安全的重要一环，仍然受制于人，存在被“卡脖子”的风险。</p>
+<ol start="10">
+<li><p>激光雷达<br>(美国Velodyne)<br>激光雷达是个传感器，自带光源，主动发出激光，感知周围环境，像蝙蝠通过超声波定位一样。它是自动驾驶汽车的必备组件，决定着自动驾驶行业的进化水平。但在该领域，国货几乎没有话语权。目前能上路的自动驾驶汽车中，凡涉及激光雷达者，使用的几乎都是美国Velodyne的产品，其激光雷达产品是行业标配，占八成以上市场份额。</p>
+</li>
+<li><p>适航标准</p>
+</li>
+</ol>
+<p>一款航空发动机要想获取一张放飞证，必须经过一套非常严格的“适航”标准体系验证，涵盖设计、制造、验证和管理。但目前在国际上，以FAA和欧洲航空安全局（EASA）的适航审定影响力最大，认可度最高。尽管在规章要求层面，中国与FAA基本一致，但由于国产航空发动机型号匮乏，缺乏实际工程实践经验，使我国适航规章缺少相应的技术支撑。实际型号的适航验证工作，成为被卡在别国空域之外的关隘。</p>
+<ol start="12">
+<li>高端电容电阻</li>
+</ol>
+<p>电容和电阻是电子工业的黄金配角。中国是最大的基础电子元件市场，一年消耗的电阻和电容，数以万亿计。但最好的消费级电容和电阻，来自日本。电容市场一年200多亿美元，电阻也有百亿美元量级。所谓高端的电容电阻，最重要的是同一个批次应该尽量一致。日本这方面做得最好，国内企业差距大。国内企业的产品多属于中低端，在工艺、材料、质量管控上，相对薄弱。</p>
+<ol start="13">
+<li><p>核心工业软件<br>(Cadence、Synopsys、Mentor）<br>中国的核心工业软件领域，基本还是“无人区”。工业软件缺位，为智能制造带来了麻烦。工业系统复杂到一定程度，就需要以计算机辅助的工业软件来替代人脑计算。如，芯片设计生产“必备神器”EDA工业软件，国产EDA与美国主流EDA工具相较，设计原理上并无差异，但软件性能却存在不小差距，主要表现在对先进技术和工艺支持不足，和国外先进EDA工具之间存在“代差”。国外EDA三大巨头公司Cadence、Synopsys及Mentor，占据了全球该行业每年总收入的70%。发展自主工业操作系统+自主工业软件体系，刻不容缓。</p>
+</li>
+<li><p>ITO靶材</p>
+</li>
+</ol>
+<p>ITO靶材不仅用于制作液晶显示器、平板显示器、等离子显示器、触摸屏、电子纸、有机发光二极管，还用于太阳能电池和抗静电镀膜、EMI屏蔽的透明传导镀膜等，在全球拥有广泛的市场。ITO膜的厚度因功能需求而有不同，一般在30纳米至200纳米。在尺寸的问题上，国内ITO靶材企业一直鲜有突破，而后端的平板显示制造企业也要仰人鼻息。烧结大尺寸ITO靶材，需要有大型的烧结炉。国外可以做宽1200毫米、长近3000毫米的单块靶材，国内只能制造不超过800毫米宽的。产出效率方面，日式装备月产量可达30吨至50吨，我们年产量只有30吨——而进口一台设备价格要花一千万元，这对国内小企业来说无异于天价。每年我国ITO靶材消耗量超过1千吨，一半左右靠进口，用于生产高端产品。</p>
+<ol start="15">
+<li><p>核心算法<br>发那科（日本）、ABB（瑞士）、安川（日本）、库卡（德国）<br>中国已经连续5年成为世界第一大机器人应用市场，但高端机器人仍然依赖于进口。由于没有掌握核心算法，国产工业机器人稳定性、故障率、易用性等关键指标远不如工业机器人“四大家族”发那科（日本）、ABB（瑞士）、安川（日本）、库卡（德国）的产品。核心算法差距过大，导致国产机器人稳定性不佳，故障率居高不下。算法的差距不只体现在核心控制器上，更拖慢了伺服系统响应的速度。机器人每完成一个动作，需要核心控制器、伺服驱动器和伺服电机协同作战。对于单台伺服系统，国产机器人动态与静态精度都很高，但高端机器人一般同时有6台以上伺服系统，用传统的控制方法难以取得好的控制效果。</p>
+</li>
+<li><p>航空钢材<br>美国的300M钢<br>无论起飞还是降落，起落架都是支撑飞机的唯一部件，尤其是在飞机降落阶段，其承载的载荷不仅仅来自机身重量，还有飞机垂直方向的巨大冲力。因此，起落架的材料强度必须十分优异，只能依靠特种钢材才行。目前使用范围最广的是美国的300M钢，该材料采用真空热处理技术，避免了渗氢，零件表面光亮，无氧化脱碳、增碳和晶界氧化等缺陷，提高了表面质量。而国内用于制作起落架的国产超强度钢材有时会出现点状缺陷、硫化物夹杂、粗晶、内部裂纹、热处理渗氢等问题，这些问题都与冶炼过程中纯净度不够有关系。所以我国在高纯度熔炼技术方面与美国还有较大差距，存在很大提升空间。</p>
+</li>
+<li><p>铣刀<br>（以色列伊斯卡（ISCAR）、瑞典山特维克可乐满、德国Ingersoll、瑞典山高（Seco Tools AB）、京瓷、德国瓦尔特（Walter）、日本Sumitomo、日本黛杰、三菱、美国肯纳）<br>随着我国近年来高铁的迅猛建设，钢轨养护问题也愈加让业内专家忧心。若养护不到位，不仅折损生命周期，还存在高风险隐患。我国自主创新研发的双动力电驱铣磨维护机器人装备——被称为钢轨‘急救车’的铣磨车可为钢轨“保驾护航”。但铣磨车最核心部件铣刀仍需从国外进口。铣刀的材料是一种超硬合金材料。对其中金属成分我们已然了解，但就是不知人家是怎么配比、合成的，如同琢磨某种中药的祖传秘方、各种药材比例是多少，都不甚明了。</p>
+</li>
+<li><p>高端轴承钢<br>（美国铁姆肯、瑞典SKF）<br>作为机械设备中不可或缺的核心零部件，轴承支撑机械旋转体，降低其摩擦系数，并保证其回转精度。无论飞机、汽车、高铁，还是高精密机床、仪器仪表，都需要轴承。这就对其精度、性能、寿命和可靠性提出了高要求。而我国的制轴工艺已经接近世界顶尖水平，但材质——也就是高端轴承用钢几乎全部依赖进口。高端轴承用钢的研发、制造与销售基本上被世界轴承巨头美国铁姆肯、瑞典SKF所垄断。前几年，他们分别在山东烟台、济南建立基地，采购中国的低端材质，运用他们的核心技术做成高端轴承，以十倍的价格卖给中国市场。炼钢过程中加入稀土，就能使原本优质的钢变得更加“坚强”。但怎么加，这是世界轴承巨头们的核心秘密。</p>
+</li>
+<li><p>高压柱塞泵<br>（德国(Bosch rexroth)博世力士乐、美国（Parker）派克、美国(vickers)威格士、日本（YUKEN）油研、德国(HAWE)哈威液压、法国（Hydro Leduc）力度克、意大利(atos)阿托斯）<br>液压系统是装备制造业的关键部件之一，一切工程领域，凡是有机械设备的场合，都离不开液压系统。高压柱塞泵是高端液压装备的核心元件，被称作液压系统的“心脏”。中国液压工业的规模在2017年已经成为世界第二，但产业大而不强，尤其是额定压力35MPa以上高压柱塞泵，90%以上依赖进口。国内生产的液压柱塞泵与外国品牌相比，在技术先进性、工作可靠性、使用寿命、变量机构控制功能和动静态性能指标上都有较大差距，基本相当于国外上世纪90年代初水平。</p>
+</li>
+<li><p>航空设计软件<br>（美国MATLAB、法国达索CATIA）<br>自上世纪80年代后，世界航空业就迈入数字化设计的新阶段，现在已经达到离开软件就无法设计的高度依赖程度。设计一架飞机至少需要十几种专业软件，全是欧美国家产品。国内设计单位不仅要投入巨资购买软件，而且头戴钢圈，一旦被念“紧箍咒”，整个航空产业将陷入瘫痪。据媒体报道，设计歼-10飞机时，主起落架主承力结构的整个金属部件是委托国外制造。但造完之后，起落架的收放出现问题，有5毫米的误差，只好重新订货制造。仅仅是这一点点的误差，影响了歼-10首飞推迟了八九个月。没有全数字化的软件支撑，任何一点细微的误差，都可能成为制造业的梦魇。</p>
+</li>
+<li><p>光刻胶<br>（TOK、JSR、住友化学、信越化学）<br>我国虽然已成为世界半导体生产大国，但面板产业整体产业链仍较为落后。目前，LCD用光刻胶几乎全部依赖进口，核心技术至今被TOK、JSR、住友化学、信越化学等日本企业所垄断。就拿在国际上具有一定竞争实力的京东方来说，目前已建立17个面板显示生产基地，其中有16个已经投产。但京东方用于高端面板的光刻胶，仍然由国外企业提供。光刻胶主要成分有高分子树脂、色浆、单体、感光引发剂、溶剂以及添加剂，开发所涉及的技术难题众多，需从低聚物结构设计和筛选、合成工艺的确定和优化、活性单体的筛选和控制、色浆细度控制和稳定、产品配方设计和优化、产品生产工艺优化和稳定、最终使用条件匹配和宽容度调整等方面进行调整。因此，要自主研发生产，技术难度非常之高。</p>
+</li>
+<li><p>高压共轨系统<br>（德国、美国和日本）<br>电控柴油高压共轨系统相当于柴油发动机的“心脏”和“大脑”，其品质的好坏，严重影响发动机的使用。柴油机产业是推动一个国家经济增长、社会运行的重要装备基础。中国是全球柴油发动机的主要市场和生产国家，而在国内的电控柴油机高压共轨系统市场，德国、美国和日本等企业占据了绝大份额。和国外先进公司的产品相比，国产高压共轨系统在性能、功能、质量及一致性上还存在一定的差距，成本上的优势也不明显。</p>
+</li>
+<li><p>透射式电镜<br>（日本电子、日立、FEI）<br>冷冻电镜可以拍摄微观结构高清3d“彩照”，是生命科学研究的利器，透射式电镜的生产能力是冷冻电镜制造能力的基础之一。目前世界上生产透射电镜的厂商只有3家，分别是日本电子、日立、FEI，国内没有一家企业生产透射式电镜。匹配冷冻电镜使用的工具都需要原装，零件坏了找不到人修理，只能等待零件邮寄到货后进行更换。对于中国的冷冻电镜使用者们来说，这样的体验可能还要持续不短的时间。</p>
+</li>
+<li><p>主轴承<br>（德国罗特艾德、IMO、FAG和瑞典SKF）<br>主轴承，有全断面隧道掘进机的“心脏”之称，承担着掘进机运转过程的主要载荷，是刀盘驱动系统的关键部件，工作所处状况十分恶劣。与直径仅有几百毫米的传统滚动轴承相比，掘进机主轴承直径一般为几米，是结构最复杂的一种轴承，制造需要上百道工序。就掘进机整机制造能力而言，国产掘进机已接近世界最先进水平，但最关键的主轴承全部依赖进口。德国的罗特艾德、IMO、FAG和瑞典的SKF占据市场。</p>
+</li>
+<li><p>微球<br>（日本）<br>微球，直径是头发粗细的三十分之一。手机屏幕里，每平方毫米要用一百个微球，撑起了两块玻璃面板，相当于骨架，在两块玻璃面板的缝隙里，再灌进液晶。少了它，你正盯着的液晶屏幕将无法生产。没有微球，芯片生产、食品安全检测、疾病诊断、生物制药、环境监测……许多行业都会陷入窘境。仅微电子领域，中国每年就要进口价值几百亿元人民币的微球。2017年中国大陆的液晶面板出货量达到全球的33%，产业规模约千亿美元，位居全球第一。但这面板中的关键材料——间隔物微球，以及导电金球，全世界只有日本一两家公司可以提供。这些材料也像芯片一样，被人卡住了脖子。</p>
+</li>
+<li><p>水下连接器<br>（英国、德国、美国）<br>除了船舶、遥感卫星，海底观测网已成为第三种海洋观测平台——通过它，人类可以深入到水下观测和认识海洋。如果将各类缆系观测平台比作胳膊、腿，水下连接器就好比关节，对海底观测网系统的建设、运行和维护有着不可替代的作用。目前我国水下连接器市场基本被外国垄断。一旦该连接器成为禁运品，整个海底观测网的建设和运行将被迫中断。</p>
+</li>
+<li><p>燃料电池关键材料<br>（无部件生产商，无车用电堆生产公司，只有极少量商业运行燃料电池车）<br>国外的燃料电池车已实现量产，但我国车用燃料电池还处在技术验证阶段。我国车用燃料电池的现状是——几乎无部件生产商，无车用电堆生产公司，只有极少量商业运行燃料电池车。多项关键材料，决定着燃料电池的寿命和性能。这些材料我国并非完全没有，有些实验室成果甚至已达到国际水平。但是，没有批量生产线，燃料电池产业链依然梗阻。关键材料长期依赖国外，一旦遭遇禁售，我国的燃料电池产业便没有了基础支撑。</p>
+</li>
+<li><p>高端焊接电源<br>（）<br>我国是海洋大国，拥有300多万平方公里海域，正在大力发展高端海洋资源开发和海洋维权装备。海里的设备一旦出现开裂等故障，需要用有工业制造“缝纫机”之称的焊接装备修补。深海焊接的实现靠水下机器人。虽然我国是全球最大焊接电源制造基地，年产能已超1000万台套，但高端焊接电源基本上仍被国外垄断。我国水下机器人焊接技术一直难以提升，原因是高端焊接电源技术受制于人。国外焊接电源全数字化控制技术已相对成熟， 国内的仍以模拟控制技术为主。</p>
+</li>
+<li><p>锂电池隔膜</p>
+</li>
+</ol>
+<p>作为新能源车的“心脏”，国产锂离子电池（以下简称锂电池）目前“跳”得还不够稳。电池四大核心材料中，正负极材料、电解液都已实现了国产化，唯独隔膜仍是短板。高端隔膜技术具有相当高的门槛，不仅要投入巨额的资金，还需要有强大的研发和生产团队、纯熟的工艺技术和高水平的生产线。高端隔膜目前依然大量依赖进口。</p>
+<ol start="30">
+<li>医学影像设备元器件</li>
+</ol>
+<p>目前国产医学影像设备的大部分元器件依赖进口，至少要花10年、20年才能达到别人的现有水平。在传统医学成像（CT、磁共振等）上，中国最早的专利比美国平均晚20年。在专利数量上，美国是我国的10倍。这意味着整个产业已经完全掌握在国外企业的手里了，所有的知识产权，所有的原创成果，所有的科研积累都在国外，中国只占很少的一部分。</p>
+<ol start="31">
+<li>超精密抛光工艺</li>
+</ol>
+<p>超精密抛光工艺在现代制造业中有多重要，其应用的领域能够直接说明问题：集成电路制造、医疗器械、汽车配件、数码配件、精密模具、航空航天。“它是技术灵魂”。美日牢牢把握了全球市场的主动权，其材料构成和制作工艺一直是个谜。换言之，购买和使用他们的产品，并不代表可以仿制甚至复制他们的产品。</p>
+<ol start="32">
+<li>环氧树脂</li>
+</ol>
+<p>碳纤维质量能比金属铝轻，但强度却高于钢铁，还具有耐高温、耐腐蚀、耐疲劳、抗蠕变等特性，其中一个关键的复合辅材就是环氧树脂。但目前国内生产的高端碳纤维，所使用的环氧树脂全部都是进口的。目前，我国已能生产T800等较高端的碳纤维，但日本东丽掌握这一技术的时间是上世纪90年代。相比于碳纤维，我国高端环氧树脂产业落后于国际的情况更为严重。</p>
+<ol start="33">
+<li>高强度不锈钢</li>
+</ol>
+<p>用于火箭发动机的钢材需具备多种特性，其中高强度是必须满足的重要指标。然而，不锈钢的强度和防锈性能，却是鱼和熊掌般难以兼得的矛盾体。火箭发动机材料如果如果严重生锈，将带来很大影响。完全依靠材料自身实现高强度和防锈性能兼备，这是世界性难题。现在，我国航天材料大多用的是国外上世纪六七十年代用的材料，发达国家在生产过程中会严格控制杂质含量，如果纯度不达标，便重新回炉，但国内厂家往往缺乏这种严谨的态度。</p>
+<ol start="34">
+<li>数据库管理系统</li>
+</ol>
+<p>目前全世界最流行的两种数据库管理系统是Oracle和MySQL，都是甲骨文公司旗下的产品。竞争者还有IBM公司以及微软公司的产品等。甲骨文、IBM、微软和Teradata几家美国公司，占了大部分市场份额。数据库管理系统国货也有市场份额，但只是个零头，其稳定性、性能都无法让市场信服，银行、电信、电力等要求极端稳妥的企业，不会考虑国货。</p>
+<ol start="35">
+<li>扫描电镜</li>
+</ol>
+<p>扫描电子显微镜，一种高端的电子光学仪器，它被广泛地应用于材料、生物、医学、冶金、化学和半导体等各个研究领域和工业部门，被称为“微观相机”目前我国科研与工业部门所用的扫描电镜严重依赖进口，每年我国花费超过1亿美元采购的几百台扫描电镜中，主要产自美、日、德和捷克等国。国产扫描电镜只占约5%-10%。</p>
+<h3 id="半导体公司"><a href="#半导体公司" class="headerlink" title="半导体公司"></a>半导体公司</h3><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AMI Semiconductor</td>
+<td align="center">半导体和集成电路器件制造商。</td>
+</tr>
+<tr>
+<td align="center">Advanced Semiconductor Engineering</td>
+<td align="center">ASE集团是全球最大的装配和测试独立半导体制造服务提供商。</td>
+</tr>
+<tr>
+<td align="center">Analog Devices</td>
+<td align="center">高性能信号处理解决方案。</td>
+</tr>
+<tr>
+<td align="center">Atmel</td>
+<td align="center">设计和制造先进的半导体。</td>
+</tr>
+<tr>
+<td align="center">Avago Technologies</td>
+<td align="center">半导体模拟，混合信号和光电元件及子系统的制造商和供应商。</td>
+</tr>
+<tr>
+<td align="center">Cosmic Circuits</td>
+<td align="center">差分模拟和混合信号硅IP的提供商，用于集成到片上系统。</td>
+</tr>
+<tr>
+<td align="center">Crocus Technology</td>
+<td align="center">用于半导体和电子系统行业的磁性随机存取存储器（“MRAM”）产品和技术的制造商。</td>
+</tr>
+<tr>
+<td align="center">Dynex Semiconductor</td>
+<td align="center">功率半导体，IGBT，SCR，GTO晶闸管，快速恢复和整流二极管，SCR &#x2F;二极管模块，功率组件，SAW滤波器和SOS IC的制造商。</td>
+</tr>
+<tr>
+<td align="center">Elpida Memory</td>
+<td align="center">动态随机存取存储器（DRAM），RDRAM（R），SDRAM，DDR SDRAM，移动RAM和消费SDRAM的领先制造商。</td>
+</tr>
+<tr>
+<td align="center">Fairchild Semiconductor</td>
+<td align="center">全球电子行业高性能半导体产品供应商。</td>
+</tr>
+<tr>
+<td align="center">Freescale Semiconductor</td>
+<td align="center">微控制器，微处理器和半导体制造商。</td>
+</tr>
+<tr>
+<td align="center">Fujitsu 富士通</td>
+<td align="center">以客户为中心的IT和通信解决方案的制造商和供应商。</td>
+</tr>
+<tr>
+<td align="center">Hynix 海力士（原Hyundai Electronics）</td>
+<td align="center">动态随机存取存储器（’DRAM’）芯片和闪存芯片的存储器半导体供应商。</td>
+</tr>
+<tr>
+<td align="center">IBM</td>
+<td align="center">IBM制造和销售计算机硬件和软件。</td>
+</tr>
+<tr>
+<td align="center">IM Flash Technologies</td>
+<td align="center">IM Flash Technologies是美光科技与英特尔的合资企业。提供先进的半导体解决方案和NAND闪存产品。</td>
+</tr>
+<tr>
+<td align="center">Infineon Technologies:</td>
+<td align="center">内存，MOSFET，电源，微控制器，通信和消费产品的制造商。</td>
+</tr>
+<tr>
+<td align="center">Inotera</td>
+<td align="center">在300mm硅晶圆上提供商品DRAM代工服务。</td>
+</tr>
+<tr>
+<td align="center">Intel Corporation 英特尔公司</td>
+<td align="center">硅创新的全球领导者开发处理器技术并支持全球计划。</td>
+</tr>
+<tr>
+<td align="center">International Rectifier</td>
+<td align="center">功率半导体（MOSFET，IBGT，二极管和晶闸管）的制造商。</td>
+</tr>
+<tr>
+<td align="center">IPtronics</td>
+<td align="center">无晶圆厂半导体公司，提供用于并行光互连的下一代集成电路。</td>
+</tr>
+<tr>
+<td align="center">Jennic Limited</td>
+<td align="center">ZigBee的市场领导者，6LoWPAN，IEEE802.15.4无线微控制器，模块和评估套件。</td>
+</tr>
+<tr>
+<td align="center">Luxtera</td>
+<td align="center">硅光子学，CMOS光子学。</td>
+</tr>
+<tr>
+<td align="center">Materials Research Corporation（普莱克斯）</td>
+<td align="center">全球高度专业化的半导体材料和设备制造商和供应商。</td>
+</tr>
+<tr>
+<td align="center">Maxim Integrated Products</td>
+<td align="center">28种类别的模拟和混合信号IC。</td>
+</tr>
+<tr>
+<td align="center">Microchip Technology</td>
+<td align="center">微控制器和模拟半导体。</td>
+</tr>
+<tr>
+<td align="center">Micron Technology 美光科技</td>
+<td align="center">提供DRAM组件，模块和NAND闪存。</td>
+</tr>
+<tr>
+<td align="center">National Semiconductor 美国国家半导体</td>
+<td align="center">芯片系统模拟和混合信号技术的制造商和供应商。</td>
+</tr>
+<tr>
+<td align="center">NEC</td>
+<td align="center">互联网，宽带网络和企业业务解决方案的提供商。</td>
+</tr>
+<tr>
+<td align="center">Nemotek Technologie</td>
+<td align="center">为便携式应用（如手机和笔记本电脑）制造定制的晶圆级相机（WLC）。</td>
+</tr>
+<tr>
+<td align="center">Numonyx</td>
+<td align="center">一家制造闪存的半导体公司。</td>
+</tr>
+<tr>
+<td align="center">Nuvoton</td>
+<td align="center">提供消费类IC设计和代工服务。</td>
+</tr>
+<tr>
+<td align="center">NXP Semiconductors 恩智浦半导体</td>
+<td align="center">半导体，系统解决方案和软件。</td>
+</tr>
+<tr>
+<td align="center">ON Semiconductor 安森美半导体</td>
+<td align="center">提供广泛的半导体和集成电路器件产品组合。</td>
+</tr>
+<tr>
+<td align="center">Oramir（现为应用材料公司）</td>
+<td align="center">用于清洁硅晶片的先进技术</td>
+</tr>
+<tr>
+<td align="center">Panasonic Corporation 松下公司</td>
+<td align="center">电子制造业。</td>
+</tr>
+<tr>
+<td align="center">Qimonda 奇梦达</td>
+<td align="center">内存&#x2F; DRAM</td>
+</tr>
+<tr>
+<td align="center">Reading Works（现已关闭）</td>
+<td align="center">用于通信和计算的集成电路和光电设备制造商。</td>
+</tr>
+<tr>
+<td align="center">Renesas Technology 瑞萨科技</td>
+<td align="center">半导体，微型计算机，逻辑和模拟器件，分立器件和存储器产品。</td>
+</tr>
+<tr>
+<td align="center">Samsung Electronics 三星电子</td>
+<td align="center">半导体，包括DRAM，闪存，SRAM，图形存储器，MCP，掩模ROM，系统LSI，TFT LCD模块等。</td>
+</tr>
+<tr>
+<td align="center">Sanyo 三洋</td>
+<td align="center">半导体，包括分立器件，闪存和IC。</td>
+</tr>
+<tr>
+<td align="center">Seiko</td>
+<td align="center">半导体CMOS IC，电源管理IC，EEPROM，传感器和实时时钟。</td>
+</tr>
+<tr>
+<td align="center">SensorDynamics</td>
+<td align="center">微型和无线半导体传感器。</td>
+</tr>
+<tr>
+<td align="center">Sharp Corporation 夏普公司</td>
+<td align="center">全球20大半导体销售领导者之一</td>
+</tr>
+<tr>
+<td align="center">Sitronics</td>
+<td align="center">提供电信解决方案，信息技术，系统集成和咨询，以及微电子产品的开发和制造。</td>
+</tr>
+<tr>
+<td align="center">Sony 索尼</td>
+<td align="center">索尼半导体。</td>
+</tr>
+<tr>
+<td align="center">STMicroelectronics 意法半导体</td>
+<td align="center">提供片上系统（SoC）和半导体解决方案。</td>
+</tr>
+<tr>
+<td align="center">Texas Instruments 德州仪器</td>
+<td align="center">数字信号处理器，分立和集成电路，计算器和数字光处理（DLP）的设计者和供应商。</td>
+</tr>
+<tr>
+<td align="center">Toshiba东芝</td>
+<td align="center">半导体，存储器件，通用逻辑IC，晶体管，二极管，光半导体器件，传感器，射频器件，微机，ASIC，ASSP，通用线性IC，电源IC，晶体管的制造商和供应商阵列，电机驱动器，运算放大器IC，比较器IC，运算放大器。</td>
+</tr>
+<tr>
+<td align="center">TriQuint Semiconductor</td>
+<td align="center">用于无线通信的高性能RF组件。</td>
+</tr>
+<tr>
+<td align="center">Winbond</td>
+<td align="center">半导体存储解决方案。</td>
+</tr>
+<tr>
+<td align="center">Xilinx赛灵思</td>
+<td align="center">全球最大的可编程芯片厂商，是FPGA，可编程SoC以及现在的ACAP的发明者。</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E6%9D%82%E8%B0%88/" class="">
+              杂谈
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Davis Cheng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2022/05/03/从微球到芯片/" target="_blank" title="从微球到芯片">https://davischeng.github.io/2022/05/03/从微球到芯片/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/img/cover/c2.jpg" class="lazyload placeholder" data-srcset="/medias/img/cover/c2.jpg" srcset="/medias/img/fruits/103.gif" alt="">
+    </div>
+    <a href="/2022/06/06/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E4%B9%8B%E9%87%8D%E7%82%B9/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">系统集成项目管理之重点</div>
+      </div>
+      
+      <!-- <div class="content">
+        第零章 资质要求2016 年下半年执行的最新的一级至四级条件（综合条件、财务状况、信誉、业绩、管理能力、技术实力、人才实
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/img/cover/c94.jpg" class="lazyload placeholder" data-srcset="/medias/img/cover/c94.jpg" srcset="/medias/img/fruits/103.gif" src="" alt="">
+    </div>
+    <a href="/2022/04/06/Zimbra/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">Zimbra</div>
+      </div>
+      <!-- <div class="content">
+        Zimbra开源邮件协同
+Zimbra提供一套开源协同办公套件包括WebMail，日历，通信录，Web文档管理和创作。它
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/medias/img/pay/alipay.jpg" class="lazyload placeholder" data-srcset="/medias/img/pay/alipay.jpg" srcset="/medias/img/fruits/103.gif" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/medias/img/pay/wechat.jpg" class="lazyload placeholder" data-srcset="/medias/img/pay/wechat.jpg" srcset="/medias/img/fruits/103.gif" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="wechat,weibo" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="gitment-container"></div>
+
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '10000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '/medias/img/scenery/s100.jpg,/medias/img/scenery/s101.jpg,/medias/img/scenery/s102.jpg,/medias/img/scenery/s103.jpg,/medias/img/scenery/s104.jpg,/medias/img/scenery/s105.jpg,/medias/img/scenery/s106.jpg,/medias/img/scenery/s107.jpg,/medias/img/scenery/s108.jpg,/medias/img/scenery/s109.jpg,/medias/img/scenery/s110.jpg,/medias/img/scenery/s111.jpg,/medias/img/scenery/s112.jpg,/medias/img/scenery/s113.jpg,/medias/img/scenery/s114.jpg,/medias/img/scenery/s115.jpg,/medias/img/scenery/s116.jpg,/medias/img/scenery/s117.jpg,/medias/img/scenery/s118.jpg,/medias/img/scenery/s119.jpg,/medias/img/scenery/s120.jpg';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
+
+      </main>
+    </div>
+
+    <!-- 页脚 -->
+    
+  
+  <!-- 底部鱼儿跳动效果，依赖于jquery-->
+<div id="j-fish-skip" style=" position: relative;height: 153px;width: auto;"></div>
+<script>
+  var RENDERER = {
+    POINT_INTERVAL: 5,
+    FISH_COUNT: 3,
+    MAX_INTERVAL_COUNT: 50,
+    INIT_HEIGHT_RATE: .5,
+    THRESHOLD: 50,
+    FISH_COLOR: '',
+    init: function () {
+      this.setFishColor(); this.setParameters(), this.reconstructMethods(), this.setup(), this.bindEvent(), this.render()
+    },
+    setFishColor: function () {
+      let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+      if (isDark) {
+        this.FISH_COLOR = '#222'; // 暗黑色，有时间把这整成一个变量
+      } else {
+        this.FISH_COLOR = '' || '#42b983';
+      }
+    },
+    setParameters: function () {
+      this.$window = $(window), this.$container = $("#j-fish-skip"), this.$canvas = $("<canvas />"), this.context = this.$canvas.appendTo(this.$container).get(0).getContext("2d"), this.points = [], this.fishes = [], this.watchIds = []
+    },
+    createSurfacePoints: function () {
+      var t = Math.round(this.width / this.POINT_INTERVAL);
+      this.pointInterval = this.width / (t - 1), this.points.push(new SURFACE_POINT(this, 0));
+      for (var i = 1; i < t; i++) {
+        var e = new SURFACE_POINT(this, i * this.pointInterval),
+          h = this.points[i - 1];
+        e.setPreviousPoint(h), h.setNextPoint(e), this.points.push(e)
+      }
+    },
+    reconstructMethods: function () {
+      this.watchWindowSize = this.watchWindowSize.bind(this), this.jdugeToStopResize = this.jdugeToStopResize.bind(this), this.startEpicenter = this.startEpicenter.bind(this), this.moveEpicenter = this.moveEpicenter.bind(this), this.reverseVertical = this.reverseVertical.bind(this), this.render = this.render.bind(this)
+    },
+    setup: function () {
+      this.points.length = 0, this.fishes.length = 0, this.watchIds.length = 0, this.intervalCount = this.MAX_INTERVAL_COUNT, this.width = this.$container.width(), this.height = this.$container.height(), this.fishCount = this.FISH_COUNT * this.width / 500 * this.height / 500, this.$canvas.attr({
+        width: this.width,
+        height: this.height
+      }), this.reverse = !1, this.fishes.push(new FISH(this)), this.createSurfacePoints()
+    },
+    watchWindowSize: function () {
+      this.clearTimer(), this.tmpWidth = this.$window.width(), this.tmpHeight = this.$window.height(), this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL))
+    },
+    clearTimer: function () {
+      for (; this.watchIds.length > 0;) clearTimeout(this.watchIds.pop())
+    },
+    jdugeToStopResize: function () {
+      var t = this.$window.width(),
+        i = this.$window.height(),
+        e = t == this.tmpWidth && i == this.tmpHeight;
+      this.tmpWidth = t, this.tmpHeight = i, e && this.setup()
+    },
+    bindEvent: function () {
+      this.$window.on("resize", this.watchWindowSize), this.$container.on("mouseenter", this.startEpicenter), this.$container.on("mousemove", this.moveEpicenter)
+    },
+    getAxis: function (t) {
+      var i = this.$container.offset();
+      return {
+        x: t.clientX - i.left + this.$window.scrollLeft(),
+        y: t.clientY - i.top + this.$window.scrollTop()
+      }
+    },
+    startEpicenter: function (t) {
+      this.axis = this.getAxis(t)
+    },
+    moveEpicenter: function (t) {
+      var i = this.getAxis(t);
+      this.axis || (this.axis = i), this.generateEpicenter(i.x, i.y, i.y - this.axis.y), this.axis = i
+    },
+    generateEpicenter: function (t, i, e) {
+      if (!(i < this.height / 2 - this.THRESHOLD || i > this.height / 2 + this.THRESHOLD)) {
+        var h = Math.round(t / this.pointInterval);
+        h < 0 || h >= this.points.length || this.points[h].interfere(i, e)
+      }
+    },
+    reverseVertical: function () {
+      this.reverse = !this.reverse;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].reverseVertical()
+    },
+    controlStatus: function () {
+      for (var t = 0, i = this.points.length; t < i; t++) this.points[t].updateSelf();
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].updateNeighbors();
+      this.fishes.length < this.fishCount && 0 == --this.intervalCount && (this.intervalCount = this.MAX_INTERVAL_COUNT, this.fishes.push(new FISH(this)))
+    },
+    render: function () {
+      requestAnimationFrame(this.render), this.controlStatus(), this.context.clearRect(0, 0, this.width, this.height), this.context.fillStyle = this.FISH_COLOR;
+      for (var t = 0, i = this.fishes.length; t < i; t++) this.fishes[t].render(this.context);
+      this.context.save(), this.context.globalCompositeOperation = "xor", this.context.beginPath(), this.context.moveTo(0, this.reverse ? 0 : this.height);
+      for (t = 0, i = this.points.length; t < i; t++) this.points[t].render(this.context);
+      this.context.lineTo(this.width, this.reverse ? 0 : this.height), this.context.closePath(), this.context.fill(), this.context.restore()
+    }
+  },
+  SURFACE_POINT = function (t, i) {
+    this.renderer = t, this.x = i, this.init()
+  };
+  SURFACE_POINT.prototype = {
+    SPRING_CONSTANT: .03,
+    SPRING_FRICTION: .9,
+    WAVE_SPREAD: .3,
+    ACCELARATION_RATE: .01,
+    init: function () {
+      this.initHeight = this.renderer.height * this.renderer.INIT_HEIGHT_RATE, this.height = this.initHeight, this.fy = 0, this.force = {
+        previous: 0,
+        next: 0
+      }
+    },
+    setPreviousPoint: function (t) {
+      this.previous = t
+    },
+    setNextPoint: function (t) {
+      this.next = t
+    },
+    interfere: function (t, i) {
+      this.fy = this.renderer.height * this.ACCELARATION_RATE * (this.renderer.height - this.height - t >= 0 ? -1 : 1) * Math.abs(i)
+    },
+    updateSelf: function () {
+      this.fy += this.SPRING_CONSTANT * (this.initHeight - this.height), this.fy *= this.SPRING_FRICTION, this.height += this.fy
+    },
+    updateNeighbors: function () {
+      this.previous && (this.force.previous = this.WAVE_SPREAD * (this.height - this.previous.height)), this.next && (this.force.next = this.WAVE_SPREAD * (this.height - this.next.height))
+    },
+    render: function (t) {
+      this.previous && (this.previous.height += this.force.previous, this.previous.fy += this.force.previous), this.next && (this.next.height += this.force.next, this.next.fy += this.force.next), t.lineTo(this.x, this.renderer.height - this.height)
+    }
+  };
+  var FISH = function (t) {
+    this.renderer = t, this.init()
+  };
+  FISH.prototype = {
+    GRAVITY: .4,
+    init: function () {
+      this.direction = Math.random() < .5, this.x = this.direction ? this.renderer.width + this.renderer.THRESHOLD : -this.renderer.THRESHOLD, this.previousY = this.y, this.vx = this.getRandomValue(4, 10) * (this.direction ? -1 : 1), this.renderer.reverse ? (this.y = this.getRandomValue(1 * this.renderer.height / 10, 4 * this.renderer.height / 10), this.vy = this.getRandomValue(2, 5), this.ay = this.getRandomValue(.05, .2)) : (this.y = this.getRandomValue(6 * this.renderer.height / 10, 9 * this.renderer.height / 10), this.vy = this.getRandomValue(-5, -2), this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1, this.theta = 0, this.phi = 0
+    },
+    getRandomValue: function (t, i) {
+      return t + (i - t) * Math.random()
+    },
+    reverseVertical: function () {
+      this.isOut = !this.isOut, this.ay *= -1
+    },
+    controlStatus: function (t) {
+      this.previousY = this.y, this.x += this.vx, this.y += this.vy, this.vy += this.ay, this.renderer.reverse ? this.y > this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy -= this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(.05, .2)), this.isOut = !1) : this.y < this.renderer.height * this.renderer.INIT_HEIGHT_RATE ? (this.vy += this.GRAVITY, this.isOut = !0) : (this.isOut && (this.ay = this.getRandomValue(-.2, -.05)), this.isOut = !1), this.isOut || (this.theta += Math.PI / 20, this.theta %= 2 * Math.PI, this.phi += Math.PI / 30, this.phi %= 2 * Math.PI), this.renderer.generateEpicenter(this.x + (this.direction ? -1 : 1) * this.renderer.THRESHOLD, this.y, this.y - this.previousY), (this.vx > 0 && this.x > this.renderer.width + this.renderer.THRESHOLD || this.vx < 0 && this.x < -this.renderer.THRESHOLD) && this.init()
+    },
+    render: function (t) {
+      t.save(), t.translate(this.x, this.y), t.rotate(Math.PI + Math.atan2(this.vy, this.vx)), t.scale(1, this.direction ? 1 : -1), t.beginPath(), t.moveTo(-30, 0), t.bezierCurveTo(-20, 15, 15, 10, 40, 0), t.bezierCurveTo(15, -10, -20, -15, -30, 0), t.fill(), t.save(), t.translate(40, 0), t.scale(.9 + .2 * Math.sin(this.theta), 1), t.beginPath(), t.moveTo(0, 0), t.quadraticCurveTo(5, 10, 20, 8), t.quadraticCurveTo(12, 5, 10, 0), t.quadraticCurveTo(12, -5, 20, -8), t.quadraticCurveTo(5, -10, 0, 0), t.fill(), t.restore(), t.save(), t.translate(-3, 0), t.rotate((Math.PI / 3 + Math.PI / 10 * Math.sin(this.phi)) * (this.renderer.reverse ? -1 : 1)), t.beginPath(), this.renderer.reverse ? (t.moveTo(5, 0), t.bezierCurveTo(10, 10, 10, 30, 0, 40), t.bezierCurveTo(-12, 25, -8, 10, 0, 0)) : (t.moveTo(-5, 0), t.bezierCurveTo(-10, -10, -10, -30, 0, -40), t.bezierCurveTo(12, -25, 8, -10, 0, 0)), t.closePath(), t.fill(), t.restore(), t.restore(), this.controlStatus(t)
+    }
+  }, $(function () {
+    RENDERER.init()
+    $('.dark').click(function () {
+      setTimeout(() => {
+        RENDERER.setFishColor();
+        RENDERER.context.fill();
+      });
+    })
+  });
+</script>
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+              
+                <a href="mailto:davischeng@outlook.com" class="social">
+                  
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="https://davischeng.github.io" class="social">
+                  
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+              
+                <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=32322788" class="social">
+                  
+                    <i class="fab fa-qq" aria-hidden="true"></i>
+                  
+                </a>
+              
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2022 <a href="https://davischeng.github.io/">子先居</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://davischeng.github.io/">TheLane</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6e4ef944392f7626176047877621a9f1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+
+    <script src="/js/utils/index.js"></script>
+    <script src="/js/app.js"></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+    content = '.post-detail',//文章容器
+    idArr = {};  //标题数组以确定是否增加索引id
+  //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    activeLinkClass: 'is-active-link',
+    // onClick: function (e) {},
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      tocbot.init(option);
+      mobileTocClick();
+    });
+
+  }
+
+  window.tocScrollFn = function () {
+    return bamboo.throttle(function () {
+      findHeadPosition();
+    }, 100)()
+  }
+  window.addEventListener('scroll', tocScrollFn);
+
+  const findHeadPosition = function (top) {
+    if ($('.toc-list').length <= 0) {
+      return false;
+    }
+    setTimeout(() => {  // or DOMContentLoaded 
+      autoScrollToc();
+    }, 0);
+  }
+
+  const autoScrollToc = function () {
+    const $activeItem = document.querySelector('.is-active-link');
+    const $cardToc = document.querySelector('.toc-content');
+    const activePosition = $activeItem.getBoundingClientRect().top
+    const sidebarScrollTop = $cardToc.scrollTop
+    if (activePosition > (document.documentElement.clientHeight - 100)) {
+      $cardToc.scrollTop = sidebarScrollTop + 150
+    }
+    if (activePosition < 100) {
+      $cardToc.scrollTop = sidebarScrollTop - 150
+    }
+  }
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+      mobileTocClick();
+    }
+  });
+  
+  // 手机端toc按钮点击出现目录
+  const mobileTocClick = function () {
+    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
+    let right = '45px';
+    if (window.innerWidth >= 551 && window.innerWidth <= 992) {
+      right = '100px'
+    }
+    const mobileToc = {
+      open: () => {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+      },
+
+      close: () => {
+        $cardTocLayout.style.animation = 'toc-close .2s'
+        setTimeout(() => {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+        }, 100)
+      }
+    }
+    document.getElementById('toc-mobile-btn').addEventListener('click', () => {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open()
+      else mobileToc.close()
+    })
+
+    $cardToc.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) { // 小于992px的时候
+        mobileToc.close()
+      }
+    })
+  }
+</script>
+
+<style>
+  .is-position-fixed {
+    position: sticky !important;
+    top: 74px;
+  }
+
+  .toc-main ul {
+    counter-reset: show-list;
+  }
+
+  .toc-main ul li::before {
+    content: counter(item)".";
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
+</style> 
+
+<!-- 设置导航背景 -->
+<script>
+  let setHeaderClass = () => {
+    const headerMenuTransparent = true;
+    if (!headerMenuTransparent) { return; }
+    const nav = $('#navHeader');
+    const navTop = nav.outerHeight();
+    const winTop = $(window).scrollTop();
+    if(winTop > navTop) {
+      nav.addClass('header-bg-color');
+    }
+    else {
+      nav.removeClass('header-bg-color');
+    }
+  };
+
+  let scrollCollect = () => {
+    return bamboo.throttle(function (e) {
+      setHeaderClass();
+    }, 200)()
+  }
+
+  let initHeaderBg = () => {
+    setHeaderClass();
+  }
+
+  setHeaderClass();
+  window.addEventListener('scroll', scrollCollect);
+
+  document.addEventListener('pjax:send', function () {
+    window.removeEventListener('scroll', scrollCollect)
+  })
+  document.addEventListener('pjax:complete', function () {
+    window.addEventListener('scroll', scrollCollect);
+    setHeaderClass();
+  })
+</script> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://unpkg.com/v-plugs-ayu/lib/ayu.css">
+  <script src="https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+          }
+        })
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+  
+
+<!-- 图片懒加载 -->
+<script defer src="https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+<!-- 卡片滚动动画 -->
+   
+
+<!-- 评论所需js -->
+
+  
+    <script type="text/javascript">
+  var utteranceCommon = {};
+
+  function check_utterance() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      utteranceCommon.Theme = 'github-dark';
+    } else {
+      utteranceCommon.Theme = 'github-light';
+    }
+
+    return document.getElementById("gitment-container");
+  }
+  comment_el = '#gitment-container';
+  load_utterance = function () {
+    if ($(comment_el).length) {
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_utterance();
+
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'davischeng/davischeng.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      // content 是要插入评论的地方
+      document.getElementById('gitment-container').appendChild(utterances);
+
+    }
+  }
+
+  function dark_utterance() {
+    const HEAD = check_utterance();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: utteranceCommon.Theme
+    };
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+
+  $(document).ready(load_utterance);
+  document.addEventListener('pjax:complete', function () {
+    load_utterance();
+  });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_utterance();
+    });
+  })
+
+</script>
+
+<style>
+  .utterances {
+    max-width: inherit !important;
+  }
+</style>
+  
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+  
+    <script src="/js/cursor/text.js"></script>
+  
+
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+</html>
