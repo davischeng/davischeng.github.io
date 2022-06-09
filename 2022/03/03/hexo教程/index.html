@@ -686,7 +686,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 997 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1k |
           </span>
   
           <span class="min2read">
@@ -746,10 +746,10 @@
 <p>git bash中输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>将输出的内容复制到框中，点击确定保存。</p>
-<p>输入ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>，如果如下图所示，出现你的用户名和You’ve successfully字样，那就成功了。</p>
+<p>输入ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;</a>，如果如下图所示，出现你的用户名和You’ve successfully字样，那就成功了。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>如果要更新以下不同的库，目前需要重复上面的步骤，各大神有好的方法可分享。<br><a href="mailto:&#117;&#115;&#101;&#114;&#x31;&#x40;&#121;&#x6f;&#117;&#x2e;&#x63;&#111;&#109;">&#117;&#115;&#101;&#114;&#x31;&#x40;&#121;&#x6f;&#117;&#x2e;&#x63;&#111;&#109;</a><br><a href="mailto:&#117;&#115;&#101;&#x72;&#50;&#64;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#109;">&#117;&#115;&#101;&#x72;&#50;&#64;&#x79;&#111;&#x75;&#46;&#99;&#x6f;&#109;</a><br><a href="mailto:&#117;&#115;&#101;&#114;&#x33;&#x40;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;">&#117;&#115;&#101;&#114;&#x33;&#x40;&#x79;&#111;&#x75;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>如果要更新以下不同的库，目前需要重复上面的步骤，各大神有好的方法可分享。<br><a href="mailto:&#x75;&#115;&#x65;&#114;&#x31;&#64;&#121;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;">&#x75;&#115;&#x65;&#114;&#x31;&#64;&#121;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;</a><br><a href="mailto:&#x75;&#115;&#101;&#114;&#x32;&#64;&#x79;&#x6f;&#117;&#46;&#x63;&#111;&#x6d;">&#x75;&#115;&#101;&#114;&#x32;&#64;&#x79;&#x6f;&#117;&#46;&#x63;&#111;&#x6d;</a><br><a href="mailto:&#117;&#x73;&#101;&#114;&#x33;&#64;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;">&#117;&#x73;&#101;&#114;&#x33;&#64;&#121;&#111;&#x75;&#x2e;&#99;&#111;&#x6d;</a></p>
 </blockquote>
 <p>安装 hexo-deployer-git。</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
@@ -769,11 +769,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-filter-kroki</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="hexo-butterfly主题使用的坑"><a href="#hexo-butterfly主题使用的坑" class="headerlink" title="hexo butterfly主题使用的坑"></a>hexo butterfly主题使用的坑</h4><ul>
-<li><p><font color=red>启用hexo-filter-kroki，hexo-filter-mermaid-diagrams，hexo-filter-sequence插件</font></p>
+<li><font color=red>启用hexo-filter-kroki，hexo-filter-mermaid-diagrams，hexo-filter-sequence插件之间有冲突，不能同时启用，只能使用其中一个。</font></li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g 结果不能编译</span><br><span class="line">PS F:\Hexo&gt; hexo g</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO</span><br><span class="line">  ===================================================================</span><br><span class="line"></span><br><span class="line">      #####  #    # ##### ##### ###### #####  ###### #      #   #</span><br><span class="line">      #    # #    #   #     #   #      #    # #      #       # #</span><br><span class="line">      #####  #    #   #     #   #####  #    # #####  #        #</span><br><span class="line">      #    # #    #   #     #   #      #####  #      #        #</span><br><span class="line">      #    # #    #   #     #   #      #   #  #      #        #</span><br><span class="line">      #####   ####    #     #   ###### #    # #      ######   #</span><br><span class="line"></span><br><span class="line">                            4.1.0</span><br><span class="line">  ===================================================================</span><br><span class="line">INFO  Start processing</span><br><span class="line">PS F:\Hexo&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><font color=red>不启用上述插件</font></p>
-</li>
+
+<ul>
+<li><font color=red>不启用上述插件</font></li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g 结果正常</span><br><span class="line">PS F:\Hexo&gt; hexo g</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO</span><br><span class="line">  ===================================================================</span><br><span class="line"></span><br><span class="line">      #####  #    # ##### ##### ###### #####  ###### #      #   #</span><br><span class="line">      #    # #    #   #     #   #      #    # #      #       # #</span><br><span class="line">      #####  #    #   #     #   #####  #    # #####  #        #</span><br><span class="line">      #    # #    #   #     #   #      #####  #      #        #</span><br><span class="line">      #    # #    #   #     #   #      #   #  #      #        #</span><br><span class="line">      #####   ####    #     #   ###### #    # #      ######   #</span><br><span class="line"></span><br><span class="line">                            4.1.0</span><br><span class="line">  ===================================================================</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 2.69 s</span><br><span class="line">INFO  Generated: gallery/index.html</span><br><span class="line">INFO  Generated: gallery/1/index.html</span><br><span class="line">INFO  Generated: about/index.html</span><br><span class="line">INFO  Generated: gallery/2/index.html</span><br><span class="line">INFO  Generated: tags/index.html</span><br><span class="line">INFO  Generated: gallery/7/index.html</span><br><span class="line">INFO  Generated: categories/index.html</span><br><span class="line">INFO  Generated: gallery/3/index.html</span><br><span class="line">INFO  38 files generated in 257 ms</span><br><span class="line">INFO  Generated manifests for 847 files. Total size: 335,214,206 bytes.</span><br><span class="line">F:\Hexo&gt;</span><br></pre></td></tr></table></figure>
 
@@ -841,8 +842,10 @@
       <!-- <div class="content">
         
 
-Kubernetes是什么？Docs
-Kubernetes是容器集群管理系统，是一个开源的平台，可以实现容器集群的自
+
+Kubernetes是什么
+
+  Kubernetes是容器集群管理系统，是一个开源的平台，可以实现容器集群的自动
       </div> -->
     </a>
   </div>
@@ -1005,8 +1008,8 @@ Kubernetes是容器集群管理系统，是一个开源的平台，可以实现�
   };
   function openToc() {
     $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
-    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside").css({'width': '350px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '350px'});
     $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
   }
   function openBtnClickFn () {
