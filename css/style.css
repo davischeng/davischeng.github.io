@@ -175,7 +175,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #fff;
 }
 .bg-floor {
-  background: url("/medias/img/scenery/s109.jpg");
+  background: url("/medias/img/scenery/s144.jpg");
   background-size: cover;
   transition: all 0.3s;
 }
@@ -2277,7 +2277,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   box-sizing: border-box;
   transition: all 0.3s;
   position: relative;
-  background: url("/medias/img/scenery/s122.jpg");
+  background: url("/medias/img/scenery/s142.jpg");
 }
 .motto .motto-title {
   text-align: center;
@@ -2302,7 +2302,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   border-radius: 10px;
   box-sizing: border-box;
   transition: all 0.3s;
-  background: url("/medias/img/scenery/s102.jpg");
+  background: url("/medias/img/scenery/s143.jpg");
 }
 .index-notice .index-notice-icon {
   color: #f00;
